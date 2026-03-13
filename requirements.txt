@@ -13,4 +13,14 @@ pydantic>=2.5.0
 google-genai>=0.2.0
 python-dotenv>=1.0.0
 
+=======
+easyocr
+pdf2image
+google-generativeai
+pillow
+numpy
+torch
+opencv-python
+>>>>>>> 9c982059d7c75dccfab717604f6ebdd5506b7441
+
 pandas

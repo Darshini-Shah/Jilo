@@ -51,3 +51,8 @@ Check the `data/output/` folder. You will see individual, FHIR-compliant JSON fi
 
 * **API Key Error:** If the script crashes asking for an API key, ensure your `.env` file is in the root folder and spelled correctly (no spaces around the `=`).
 * **Validation Fatal Error:** If testing the output JSON in the HL7 Validator and you get a "Fatal: Unable to infer format" error at Line 0, ensure you are uploading the actual `.json` file from the output folder, NOT copy-pasting terminal output.
+
+# Linux
+sudo apt-get install poppler-utils
+# Windows
+Download poppler and add to PATH
