@@ -1,0 +1,3092 @@
+"Current Procedural Terminology (CPT) codes, descriptions and other data only are copyright 2025 American Medical Association. All rights reserved. 
+
+CPT® is a registered trademark of the American Medical Association.
+
+Applicable FARS/DFARS Restrictions Apply to Government Use. 
+
+Fee schedules, relative value units, conversion factors and/or related components are not assigned by the AMA, are not part of CPT, and the AMA is not recommending their use.  The AMA does not directly or indirectly practice medicine or dispense medical services.  The AMA assumes no liability for the data contained or not contained herein.",,,
+"HCPCS/
+CPT Code",DME Supplier Services MUE Values,MUE Adjudication Indicator,MUE Rationale
+A4206,0,3 Date of Service Edit: Clinical,CMS Policy
+A4207,0,3 Date of Service Edit: Clinical,CMS Policy
+A4208,0,3 Date of Service Edit: Clinical,CMS Policy
+A4209,0,3 Date of Service Edit: Clinical,CMS Policy
+A4210,0,3 Date of Service Edit: Clinical,CMS Policy
+A4211,0,3 Date of Service Edit: Clinical,CMS Policy
+A4213,0,3 Date of Service Edit: Clinical,CMS Policy
+A4215,0,3 Date of Service Edit: Clinical,CMS Policy
+A4218,56,3 Date of Service Edit: Clinical,CMS Policy
+A4221,4,3 Date of Service Edit: Clinical,Clinical: Data
+A4224,13,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+A4226,0,3 Date of Service Edit: Clinical,CMS Policy
+A4230,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4231,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4232,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4233,2,3 Date of Service Edit: Clinical,Clinical: Data
+A4234,2,3 Date of Service Edit: Clinical,Clinical: Data
+A4235,2,3 Date of Service Edit: Clinical,Clinical: Data
+A4236,2,3 Date of Service Edit: Clinical,Clinical: Data
+A4238,3,3 Date of Service Edit: Clinical,CMS Policy
+A4239,3,3 Date of Service Edit: Clinical,CMS Policy
+A4244,0,3 Date of Service Edit: Clinical,CMS Policy
+A4245,0,3 Date of Service Edit: Clinical,CMS Policy
+A4246,0,3 Date of Service Edit: Clinical,CMS Policy
+A4247,0,3 Date of Service Edit: Clinical,CMS Policy
+A4248,0,3 Date of Service Edit: Clinical,CMS Policy
+A4250,0,3 Date of Service Edit: Clinical,CMS Policy
+A4252,0,3 Date of Service Edit: Clinical,CMS Policy
+A4253,1,3 Date of Service Edit: Clinical,Nature of Equipment
+A4255,0,3 Date of Service Edit: Clinical,Nature of Equipment
+A4256,2,3 Date of Service Edit: Clinical,Clinical: Data
+A4257,0,3 Date of Service Edit: Clinical,Nature of Equipment
+A4258,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A4259,1,3 Date of Service Edit: Clinical,Nature of Equipment
+A4265,6,3 Date of Service Edit: Clinical,Clinical: Data
+A4271,6,3 Date of Service Edit: Clinical,CMS Policy
+A4280,60,3 Date of Service Edit: Clinical,Nature of Service/Procedure
+A4281,0,3 Date of Service Edit: Clinical,CMS Policy
+A4282,0,3 Date of Service Edit: Clinical,CMS Policy
+A4283,0,3 Date of Service Edit: Clinical,CMS Policy
+A4284,0,3 Date of Service Edit: Clinical,CMS Policy
+A4285,0,3 Date of Service Edit: Clinical,CMS Policy
+A4286,0,3 Date of Service Edit: Clinical,CMS Policy
+A4295,600,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4296,600,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4297,600,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4305,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4306,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4310,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4311,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4312,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4313,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4314,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4315,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4316,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4321,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4322,12,3 Date of Service Edit: Clinical,Clinical: Data
+A4326,90,3 Date of Service Edit: Clinical,Clinical: Data
+A4327,4,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4328,93,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4330,0,3 Date of Service Edit: Clinical,CMS Policy
+A4331,6,3 Date of Service Edit: Clinical,Clinical: Data
+A4332,600,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4333,36,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4334,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4336,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+A4337,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4338,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4340,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4341,4,3 Date of Service Edit: Clinical,Nature of Equipment
+A4342,4,3 Date of Service Edit: Clinical,Nature of Equipment
+A4344,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4346,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4349,105,3 Date of Service Edit: Clinical,CMS Policy
+A4351,600,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4352,600,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4353,600,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4354,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4355,4,3 Date of Service Edit: Clinical,Clinical: Data
+A4356,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A4357,6,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4358,6,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4360,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4361,2,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4363,6,3 Date of Service Edit: Clinical,Clinical: Data
+A4367,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4384,4,3 Date of Service Edit: Clinical,Clinical: Data
+A4396,3,3 Date of Service Edit: Clinical,Clinical: Data
+A4398,1,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4399,1,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4400,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4438,30,3 Date of Service Edit: Clinical,Nature of Equipment
+A4458,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4459,1,3 Date of Service Edit: Clinical,Nature of Equipment
+A4463,3,3 Date of Service Edit: Clinical,Clinical: Data
+A4465,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4467,0,3 Date of Service Edit: Clinical,CMS Policy
+A4470,0,3 Date of Service Edit: Clinical,CMS Policy
+A4480,0,3 Date of Service Edit: Clinical,CMS Policy
+A4481,186,3 Date of Service Edit: Clinical,CMS Policy
+A4483,30,3 Date of Service Edit: Clinical,Clinical: Data
+A4490,0,3 Date of Service Edit: Clinical,CMS Policy
+A4495,0,3 Date of Service Edit: Clinical,CMS Policy
+A4500,0,3 Date of Service Edit: Clinical,CMS Policy
+A4510,0,3 Date of Service Edit: Clinical,CMS Policy
+A4520,0,3 Date of Service Edit: Clinical,CMS Policy
+A4543,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+A4544,8,3 Date of Service Edit: Clinical,Nature of Equipment
+A4545,6,3 Date of Service Edit: Clinical,Code Descriptor / CPT Instruction
+A4553,0,3 Date of Service Edit: Clinical,CMS Policy
+A4554,0,3 Date of Service Edit: Clinical,CMS Policy
+A4555,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4556,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4557,2,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4558,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4559,6,3 Date of Service Edit: Clinical,Nature of Equipment
+A4560,0,3 Date of Service Edit: Clinical,Nature of Equipment
+A4561,0,3 Date of Service Edit: Clinical,CMS Policy
+A4562,0,3 Date of Service Edit: Clinical,CMS Policy
+A4575,0,3 Date of Service Edit: Clinical,CMS Policy
+A4593,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+A4594,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+A4595,6,3 Date of Service Edit: Clinical,Code Descriptor / CPT Instruction
+A4596,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+A4600,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4601,1,3 Date of Service Edit: Clinical,Clinical: Data
+A4602,6,3 Date of Service Edit: Clinical,Clinical: Data
+A4604,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A4605,90,3 Date of Service Edit: Clinical,Nature of Equipment
+A4606,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4608,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4611,2,3 Date of Service Edit: Clinical,Clinical: Data
+A4612,2,3 Date of Service Edit: Clinical,Clinical: Data
+A4613,1,3 Date of Service Edit: Clinical,Clinical: Data
+A4614,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+A4615,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4616,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4617,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4618,12,3 Date of Service Edit: Clinical,Nature of Equipment
+A4619,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4620,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4623,200,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4624,270,3 Date of Service Edit: Clinical,CMS Policy
+A4625,100,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4626,6,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4627,0,3 Date of Service Edit: Clinical,CMS Policy
+A4628,36,3 Date of Service Edit: Clinical,CMS Policy
+A4629,93,3 Date of Service Edit: Clinical,CMS Policy
+A4630,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A4633,6,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+A4634,0,3 Date of Service Edit: Clinical,CMS Policy
+A4635,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+A4636,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+A4637,4,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+A4638,2,3 Date of Service Edit: Clinical,Clinical: Data
+A4639,0,3 Date of Service Edit: Clinical,CMS Policy
+A4640,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+A4650,0,3 Date of Service Edit: Clinical,CMS Policy
+A4651,0,3 Date of Service Edit: Clinical,CMS Policy
+A4652,0,3 Date of Service Edit: Clinical,CMS Policy
+A4653,0,3 Date of Service Edit: Clinical,CMS Policy
+A4657,0,3 Date of Service Edit: Clinical,CMS Policy
+A4660,0,3 Date of Service Edit: Clinical,CMS Policy
+A4663,0,3 Date of Service Edit: Clinical,CMS Policy
+A4670,0,3 Date of Service Edit: Clinical,CMS Policy
+A4671,0,3 Date of Service Edit: Clinical,CMS Policy
+A4672,0,3 Date of Service Edit: Clinical,CMS Policy
+A4673,0,3 Date of Service Edit: Clinical,CMS Policy
+A4674,0,3 Date of Service Edit: Clinical,CMS Policy
+A4680,0,3 Date of Service Edit: Clinical,CMS Policy
+A4690,0,3 Date of Service Edit: Clinical,CMS Policy
+A4706,0,3 Date of Service Edit: Clinical,CMS Policy
+A4707,0,3 Date of Service Edit: Clinical,CMS Policy
+A4708,0,3 Date of Service Edit: Clinical,CMS Policy
+A4709,0,3 Date of Service Edit: Clinical,CMS Policy
+A4714,0,3 Date of Service Edit: Clinical,CMS Policy
+A4719,0,3 Date of Service Edit: Clinical,CMS Policy
+A4720,0,3 Date of Service Edit: Clinical,CMS Policy
+A4721,0,3 Date of Service Edit: Clinical,CMS Policy
+A4722,0,3 Date of Service Edit: Clinical,CMS Policy
+A4723,0,3 Date of Service Edit: Clinical,CMS Policy
+A4724,0,3 Date of Service Edit: Clinical,CMS Policy
+A4725,0,3 Date of Service Edit: Clinical,CMS Policy
+A4726,0,3 Date of Service Edit: Clinical,CMS Policy
+A4728,0,3 Date of Service Edit: Clinical,CMS Policy
+A4730,0,3 Date of Service Edit: Clinical,CMS Policy
+A4736,0,3 Date of Service Edit: Clinical,CMS Policy
+A4737,0,3 Date of Service Edit: Clinical,CMS Policy
+A4740,0,3 Date of Service Edit: Clinical,CMS Policy
+A4750,0,3 Date of Service Edit: Clinical,CMS Policy
+A4755,0,3 Date of Service Edit: Clinical,CMS Policy
+A4760,0,3 Date of Service Edit: Clinical,CMS Policy
+A4765,0,3 Date of Service Edit: Clinical,CMS Policy
+A4766,0,3 Date of Service Edit: Clinical,CMS Policy
+A4770,0,3 Date of Service Edit: Clinical,CMS Policy
+A4771,0,3 Date of Service Edit: Clinical,CMS Policy
+A4772,0,3 Date of Service Edit: Clinical,CMS Policy
+A4773,0,3 Date of Service Edit: Clinical,CMS Policy
+A4774,0,3 Date of Service Edit: Clinical,CMS Policy
+A4802,0,3 Date of Service Edit: Clinical,CMS Policy
+A4860,0,3 Date of Service Edit: Clinical,CMS Policy
+A4870,0,3 Date of Service Edit: Clinical,CMS Policy
+A4890,0,3 Date of Service Edit: Clinical,CMS Policy
+A4911,0,3 Date of Service Edit: Clinical,CMS Policy
+A4913,0,3 Date of Service Edit: Clinical,CMS Policy
+A4918,0,3 Date of Service Edit: Clinical,CMS Policy
+A4927,0,3 Date of Service Edit: Clinical,CMS Policy
+A4928,0,3 Date of Service Edit: Clinical,CMS Policy
+A4929,0,3 Date of Service Edit: Clinical,CMS Policy
+A4930,0,3 Date of Service Edit: Clinical,CMS Policy
+A4931,0,3 Date of Service Edit: Clinical,CMS Policy
+A4932,0,3 Date of Service Edit: Clinical,CMS Policy
+A5056,120,3 Date of Service Edit: Clinical,Published Contractor Policy
+A5057,120,3 Date of Service Edit: Clinical,Published Contractor Policy
+A5082,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A5102,1,3 Date of Service Edit: Clinical,Published Contractor Policy
+A5105,4,3 Date of Service Edit: Clinical,Clinical: Data
+A5112,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A5113,3,3 Date of Service Edit: Clinical,Clinical: Data
+A5114,3,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+A5120,450,3 Date of Service Edit: Clinical,Published Contractor Policy
+A5131,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A5500,2,2 Date of Service Edit: Policy,Published Contractor Policy
+A5501,2,2 Date of Service Edit: Policy,Published Contractor Policy
+A5503,2,2 Date of Service Edit: Policy,Published Contractor Policy
+A5504,2,2 Date of Service Edit: Policy,Published Contractor Policy
+A5505,2,2 Date of Service Edit: Policy,Published Contractor Policy
+A5506,2,2 Date of Service Edit: Policy,Published Contractor Policy
+A5507,2,3 Date of Service Edit: Clinical,Published Contractor Policy
+A5508,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A5510,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A5512,6,2 Date of Service Edit: Policy,CMS Policy
+A5513,6,2 Date of Service Edit: Policy,CMS Policy
+A5514,6,2 Date of Service Edit: Policy,CMS Policy
+A6000,0,3 Date of Service Edit: Clinical,CMS Policy
+A6025,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A6228,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A6229,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A6230,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A6250,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A6260,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A6411,2,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+A6412,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+A6413,0,3 Date of Service Edit: Clinical,CMS Policy
+A6460,1,1 Line Edit,Clinical: CMS Workgroup
+A6461,1,1 Line Edit,Clinical: CMS Workgroup
+A6501,2,3 Date of Service Edit: Clinical,Nature of Equipment
+A6502,1,3 Date of Service Edit: Clinical,Nature of Equipment
+A6503,2,3 Date of Service Edit: Clinical,Nature of Equipment
+A6504,4,3 Date of Service Edit: Clinical,Nature of Equipment
+A6505,4,3 Date of Service Edit: Clinical,Nature of Equipment
+A6506,4,3 Date of Service Edit: Clinical,Nature of Equipment
+A6507,4,3 Date of Service Edit: Clinical,Nature of Equipment
+A6508,4,3 Date of Service Edit: Clinical,Nature of Equipment
+A6509,2,3 Date of Service Edit: Clinical,Nature of Equipment
+A6510,2,3 Date of Service Edit: Clinical,Nature of Equipment
+A6511,2,3 Date of Service Edit: Clinical,Nature of Equipment
+A6513,2,3 Date of Service Edit: Clinical,Nature of Equipment
+A6515,6,2 Date of Service Edit: Policy,CMS Policy
+A6516,6,2 Date of Service Edit: Policy,CMS Policy
+A6517,6,2 Date of Service Edit: Policy,CMS Policy
+A6518,6,2 Date of Service Edit: Policy,CMS Policy
+A6520,4,2 Date of Service Edit: Policy,CMS Policy
+A6521,4,2 Date of Service Edit: Policy,CMS Policy
+A6522,4,2 Date of Service Edit: Policy,CMS Policy
+A6523,4,2 Date of Service Edit: Policy,CMS Policy
+A6524,4,2 Date of Service Edit: Policy,CMS Policy
+A6525,4,2 Date of Service Edit: Policy,CMS Policy
+A6526,4,2 Date of Service Edit: Policy,CMS Policy
+A6527,4,2 Date of Service Edit: Policy,CMS Policy
+A6528,4,2 Date of Service Edit: Policy,CMS Policy
+A6529,4,2 Date of Service Edit: Policy,CMS Policy
+A6530,6,2 Date of Service Edit: Policy,CMS Policy
+A6531,4,3 Date of Service Edit: Clinical,Clinical: Data
+A6532,4,3 Date of Service Edit: Clinical,Clinical: Data
+A6533,6,2 Date of Service Edit: Policy,CMS Policy
+A6534,6,2 Date of Service Edit: Policy,CMS Policy
+A6535,6,2 Date of Service Edit: Policy,CMS Policy
+A6536,6,2 Date of Service Edit: Policy,CMS Policy
+A6537,6,2 Date of Service Edit: Policy,CMS Policy
+A6538,6,2 Date of Service Edit: Policy,CMS Policy
+A6539,6,2 Date of Service Edit: Policy,CMS Policy
+A6540,6,2 Date of Service Edit: Policy,CMS Policy
+A6541,6,2 Date of Service Edit: Policy,CMS Policy
+A6544,0,3 Date of Service Edit: Clinical,CMS Policy
+A6545,2,3 Date of Service Edit: Clinical,Clinical: Data
+A6552,6,2 Date of Service Edit: Policy,CMS Policy
+A6553,6,2 Date of Service Edit: Policy,CMS Policy
+A6554,6,2 Date of Service Edit: Policy,CMS Policy
+A6555,6,2 Date of Service Edit: Policy,CMS Policy
+A6556,6,2 Date of Service Edit: Policy,CMS Policy
+A6557,6,2 Date of Service Edit: Policy,CMS Policy
+A6558,6,2 Date of Service Edit: Policy,CMS Policy
+A6559,6,2 Date of Service Edit: Policy,CMS Policy
+A6560,6,2 Date of Service Edit: Policy,CMS Policy
+A6561,6,2 Date of Service Edit: Policy,CMS Policy
+A6562,6,2 Date of Service Edit: Policy,CMS Policy
+A6563,6,2 Date of Service Edit: Policy,CMS Policy
+A6564,6,2 Date of Service Edit: Policy,CMS Policy
+A6565,6,2 Date of Service Edit: Policy,CMS Policy
+A6566,6,2 Date of Service Edit: Policy,CMS Policy
+A6567,6,2 Date of Service Edit: Policy,CMS Policy
+A6568,6,2 Date of Service Edit: Policy,CMS Policy
+A6569,6,2 Date of Service Edit: Policy,CMS Policy
+A6570,6,2 Date of Service Edit: Policy,CMS Policy
+A6571,6,2 Date of Service Edit: Policy,CMS Policy
+A6572,6,2 Date of Service Edit: Policy,CMS Policy
+A6573,6,2 Date of Service Edit: Policy,CMS Policy
+A6574,6,2 Date of Service Edit: Policy,CMS Policy
+A6575,6,2 Date of Service Edit: Policy,CMS Policy
+A6576,6,2 Date of Service Edit: Policy,CMS Policy
+A6577,6,2 Date of Service Edit: Policy,CMS Policy
+A6578,6,2 Date of Service Edit: Policy,CMS Policy
+A6579,6,2 Date of Service Edit: Policy,CMS Policy
+A6580,6,2 Date of Service Edit: Policy,CMS Policy
+A6581,6,2 Date of Service Edit: Policy,CMS Policy
+A6582,6,2 Date of Service Edit: Policy,CMS Policy
+A6583,6,2 Date of Service Edit: Policy,CMS Policy
+A6585,6,2 Date of Service Edit: Policy,CMS Policy
+A6586,6,2 Date of Service Edit: Policy,CMS Policy
+A6587,6,2 Date of Service Edit: Policy,CMS Policy
+A6588,6,2 Date of Service Edit: Policy,CMS Policy
+A6589,6,2 Date of Service Edit: Policy,CMS Policy
+A6590,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+A6591,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+A6610,6,2 Date of Service Edit: Policy,CMS Policy
+A6611,6,2 Date of Service Edit: Policy,CMS Policy
+A7001,3,3 Date of Service Edit: Clinical,Clinical: Data
+A7002,30,3 Date of Service Edit: Clinical,Clinical: Data
+A7003,6,2 Date of Service Edit: Policy,Published Contractor Policy
+A7004,6,2 Date of Service Edit: Policy,Published Contractor Policy
+A7005,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7006,3,2 Date of Service Edit: Policy,Published Contractor Policy
+A7007,6,2 Date of Service Edit: Policy,Published Contractor Policy
+A7008,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7009,2,3 Date of Service Edit: Clinical,Clinical: Data
+A7010,2,2 Date of Service Edit: Policy,Published Contractor Policy
+A7012,6,2 Date of Service Edit: Policy,Published Contractor Policy
+A7013,6,2 Date of Service Edit: Policy,Published Contractor Policy
+A7014,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7015,3,2 Date of Service Edit: Policy,Published Contractor Policy
+A7016,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7017,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7020,1,3 Date of Service Edit: Clinical,Nature of Equipment
+A7021,3,3 Date of Service Edit: Clinical,Code Descriptor / CPT Instruction
+A7025,1,3 Date of Service Edit: Clinical,Clinical: Data
+A7026,1,3 Date of Service Edit: Clinical,Clinical: Data
+A7027,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7028,6,2 Date of Service Edit: Policy,Published Contractor Policy
+A7029,6,2 Date of Service Edit: Policy,Published Contractor Policy
+A7030,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7031,3,2 Date of Service Edit: Policy,Published Contractor Policy
+A7032,6,2 Date of Service Edit: Policy,Published Contractor Policy
+A7033,6,2 Date of Service Edit: Policy,Published Contractor Policy
+A7034,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7035,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7036,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7037,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7038,6,2 Date of Service Edit: Policy,Published Contractor Policy
+A7039,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7040,0,3 Date of Service Edit: Clinical,CMS Policy
+A7041,0,3 Date of Service Edit: Clinical,CMS Policy
+A7044,1,3 Date of Service Edit: Clinical,Clinical: Data
+A7045,2,3 Date of Service Edit: Clinical,Clinical: Data
+A7046,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7047,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7048,0,3 Date of Service Edit: Clinical,CMS Policy
+A7049,1,3 Date of Service Edit: Clinical,Nature of Equipment
+A7501,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7502,3,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7503,1,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7504,200,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7505,2,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7506,200,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7507,200,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7508,200,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7509,200,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7520,1,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7521,1,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7522,1,2 Date of Service Edit: Policy,Published Contractor Policy
+A7523,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7524,1,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7525,8,3 Date of Service Edit: Clinical,Clinical: Data
+A7526,100,3 Date of Service Edit: Clinical,Published Contractor Policy
+A7527,2,3 Date of Service Edit: Clinical,Published Contractor Policy
+A8000,0,3 Date of Service Edit: Clinical,CMS Policy
+A8001,0,3 Date of Service Edit: Clinical,CMS Policy
+A8002,0,3 Date of Service Edit: Clinical,CMS Policy
+A8003,0,3 Date of Service Edit: Clinical,CMS Policy
+A8004,0,3 Date of Service Edit: Clinical,CMS Policy
+A9270,0,3 Date of Service Edit: Clinical,Code Descriptor / CPT Instruction
+A9272,0,3 Date of Service Edit: Clinical,CMS Policy
+A9273,0,3 Date of Service Edit: Clinical,CMS Policy
+A9274,0,3 Date of Service Edit: Clinical,CMS Policy
+A9275,0,3 Date of Service Edit: Clinical,CMS Policy
+A9276,0,3 Date of Service Edit: Clinical,CMS Policy
+A9277,0,3 Date of Service Edit: Clinical,CMS Policy
+A9278,0,3 Date of Service Edit: Clinical,CMS Policy
+A9279,0,3 Date of Service Edit: Clinical,CMS Policy
+A9280,0,3 Date of Service Edit: Clinical,CMS Policy
+A9281,0,3 Date of Service Edit: Clinical,CMS Policy
+A9282,0,3 Date of Service Edit: Clinical,CMS Policy
+A9283,0,3 Date of Service Edit: Clinical,CMS Policy
+A9284,0,3 Date of Service Edit: Clinical,CMS Policy
+A9285,0,3 Date of Service Edit: Clinical,CMS Policy
+A9286,0,3 Date of Service Edit: Clinical,CMS Policy
+A9300,0,3 Date of Service Edit: Clinical,CMS Policy
+A9559,0,3 Date of Service Edit: Clinical,CMS Policy
+A9901,0,3 Date of Service Edit: Clinical,Code Descriptor / CPT Instruction
+B4034,1,1 Line Edit,Code Descriptor / CPT Instruction
+B4035,1,1 Line Edit,Code Descriptor / CPT Instruction
+B4036,1,1 Line Edit,Code Descriptor / CPT Instruction
+B4100,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+B4102,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+B4103,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+B4104,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+B4148,1,3 Date of Service Edit: Clinical,CMS Policy
+B4164,2,1 Line Edit,Clinical: Data
+B4168,2,1 Line Edit,Clinical: Data
+B4172,2,1 Line Edit,Clinical: CMS Workgroup
+B4176,2,1 Line Edit,Clinical: CMS Workgroup
+B4178,2,1 Line Edit,Clinical: Data
+B4180,1,1 Line Edit,Clinical: Data
+B4185,15,3 Date of Service Edit: Clinical,Prescribing Information
+B4187,15,3 Date of Service Edit: Clinical,Prescribing Information
+B4189,1,1 Line Edit,Published Contractor Policy
+B4193,1,1 Line Edit,Published Contractor Policy
+B4197,1,1 Line Edit,Published Contractor Policy
+B4199,1,1 Line Edit,Published Contractor Policy
+B4216,1,1 Line Edit,Code Descriptor / CPT Instruction
+B4220,1,1 Line Edit,Code Descriptor / CPT Instruction
+B4222,1,1 Line Edit,Code Descriptor / CPT Instruction
+B4224,1,1 Line Edit,Code Descriptor / CPT Instruction
+B5000,31,3 Date of Service Edit: Clinical,Prescribing Information
+B5100,120,3 Date of Service Edit: Clinical,Prescribing Information
+B5200,225,3 Date of Service Edit: Clinical,Prescribing Information
+B9002,1,1 Line Edit,Nature of Equipment
+B9004,1,1 Line Edit,Nature of Equipment
+B9006,1,1 Line Edit,Nature of Equipment
+C9804,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+C9807,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0100,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0105,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0110,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0111,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0112,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0113,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0114,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0116,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0117,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0118,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0130,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0135,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0140,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0141,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0143,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0144,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0147,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0148,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0149,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0152,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0153,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0154,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0155,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0156,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0157,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0158,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0159,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0160,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0161,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0162,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0163,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0165,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0167,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0168,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0170,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0171,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0172,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0175,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0181,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0182,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0183,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0184,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0185,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0186,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0187,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0188,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0189,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0190,0,3 Date of Service Edit: Clinical,CMS Policy
+E0191,0,3 Date of Service Edit: Clinical,CMS Policy
+E0193,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0194,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0196,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0197,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0198,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0199,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0200,0,3 Date of Service Edit: Clinical,CMS Policy
+E0202,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0203,0,3 Date of Service Edit: Clinical,CMS Policy
+E0205,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0210,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0215,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0217,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0218,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0221,0,3 Date of Service Edit: Clinical,CMS Policy
+E0225,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0231,0,3 Date of Service Edit: Clinical,CMS Policy
+E0232,0,3 Date of Service Edit: Clinical,CMS Policy
+E0235,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0236,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0239,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0240,0,3 Date of Service Edit: Clinical,CMS Policy
+E0241,0,3 Date of Service Edit: Clinical,CMS Policy
+E0242,0,3 Date of Service Edit: Clinical,CMS Policy
+E0243,0,3 Date of Service Edit: Clinical,CMS Policy
+E0244,0,3 Date of Service Edit: Clinical,CMS Policy
+E0245,0,3 Date of Service Edit: Clinical,CMS Policy
+E0246,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0247,0,3 Date of Service Edit: Clinical,CMS Policy
+E0248,0,3 Date of Service Edit: Clinical,CMS Policy
+E0249,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0250,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0251,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0255,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0256,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0260,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0261,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0265,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0266,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0270,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0271,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0272,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0273,0,3 Date of Service Edit: Clinical,CMS Policy
+E0274,0,3 Date of Service Edit: Clinical,CMS Policy
+E0275,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0276,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0277,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0280,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0290,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0291,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0292,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0293,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0294,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0295,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0296,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0297,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0300,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0301,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0302,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0303,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0304,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0305,2,3 Date of Service Edit: Clinical,Clinical: Data
+E0310,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0315,0,3 Date of Service Edit: Clinical,CMS Policy
+E0316,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0325,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0326,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0328,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0329,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0350,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0352,30,3 Date of Service Edit: Clinical,Clinical: Data
+E0370,0,3 Date of Service Edit: Clinical,CMS Policy
+E0371,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0372,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0373,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0424,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0425,0,3 Date of Service Edit: Clinical,CMS Policy
+E0430,0,3 Date of Service Edit: Clinical,CMS Policy
+E0431,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0433,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0434,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0435,0,3 Date of Service Edit: Clinical,CMS Policy
+E0439,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0440,0,3 Date of Service Edit: Clinical,CMS Policy
+E0441,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0442,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0443,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0444,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0445,0,3 Date of Service Edit: Clinical,CMS Policy
+E0446,0,3 Date of Service Edit: Clinical,CMS Policy
+E0447,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0455,0,3 Date of Service Edit: Clinical,CMS Policy
+E0457,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0459,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0462,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0465,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E0466,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E0467,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E0468,2,2 Date of Service Edit: Policy,CMS Policy
+E0469,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0470,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0471,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0472,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0480,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0481,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0482,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0483,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0484,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0485,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0486,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0487,0,3 Date of Service Edit: Clinical,CMS Policy
+E0490,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0491,1,3 Date of Service Edit: Clinical,Code Descriptor / CPT Instruction
+E0500,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0550,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0555,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0560,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0561,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0562,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0565,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0570,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0572,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0574,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0575,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0580,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0585,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0600,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0601,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0602,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0603,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0604,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0605,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0606,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0607,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0610,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0615,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0616,1,3 Date of Service Edit: Clinical,CMS Policy
+E0617,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0618,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0619,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0620,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0621,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0625,0,3 Date of Service Edit: Clinical,CMS Policy
+E0627,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0629,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0630,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0635,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0636,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0637,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0638,0,3 Date of Service Edit: Clinical,CMS Policy
+E0639,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0640,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0641,0,3 Date of Service Edit: Clinical,CMS Policy
+E0642,0,3 Date of Service Edit: Clinical,CMS Policy
+E0650,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0651,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0652,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0655,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0656,1,2 Date of Service Edit: Policy,Anatomic Consideration
+E0657,1,2 Date of Service Edit: Policy,Anatomic Consideration
+E0660,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0665,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0666,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0667,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0668,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0669,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0670,1,2 Date of Service Edit: Policy,Anatomic Consideration
+E0671,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0672,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0673,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0675,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0676,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0677,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0683,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0691,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0692,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0693,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0694,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0700,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0705,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0710,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0711,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0715,1,2 Date of Service Edit: Policy,Anatomic Consideration
+E0716,1,3 Date of Service Edit: Clinical,Code Descriptor / CPT Instruction
+E0720,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0721,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0730,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0731,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0736,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0737,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0738,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0739,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0740,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0743,2,3 Date of Service Edit: Clinical,Code Descriptor / CPT Instruction
+E0744,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0745,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0746,0,3 Date of Service Edit: Clinical,CMS Policy
+E0747,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0748,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0749,0,3 Date of Service Edit: Clinical,CMS Policy
+E0755,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0760,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0761,0,3 Date of Service Edit: Clinical,CMS Policy
+E0762,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0764,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0765,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0766,1,3 Date of Service Edit: Clinical,CMS Policy
+E0767,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0769,0,3 Date of Service Edit: Clinical,CMS Policy
+E0770,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0776,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0779,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0780,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0781,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0782,1,3 Date of Service Edit: Clinical,CMS Policy
+E0783,1,3 Date of Service Edit: Clinical,CMS Policy
+E0784,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0785,1,3 Date of Service Edit: Clinical,CMS Policy
+E0786,1,3 Date of Service Edit: Clinical,CMS Policy
+E0787,0,3 Date of Service Edit: Clinical,CMS Policy
+E0791,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0830,0,3 Date of Service Edit: Clinical,CMS Policy
+E0840,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0849,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0850,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0855,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0856,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0860,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0870,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0880,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0890,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0900,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0910,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0911,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0912,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0920,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0930,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0935,21,3 Date of Service Edit: Clinical,CMS Policy
+E0936,0,3 Date of Service Edit: Clinical,CMS Policy
+E0940,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0941,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0942,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0944,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0945,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E0946,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0947,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0948,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0950,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0951,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0952,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0953,4,3 Date of Service Edit: Clinical,Nature of Equipment
+E0954,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0955,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0956,4,3 Date of Service Edit: Clinical,Nature of Equipment
+E0957,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E0958,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0959,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0960,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0961,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0966,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0967,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0968,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0969,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0970,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0971,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E0973,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0974,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0978,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E0980,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E0981,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0982,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0983,0,3 Date of Service Edit: Clinical,CMS Policy
+E0984,0,3 Date of Service Edit: Clinical,CMS Policy
+E0985,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0986,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0988,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0990,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0992,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E0994,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E0995,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E1002,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1003,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1004,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1005,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1006,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1007,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1008,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1009,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1010,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1011,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1012,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E1014,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1015,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E1016,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E1017,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E1018,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E1020,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1022,0,3 Date of Service Edit: Clinical,CMS Policy
+E1023,0,3 Date of Service Edit: Clinical,CMS Policy
+E1028,6,3 Date of Service Edit: Clinical,Clinical: Data
+E1029,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1030,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1031,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1032,6,3 Date of Service Edit: Clinical,CMS Policy
+E1033,1,3 Date of Service Edit: Clinical,Code Descriptor / CPT Instruction
+E1034,4,3 Date of Service Edit: Clinical,Nature of Equipment
+E1035,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1036,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1037,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1038,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1039,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1050,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1060,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1070,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1083,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1084,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1085,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1086,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1087,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1088,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1089,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1090,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1092,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1093,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1100,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1110,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1130,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1140,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1150,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1160,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1161,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1170,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1171,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1172,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1180,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1190,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1195,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1200,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1220,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1221,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1222,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1223,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1224,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1225,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1226,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1227,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E1228,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1229,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1230,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1231,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1232,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1233,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1234,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1235,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1236,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1237,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1238,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1239,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1240,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1250,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1260,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1270,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1280,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1285,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1290,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1295,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1296,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E1297,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E1298,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E1300,0,3 Date of Service Edit: Clinical,CMS Policy
+E1310,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1352,0,3 Date of Service Edit: Clinical,CMS Policy
+E1353,0,3 Date of Service Edit: Clinical,CMS Policy
+E1354,0,3 Date of Service Edit: Clinical,CMS Policy
+E1355,0,3 Date of Service Edit: Clinical,CMS Policy
+E1356,0,3 Date of Service Edit: Clinical,CMS Policy
+E1357,0,3 Date of Service Edit: Clinical,CMS Policy
+E1358,0,3 Date of Service Edit: Clinical,CMS Policy
+E1372,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E1390,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1391,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1392,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1405,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1406,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1500,0,3 Date of Service Edit: Clinical,CMS Policy
+E1510,0,3 Date of Service Edit: Clinical,CMS Policy
+E1520,0,3 Date of Service Edit: Clinical,CMS Policy
+E1530,0,3 Date of Service Edit: Clinical,CMS Policy
+E1540,0,3 Date of Service Edit: Clinical,CMS Policy
+E1550,0,3 Date of Service Edit: Clinical,CMS Policy
+E1560,0,3 Date of Service Edit: Clinical,CMS Policy
+E1570,0,3 Date of Service Edit: Clinical,CMS Policy
+E1575,0,3 Date of Service Edit: Clinical,CMS Policy
+E1580,0,3 Date of Service Edit: Clinical,CMS Policy
+E1590,0,3 Date of Service Edit: Clinical,CMS Policy
+E1592,0,3 Date of Service Edit: Clinical,CMS Policy
+E1594,0,3 Date of Service Edit: Clinical,CMS Policy
+E1600,0,3 Date of Service Edit: Clinical,CMS Policy
+E1610,0,3 Date of Service Edit: Clinical,CMS Policy
+E1615,0,3 Date of Service Edit: Clinical,CMS Policy
+E1620,0,3 Date of Service Edit: Clinical,CMS Policy
+E1625,0,3 Date of Service Edit: Clinical,CMS Policy
+E1630,0,3 Date of Service Edit: Clinical,CMS Policy
+E1632,0,3 Date of Service Edit: Clinical,CMS Policy
+E1634,0,3 Date of Service Edit: Clinical,CMS Policy
+E1635,0,3 Date of Service Edit: Clinical,CMS Policy
+E1636,0,3 Date of Service Edit: Clinical,CMS Policy
+E1637,0,3 Date of Service Edit: Clinical,CMS Policy
+E1639,0,3 Date of Service Edit: Clinical,CMS Policy
+E1700,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E1701,3,3 Date of Service Edit: Clinical,Clinical: Data
+E1702,0,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+E1800,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1801,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1802,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1803,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1804,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1805,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1806,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1807,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1808,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1810,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1811,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1812,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1813,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1814,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1815,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1816,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1818,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1820,2,3 Date of Service Edit: Clinical,Clinical: Data
+E1821,1,3 Date of Service Edit: Clinical,Clinical: Data
+E1822,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1823,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1825,3,3 Date of Service Edit: Clinical,Clinical: Data
+E1826,3,3 Date of Service Edit: Clinical,Clinical: Data
+E1827,3,3 Date of Service Edit: Clinical,Clinical: Data
+E1828,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E1829,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E1830,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E1831,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1832,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E1840,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1841,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+E1902,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E1905,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E2000,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2001,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2100,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2101,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2102,1,3 Date of Service Edit: Clinical,CMS Policy
+E2103,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E2104,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2120,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2201,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2202,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2203,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2204,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2205,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2206,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2207,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2208,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E2209,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E2210,12,3 Date of Service Edit: Clinical,Clinical: Data
+E2211,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2212,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2213,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2214,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E2215,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E2216,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2217,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E2218,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2219,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E2220,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2221,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E2222,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E2224,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2225,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E2226,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E2227,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2228,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2230,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E2231,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2291,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2292,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2293,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2294,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2295,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2298,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2301,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2310,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2311,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2312,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2313,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2321,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2322,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E2323,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2324,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2325,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2326,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E2327,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2328,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2329,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2330,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2331,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2340,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2341,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2342,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2343,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2351,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2358,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2359,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2360,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E2361,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2362,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E2363,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2364,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E2365,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2366,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2367,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2368,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2369,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2370,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2371,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2372,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E2373,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2374,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2375,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2376,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2377,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2378,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E2381,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2382,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2383,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2384,4,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2385,4,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2386,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2387,4,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2388,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2389,4,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2390,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2391,4,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2392,4,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2394,2,3 Date of Service Edit: Clinical,Nature of Equipment
+E2395,4,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2396,4,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2397,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E2398,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E2402,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2500,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2502,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2504,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2506,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2508,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2510,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2511,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2512,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E2513,1,3 Date of Service Edit: Clinical,Nature of Equipment
+E2601,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2602,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2603,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2604,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2605,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2606,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2607,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2608,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2609,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2610,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+E2611,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2612,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2613,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2614,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2615,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2616,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2617,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2619,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2620,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2621,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2622,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2623,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2624,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2625,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E2626,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E2627,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E2628,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E2629,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E2630,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E2631,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E2632,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E2633,2,2 Date of Service Edit: Policy,Anatomic Consideration
+E3200,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+E8000,0,3 Date of Service Edit: Clinical,CMS Policy
+E8001,0,3 Date of Service Edit: Clinical,CMS Policy
+E8002,0,3 Date of Service Edit: Clinical,CMS Policy
+G0333,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+J0120,0,3 Date of Service Edit: Clinical,CMS Policy
+J0129,0,3 Date of Service Edit: Clinical,CMS Policy
+J0130,0,3 Date of Service Edit: Clinical,CMS Policy
+J0131,400,3 Date of Service Edit: Clinical,Prescribing Information
+J0132,0,3 Date of Service Edit: Clinical,CMS Policy
+J0133,3600,3 Date of Service Edit: Clinical,Clinical: Data
+J0134,400,3 Date of Service Edit: Clinical,Prescribing Information
+J0136,400,3 Date of Service Edit: Clinical,Prescribing Information
+J0138,400,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+J0139,160,3 Date of Service Edit: Clinical,Prescribing Information
+J0153,0,3 Date of Service Edit: Clinical,CMS Policy
+J0165,0,3 Date of Service Edit: Clinical,CMS Policy
+J0166,0,3 Date of Service Edit: Clinical,CMS Policy
+J0167,0,3 Date of Service Edit: Clinical,CMS Policy
+J0168,0,3 Date of Service Edit: Clinical,CMS Policy
+J0169,0,3 Date of Service Edit: Clinical,CMS Policy
+J0175,700,3 Date of Service Edit: Clinical,Prescribing Information
+J0177,0,2 Date of Service Edit: Policy,CMS Policy
+J0178,0,3 Date of Service Edit: Clinical,CMS Policy
+J0180,0,3 Date of Service Edit: Clinical,CMS Policy
+J0184,10,3 Date of Service Edit: Clinical,Prescribing Information
+J0202,0,3 Date of Service Edit: Clinical,CMS Policy
+J0207,0,3 Date of Service Edit: Clinical,CMS Policy
+J0208,500,3 Date of Service Edit: Clinical,Prescribing Information
+J0209,250,3 Date of Service Edit: Clinical,CMS Policy
+J0210,0,3 Date of Service Edit: Clinical,CMS Policy
+J0211,200,3 Date of Service Edit: Clinical,CMS Policy
+J0217,0,3 Date of Service Edit: Clinical,CMS Policy
+J0220,0,3 Date of Service Edit: Clinical,CMS Policy
+J0221,0,3 Date of Service Edit: Clinical,CMS Policy
+J0225,25,3 Date of Service Edit: Clinical,Prescribing Information
+J0256,0,3 Date of Service Edit: Clinical,CMS Policy
+J0257,0,3 Date of Service Edit: Clinical,CMS Policy
+J0270,0,3 Date of Service Edit: Clinical,CMS Policy
+J0275,0,3 Date of Service Edit: Clinical,CMS Policy
+J0278,0,3 Date of Service Edit: Clinical,CMS Policy
+J0280,0,3 Date of Service Edit: Clinical,CMS Policy
+J0281,30,3 Date of Service Edit: Clinical,Prescribing Information
+J0282,35,3 Date of Service Edit: Clinical,Prescribing Information
+J0283,35,3 Date of Service Edit: Clinical,Prescribing Information
+J0285,30,3 Date of Service Edit: Clinical,Clinical: Data
+J0287,300,3 Date of Service Edit: Clinical,Clinical: Data
+J0289,150,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+J0290,0,3 Date of Service Edit: Clinical,CMS Policy
+J0295,0,3 Date of Service Edit: Clinical,CMS Policy
+J0300,0,3 Date of Service Edit: Clinical,CMS Policy
+J0330,0,3 Date of Service Edit: Clinical,CMS Policy
+J0348,0,3 Date of Service Edit: Clinical,CMS Policy
+J0360,0,3 Date of Service Edit: Clinical,CMS Policy
+J0364,0,3 Date of Service Edit: Clinical,CMS Policy
+J0390,0,3 Date of Service Edit: Clinical,Drug discontinued
+J0400,0,3 Date of Service Edit: Clinical,CMS Policy
+J0401,0,3 Date of Service Edit: Clinical,CMS Policy
+J0402,960,3 Date of Service Edit: Clinical,Prescribing Information
+J0456,0,3 Date of Service Edit: Clinical,CMS Policy
+J0461,0,3 Date of Service Edit: Clinical,CMS Policy
+J0470,0,3 Date of Service Edit: Clinical,CMS Policy
+J0475,0,3 Date of Service Edit: Clinical,CMS Policy
+J0476,0,3 Date of Service Edit: Clinical,CMS Policy
+J0480,0,3 Date of Service Edit: Clinical,CMS Policy
+J0485,0,3 Date of Service Edit: Clinical,CMS Policy
+J0490,0,3 Date of Service Edit: Clinical,CMS Policy
+J0500,0,3 Date of Service Edit: Clinical,CMS Policy
+J0515,0,3 Date of Service Edit: Clinical,CMS Policy
+J0520,0,3 Date of Service Edit: Clinical,Drug discontinued
+J0558,0,3 Date of Service Edit: Clinical,CMS Policy
+J0561,0,3 Date of Service Edit: Clinical,CMS Policy
+J0565,0,3 Date of Service Edit: Clinical,CMS Policy
+J0571,0,3 Date of Service Edit: Clinical,CMS Policy
+J0572,0,3 Date of Service Edit: Clinical,CMS Policy
+J0573,0,3 Date of Service Edit: Clinical,CMS Policy
+J0574,0,3 Date of Service Edit: Clinical,CMS Policy
+J0575,0,3 Date of Service Edit: Clinical,CMS Policy
+J0577,1,3 Date of Service Edit: Clinical,Prescribing Information
+J0578,1,3 Date of Service Edit: Clinical,Prescribing Information
+J0583,0,3 Date of Service Edit: Clinical,CMS Policy
+J0585,0,3 Date of Service Edit: Clinical,CMS Policy
+J0586,0,3 Date of Service Edit: Clinical,CMS Policy
+J0587,0,3 Date of Service Edit: Clinical,CMS Policy
+J0588,0,3 Date of Service Edit: Clinical,CMS Policy
+J0589,0,3 Date of Service Edit: Clinical,Clinical: Data
+J0592,0,3 Date of Service Edit: Clinical,CMS Policy
+J0594,0,3 Date of Service Edit: Clinical,CMS Policy
+J0595,0,3 Date of Service Edit: Clinical,CMS Policy
+J0596,0,3 Date of Service Edit: Clinical,CMS Policy
+J0597,0,3 Date of Service Edit: Clinical,CMS Policy
+J0598,0,3 Date of Service Edit: Clinical,CMS Policy
+J0600,0,3 Date of Service Edit: Clinical,CMS Policy
+J0606,0,3 Date of Service Edit: Clinical,CMS Policy
+J0616,15,3 Date of Service Edit: Clinical,Prescribing Information
+J0618,2000,3 Date of Service Edit: Clinical,Prescribing Information
+J0620,0,3 Date of Service Edit: Clinical,CMS Policy
+J0630,0,3 Date of Service Edit: Clinical,CMS Policy
+J0636,0,3 Date of Service Edit: Clinical,CMS Policy
+J0637,0,3 Date of Service Edit: Clinical,CMS Policy
+J0638,0,3 Date of Service Edit: Clinical,CMS Policy
+J0640,0,3 Date of Service Edit: Clinical,CMS Policy
+J0641,0,3 Date of Service Edit: Clinical,CMS Policy
+J0650,100,3 Date of Service Edit: Clinical,CMS Policy
+J0651,100,3 Date of Service Edit: Clinical,CMS Policy
+J0652,100,3 Date of Service Edit: Clinical,CMS Policy
+J0666,266,2 Date of Service Edit: Policy,Anatomic Consideration
+J0668,400,3 Date of Service Edit: Clinical,Prescribing Information
+J0670,0,3 Date of Service Edit: Clinical,CMS Policy
+J0687,16,3 Date of Service Edit: Clinical,CMS Policy
+J0688,16,3 Date of Service Edit: Clinical,CMS Policy
+J0689,16,3 Date of Service Edit: Clinical,CMS Policy
+J0690,16,3 Date of Service Edit: Clinical,Clinical: Society Comment
+J0692,12,3 Date of Service Edit: Clinical,Prescribing Information
+J0694,0,3 Date of Service Edit: Clinical,CMS Policy
+J0695,0,3 Date of Service Edit: Clinical,CMS Policy
+J0696,0,3 Date of Service Edit: Clinical,CMS Policy
+J0697,0,3 Date of Service Edit: Clinical,CMS Policy
+J0698,0,3 Date of Service Edit: Clinical,CMS Policy
+J0701,12,3 Date of Service Edit: Clinical,Prescribing Information
+J0702,0,3 Date of Service Edit: Clinical,CMS Policy
+J0703,12,3 Date of Service Edit: Clinical,Prescribing Information
+J0706,0,3 Date of Service Edit: Clinical,CMS Policy
+J0712,0,3 Date of Service Edit: Clinical,CMS Policy
+J0713,0,3 Date of Service Edit: Clinical,CMS Policy
+J0714,0,3 Date of Service Edit: Clinical,CMS Policy
+J0716,0,3 Date of Service Edit: Clinical,CMS Policy
+J0717,0,3 Date of Service Edit: Clinical,CMS Policy
+J0720,0,3 Date of Service Edit: Clinical,CMS Policy
+J0725,0,3 Date of Service Edit: Clinical,CMS Policy
+J0735,0,3 Date of Service Edit: Clinical,CMS Policy
+J0740,0,3 Date of Service Edit: Clinical,CMS Policy
+J0743,0,3 Date of Service Edit: Clinical,CMS Policy
+J0744,0,3 Date of Service Edit: Clinical,CMS Policy
+J0745,0,3 Date of Service Edit: Clinical,CMS Policy
+J0759,300,3 Date of Service Edit: Clinical,Clinical: Data
+J0770,0,3 Date of Service Edit: Clinical,CMS Policy
+J0775,0,3 Date of Service Edit: Clinical,CMS Policy
+J0780,0,3 Date of Service Edit: Clinical,CMS Policy
+J0834,0,3 Date of Service Edit: Clinical,CMS Policy
+J0840,0,3 Date of Service Edit: Clinical,CMS Policy
+J0850,0,3 Date of Service Edit: Clinical,CMS Policy
+J0870,1081,3 Date of Service Edit: Clinical,CMS Policy
+J0872,1050,3 Date of Service Edit: Clinical,CMS Policy
+J0873,1000,3 Date of Service Edit: Clinical,CMS Policy
+J0874,1000,3 Date of Service Edit: Clinical,CMS Policy
+J0875,0,3 Date of Service Edit: Clinical,CMS Policy
+J0877,1000,3 Date of Service Edit: Clinical,CMS Policy
+J0878,1000,3 Date of Service Edit: Clinical,CMS Policy
+J0881,0,3 Date of Service Edit: Clinical,CMS Policy
+J0882,0,3 Date of Service Edit: Clinical,CMS Policy
+J0883,0,3 Date of Service Edit: Clinical,CMS Policy
+J0884,0,3 Date of Service Edit: Clinical,CMS Policy
+J0885,0,3 Date of Service Edit: Clinical,CMS Policy
+J0887,0,3 Date of Service Edit: Clinical,CMS Policy
+J0888,0,3 Date of Service Edit: Clinical,CMS Policy
+J0890,0,3 Date of Service Edit: Clinical,Drug discontinued
+J0894,0,3 Date of Service Edit: Clinical,CMS Policy
+J0895,212,3 Date of Service Edit: Clinical,Clinical: Data
+J0897,0,3 Date of Service Edit: Clinical,CMS Policy
+J0901,600,3 Date of Service Edit: Clinical,Prescribing Information
+J0911,60,3 Date of Service Edit: Clinical,Prescribing Information
+J0945,0,3 Date of Service Edit: Clinical,CMS Policy
+J1000,0,3 Date of Service Edit: Clinical,CMS Policy
+J1010,160,3 Date of Service Edit: Clinical,Prescribing Information
+J1050,0,3 Date of Service Edit: Clinical,CMS Policy
+J1071,0,3 Date of Service Edit: Clinical,CMS Policy
+J1072,400,3 Date of Service Edit: Clinical,Prescribing Information
+J1100,0,3 Date of Service Edit: Clinical,CMS Policy
+J1105,360,3 Date of Service Edit: Clinical,CMS Policy
+J1110,0,3 Date of Service Edit: Clinical,CMS Policy
+J1120,0,3 Date of Service Edit: Clinical,CMS Policy
+J1130,0,3 Date of Service Edit: Clinical,CMS Policy
+J1160,0,3 Date of Service Edit: Clinical,CMS Policy
+J1162,0,3 Date of Service Edit: Clinical,CMS Policy
+J1163,900,3 Date of Service Edit: Clinical,Prescribing Information
+J1165,0,3 Date of Service Edit: Clinical,CMS Policy
+J1171,240,3 Date of Service Edit: Clinical,Prescribing Information
+J1180,0,3 Date of Service Edit: Clinical,Drug discontinued
+J1190,0,3 Date of Service Edit: Clinical,CMS Policy
+J1200,0,3 Date of Service Edit: Clinical,CMS Policy
+J1202,4,3 Date of Service Edit: Clinical,Prescribing Information
+J1203,630,3 Date of Service Edit: Clinical,CMS Policy
+J1205,0,3 Date of Service Edit: Clinical,CMS Policy
+J1212,0,3 Date of Service Edit: Clinical,CMS Policy
+J1230,0,3 Date of Service Edit: Clinical,CMS Policy
+J1240,0,3 Date of Service Edit: Clinical,CMS Policy
+J1245,0,3 Date of Service Edit: Clinical,CMS Policy
+J1250,60,3 Date of Service Edit: Clinical,Clinical: Data
+J1260,0,3 Date of Service Edit: Clinical,CMS Policy
+J1265,230,3 Date of Service Edit: Clinical,Clinical: Data
+J1270,0,3 Date of Service Edit: Clinical,CMS Policy
+J1271,300,3 Date of Service Edit: Clinical,Prescribing Information
+J1290,0,3 Date of Service Edit: Clinical,CMS Policy
+J1299,600,3 Date of Service Edit: Clinical,Prescribing Information
+J1302,770,3 Date of Service Edit: Clinical,Prescribing Information
+J1304,100,3 Date of Service Edit: Clinical,Prescribing Information
+J1307,170,3 Date of Service Edit: Clinical,CMS Policy
+J1308,160,3 Date of Service Edit: Clinical,Prescribing Information
+J1320,0,3 Date of Service Edit: Clinical,Drug discontinued
+J1322,0,3 Date of Service Edit: Clinical,CMS Policy
+J1323,0,3 Date of Service Edit: Clinical,CMS Policy
+J1324,0,3 Date of Service Edit: Clinical,CMS Policy
+J1325,810,3 Date of Service Edit: Clinical,Clinical: Data
+J1327,0,3 Date of Service Edit: Clinical,CMS Policy
+J1335,0,3 Date of Service Edit: Clinical,CMS Policy
+J1364,0,3 Date of Service Edit: Clinical,CMS Policy
+J1380,0,3 Date of Service Edit: Clinical,CMS Policy
+J1410,0,3 Date of Service Edit: Clinical,CMS Policy
+J1428,0,3 Date of Service Edit: Clinical,CMS Policy
+J1430,0,3 Date of Service Edit: Clinical,CMS Policy
+J1434,150,3 Date of Service Edit: Clinical,Prescribing Information
+J1435,0,3 Date of Service Edit: Clinical,CMS Policy
+J1436,0,3 Date of Service Edit: Clinical,Drug discontinued
+J1438,0,3 Date of Service Edit: Clinical,CMS Policy
+J1439,0,3 Date of Service Edit: Clinical,CMS Policy
+J1442,0,3 Date of Service Edit: Clinical,CMS Policy
+J1447,0,3 Date of Service Edit: Clinical,CMS Policy
+J1450,0,3 Date of Service Edit: Clinical,CMS Policy
+J1451,0,3 Date of Service Edit: Clinical,CMS Policy
+J1453,0,3 Date of Service Edit: Clinical,CMS Policy
+J1455,90,3 Date of Service Edit: Clinical,Clinical: Data
+J1458,0,3 Date of Service Edit: Clinical,CMS Policy
+J1459,300,3 Date of Service Edit: Clinical,Clinical: Data
+J1460,0,3 Date of Service Edit: Clinical,CMS Policy
+J1552,1200,3 Date of Service Edit: Clinical,Prescribing Information
+J1554,240,3 Date of Service Edit: Clinical,Prescribing Information
+J1555,1500,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+J1556,240,3 Date of Service Edit: Clinical,Prescribing Information
+J1557,300,3 Date of Service Edit: Clinical,Clinical: Data
+J1558,1500,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+J1559,2400,3 Date of Service Edit: Clinical,CMS Policy
+J1560,0,3 Date of Service Edit: Clinical,CMS Policy
+J1561,360,3 Date of Service Edit: Clinical,Clinical: Data
+J1566,300,3 Date of Service Edit: Clinical,Clinical: Data
+J1568,300,3 Date of Service Edit: Clinical,Clinical: Data
+J1569,400,3 Date of Service Edit: Clinical,Clinical: Data
+J1570,18,3 Date of Service Edit: Clinical,Clinical: Data
+J1571,0,3 Date of Service Edit: Clinical,CMS Policy
+J1572,180,3 Date of Service Edit: Clinical,Prescribing Information
+J1575,3000,3 Date of Service Edit: Clinical,Prescribing Information
+J1580,0,3 Date of Service Edit: Clinical,CMS Policy
+J1595,0,3 Date of Service Edit: Clinical,CMS Policy
+J1597,8,3 Date of Service Edit: Clinical,Prescribing Information
+J1598,12,3 Date of Service Edit: Clinical,CMS Policy
+J1599,300,3 Date of Service Edit: Clinical,Clinical: Data
+J1600,0,3 Date of Service Edit: Clinical,CMS Policy
+J1602,0,3 Date of Service Edit: Clinical,CMS Policy
+J1610,0,3 Date of Service Edit: Clinical,CMS Policy
+J1626,0,3 Date of Service Edit: Clinical,CMS Policy
+J1627,0,3 Date of Service Edit: Clinical,CMS Policy
+J1630,0,3 Date of Service Edit: Clinical,CMS Policy
+J1631,0,3 Date of Service Edit: Clinical,CMS Policy
+J1640,0,3 Date of Service Edit: Clinical,CMS Policy
+J1642,0,3 Date of Service Edit: Clinical,CMS Policy
+J1644,0,3 Date of Service Edit: Clinical,CMS Policy
+J1645,0,3 Date of Service Edit: Clinical,CMS Policy
+J1650,0,3 Date of Service Edit: Clinical,CMS Policy
+J1652,0,3 Date of Service Edit: Clinical,CMS Policy
+J1670,0,3 Date of Service Edit: Clinical,CMS Policy
+J1675,0,3 Date of Service Edit: Clinical,Drug discontinued
+J1700,0,3 Date of Service Edit: Clinical,Drug discontinued
+J1720,0,3 Date of Service Edit: Clinical,CMS Policy
+J1726,0,3 Date of Service Edit: Clinical,CMS Policy
+J1729,0,3 Date of Service Edit: Clinical,CMS Policy
+J1730,0,3 Date of Service Edit: Clinical,Drug discontinued
+J1740,0,3 Date of Service Edit: Clinical,CMS Policy
+J1741,0,3 Date of Service Edit: Clinical,CMS Policy
+J1742,0,3 Date of Service Edit: Clinical,CMS Policy
+J1743,0,3 Date of Service Edit: Clinical,CMS Policy
+J1744,0,3 Date of Service Edit: Clinical,CMS Policy
+J1745,0,3 Date of Service Edit: Clinical,CMS Policy
+J1748,12,3 Date of Service Edit: Clinical,Prescribing Information
+J1749,2000,3 Date of Service Edit: Clinical,CMS Policy
+J1750,0,3 Date of Service Edit: Clinical,CMS Policy
+J1756,0,3 Date of Service Edit: Clinical,CMS Policy
+J1786,0,3 Date of Service Edit: Clinical,CMS Policy
+J1790,0,3 Date of Service Edit: Clinical,CMS Policy
+J1800,0,3 Date of Service Edit: Clinical,CMS Policy
+J1808,150,3 Date of Service Edit: Clinical,Prescribing Information
+J1815,0,3 Date of Service Edit: Clinical,CMS Policy
+J1817,270,3 Date of Service Edit: Clinical,Prescribing Information
+J1826,0,3 Date of Service Edit: Clinical,CMS Policy
+J1830,0,3 Date of Service Edit: Clinical,CMS Policy
+J1833,0,3 Date of Service Edit: Clinical,CMS Policy
+J1835,0,3 Date of Service Edit: Clinical,Drug discontinued
+J1885,0,3 Date of Service Edit: Clinical,CMS Policy
+J1930,0,3 Date of Service Edit: Clinical,CMS Policy
+J1931,609,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+J1932,120,3 Date of Service Edit: Clinical,Prescribing Information
+J1938,5360,3 Date of Service Edit: Clinical,Prescribing Information
+J1950,0,3 Date of Service Edit: Clinical,CMS Policy
+J1953,0,3 Date of Service Edit: Clinical,CMS Policy
+J1955,0,3 Date of Service Edit: Clinical,CMS Policy
+J1956,0,3 Date of Service Edit: Clinical,CMS Policy
+J1960,0,3 Date of Service Edit: Clinical,Drug discontinued
+J1980,0,3 Date of Service Edit: Clinical,CMS Policy
+J1990,0,3 Date of Service Edit: Clinical,Drug discontinued
+J2010,0,3 Date of Service Edit: Clinical,CMS Policy
+J2020,0,3 Date of Service Edit: Clinical,CMS Policy
+J2060,0,3 Date of Service Edit: Clinical,CMS Policy
+J2170,0,3 Date of Service Edit: Clinical,CMS Policy
+J2175,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+J2180,0,3 Date of Service Edit: Clinical,Drug discontinued
+J2182,0,3 Date of Service Edit: Clinical,CMS Policy
+J2183,60,3 Date of Service Edit: Clinical,Prescribing Information
+J2185,0,3 Date of Service Edit: Clinical,CMS Policy
+J2210,0,3 Date of Service Edit: Clinical,CMS Policy
+J2212,0,3 Date of Service Edit: Clinical,CMS Policy
+J2246,150,3 Date of Service Edit: Clinical,Prescribing Information
+J2248,0,3 Date of Service Edit: Clinical,CMS Policy
+J2250,0,3 Date of Service Edit: Clinical,CMS Policy
+J2252,400,3 Date of Service Edit: Clinical,CMS Policy
+J2253,10,3 Date of Service Edit: Clinical,Prescribing Information
+J2260,252,3 Date of Service Edit: Clinical,Clinical: Data
+J2265,0,3 Date of Service Edit: Clinical,CMS Policy
+J2267,900,3 Date of Service Edit: Clinical,Prescribing Information
+J2270,320,3 Date of Service Edit: Clinical,Clinical: Data
+J2272,320,3 Date of Service Edit: Clinical,Clinical: Data
+J2274,0,3 Date of Service Edit: Clinical,CMS Policy
+J2277,750,3 Date of Service Edit: Clinical,Prescribing Information
+J2278,999,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+J2280,4,3 Date of Service Edit: Clinical,Prescribing Information
+J2281,4,3 Date of Service Edit: Clinical,Prescribing Information
+J2290,300,3 Date of Service Edit: Clinical,Prescribing Information
+J2300,0,3 Date of Service Edit: Clinical,CMS Policy
+J2312,1000,3 Date of Service Edit: Clinical,Prescribing Information
+J2313,1000,3 Date of Service Edit: Clinical,Prescribing Information
+J2315,0,3 Date of Service Edit: Clinical,CMS Policy
+J2320,0,3 Date of Service Edit: Clinical,CMS Policy
+J2323,0,3 Date of Service Edit: Clinical,CMS Policy
+J2325,0,3 Date of Service Edit: Clinical,CMS Policy
+J2326,0,3 Date of Service Edit: Clinical,CMS Policy
+J2327,1200,3 Date of Service Edit: Clinical,Prescribing Information
+J2350,0,3 Date of Service Edit: Clinical,CMS Policy
+J2351,920,3 Date of Service Edit: Clinical,Prescribing Information
+J2353,0,3 Date of Service Edit: Clinical,CMS Policy
+J2354,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+J2355,0,3 Date of Service Edit: Clinical,CMS Policy
+J2357,0,3 Date of Service Edit: Clinical,CMS Policy
+J2358,0,3 Date of Service Edit: Clinical,CMS Policy
+J2360,0,3 Date of Service Edit: Clinical,CMS Policy
+J2401,1000,3 Date of Service Edit: Clinical,Prescribing Information
+J2402,50,3 Date of Service Edit: Clinical,Prescribing Information
+J2405,0,3 Date of Service Edit: Clinical,CMS Policy
+J2407,0,3 Date of Service Edit: Clinical,CMS Policy
+J2410,0,3 Date of Service Edit: Clinical,CMS Policy
+J2425,0,3 Date of Service Edit: Clinical,CMS Policy
+J2426,0,3 Date of Service Edit: Clinical,CMS Policy
+J2428,351,3 Date of Service Edit: Clinical,Prescribing Information
+J2430,0,3 Date of Service Edit: Clinical,CMS Policy
+J2440,0,3 Date of Service Edit: Clinical,CMS Policy
+J2460,0,3 Date of Service Edit: Clinical,Drug discontinued
+J2468,10,3 Date of Service Edit: Clinical,Prescribing Information
+J2469,0,3 Date of Service Edit: Clinical,CMS Policy
+J2470,6,3 Date of Service Edit: Clinical,Prescribing Information
+J2471,6,3 Date of Service Edit: Clinical,Prescribing Information
+J2472,6,3 Date of Service Edit: Clinical,Prescribing Information
+J2501,0,3 Date of Service Edit: Clinical,CMS Policy
+J2502,0,3 Date of Service Edit: Clinical,CMS Policy
+J2507,0,3 Date of Service Edit: Clinical,CMS Policy
+J2510,0,3 Date of Service Edit: Clinical,CMS Policy
+J2515,0,3 Date of Service Edit: Clinical,CMS Policy
+J2540,0,3 Date of Service Edit: Clinical,CMS Policy
+J2543,0,3 Date of Service Edit: Clinical,CMS Policy
+J2545,3,3 Date of Service Edit: Clinical,Prescribing Information
+J2547,0,3 Date of Service Edit: Clinical,CMS Policy
+J2550,0,3 Date of Service Edit: Clinical,CMS Policy
+J2560,0,3 Date of Service Edit: Clinical,CMS Policy
+J2562,0,3 Date of Service Edit: Clinical,CMS Policy
+J2590,0,3 Date of Service Edit: Clinical,CMS Policy
+J2597,0,3 Date of Service Edit: Clinical,CMS Policy
+J2601,160,3 Date of Service Edit: Clinical,CMS Policy
+J2650,0,3 Date of Service Edit: Clinical,Drug discontinued
+J2670,0,3 Date of Service Edit: Clinical,Drug discontinued
+J2675,0,3 Date of Service Edit: Clinical,CMS Policy
+J2680,0,3 Date of Service Edit: Clinical,CMS Policy
+J2690,0,3 Date of Service Edit: Clinical,CMS Policy
+J2700,0,3 Date of Service Edit: Clinical,CMS Policy
+J2704,0,3 Date of Service Edit: Clinical,CMS Policy
+J2710,0,3 Date of Service Edit: Clinical,CMS Policy
+J2720,0,3 Date of Service Edit: Clinical,CMS Policy
+J2724,0,3 Date of Service Edit: Clinical,CMS Policy
+J2725,0,3 Date of Service Edit: Clinical,Drug discontinued
+J2730,0,3 Date of Service Edit: Clinical,CMS Policy
+J2760,0,3 Date of Service Edit: Clinical,CMS Policy
+J2765,0,3 Date of Service Edit: Clinical,CMS Policy
+J2770,0,3 Date of Service Edit: Clinical,CMS Policy
+J2782,40,3 Date of Service Edit: Clinical,CMS Policy
+J2783,0,3 Date of Service Edit: Clinical,CMS Policy
+J2785,0,3 Date of Service Edit: Clinical,CMS Policy
+J2786,0,3 Date of Service Edit: Clinical,CMS Policy
+J2788,0,3 Date of Service Edit: Clinical,CMS Policy
+J2790,0,3 Date of Service Edit: Clinical,CMS Policy
+J2792,0,3 Date of Service Edit: Clinical,CMS Policy
+J2793,0,3 Date of Service Edit: Clinical,CMS Policy
+J2794,100,3 Date of Service Edit: Clinical,Prescribing Information
+J2795,0,3 Date of Service Edit: Clinical,CMS Policy
+J2798,240,3 Date of Service Edit: Clinical,Prescribing Information
+J2799,250,3 Date of Service Edit: Clinical,Prescribing Information
+J2800,0,3 Date of Service Edit: Clinical,CMS Policy
+J2801,100,3 Date of Service Edit: Clinical,Prescribing Information
+J2802,1500,3 Date of Service Edit: Clinical,Prescribing Information
+J2804,1200,3 Date of Service Edit: Clinical,Prescribing Information
+J2805,0,3 Date of Service Edit: Clinical,CMS Policy
+J2810,0,3 Date of Service Edit: Clinical,CMS Policy
+J2820,0,3 Date of Service Edit: Clinical,CMS Policy
+J2840,0,3 Date of Service Edit: Clinical,CMS Policy
+J2850,0,3 Date of Service Edit: Clinical,CMS Policy
+J2860,0,3 Date of Service Edit: Clinical,CMS Policy
+J2865,3000,3 Date of Service Edit: Clinical,Prescribing Information
+J2916,0,3 Date of Service Edit: Clinical,CMS Policy
+J2919,5400,3 Date of Service Edit: Clinical,Prescribing Information
+J2941,0,3 Date of Service Edit: Clinical,CMS Policy
+J2950,0,3 Date of Service Edit: Clinical,Drug discontinued
+J2993,0,3 Date of Service Edit: Clinical,CMS Policy
+J2997,0,3 Date of Service Edit: Clinical,CMS Policy
+J3000,0,3 Date of Service Edit: Clinical,CMS Policy
+J3010,700,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+J3030,0,3 Date of Service Edit: Clinical,CMS Policy
+J3055,480,3 Date of Service Edit: Clinical,Prescribing Information
+J3060,0,3 Date of Service Edit: Clinical,CMS Policy
+J3070,0,3 Date of Service Edit: Clinical,CMS Policy
+J3090,0,3 Date of Service Edit: Clinical,CMS Policy
+J3095,0,3 Date of Service Edit: Clinical,CMS Policy
+J3101,0,3 Date of Service Edit: Clinical,CMS Policy
+J3105,0,3 Date of Service Edit: Clinical,CMS Policy
+J3110,0,3 Date of Service Edit: Clinical,CMS Policy
+J3121,0,3 Date of Service Edit: Clinical,CMS Policy
+J3145,0,3 Date of Service Edit: Clinical,CMS Policy
+J3230,0,3 Date of Service Edit: Clinical,CMS Policy
+J3240,0,3 Date of Service Edit: Clinical,CMS Policy
+J3241,500,3 Date of Service Edit: Clinical,Prescribing Information
+J3243,150,3 Date of Service Edit: Clinical,Prescribing Information
+J3244,150,3 Date of Service Edit: Clinical,Prescribing Information
+J3246,0,3 Date of Service Edit: Clinical,CMS Policy
+J3247,1000,3 Date of Service Edit: Clinical,CMS Policy
+J3250,0,3 Date of Service Edit: Clinical,CMS Policy
+J3260,0,3 Date of Service Edit: Clinical,CMS Policy
+J3262,0,3 Date of Service Edit: Clinical,CMS Policy
+J3263,480,3 Date of Service Edit: Clinical,CMS Policy
+J3265,0,3 Date of Service Edit: Clinical,Drug discontinued
+J3300,0,3 Date of Service Edit: Clinical,CMS Policy
+J3301,0,3 Date of Service Edit: Clinical,CMS Policy
+J3302,0,3 Date of Service Edit: Clinical,Drug discontinued
+J3303,0,3 Date of Service Edit: Clinical,CMS Policy
+J3315,0,3 Date of Service Edit: Clinical,CMS Policy
+J3350,0,3 Date of Service Edit: Clinical,Drug discontinued
+J3357,0,3 Date of Service Edit: Clinical,CMS Policy
+J3358,0,3 Date of Service Edit: Clinical,CMS Policy
+J3360,0,3 Date of Service Edit: Clinical,CMS Policy
+J3373,600,3 Date of Service Edit: Clinical,Prescribing Information
+J3374,600,3 Date of Service Edit: Clinical,Prescribing Information
+J3375,600,3 Date of Service Edit: Clinical,Prescribing Information
+J3380,0,3 Date of Service Edit: Clinical,CMS Policy
+J3385,0,3 Date of Service Edit: Clinical,CMS Policy
+J3391,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+J3392,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+J3396,0,3 Date of Service Edit: Clinical,CMS Policy
+J3410,0,3 Date of Service Edit: Clinical,CMS Policy
+J3411,0,3 Date of Service Edit: Clinical,CMS Policy
+J3415,0,3 Date of Service Edit: Clinical,CMS Policy
+J3420,0,3 Date of Service Edit: Clinical,CMS Policy
+J3424,400,3 Date of Service Edit: Clinical,Prescribing Information
+J3425,20,3 Date of Service Edit: Clinical,Prescribing Information
+J3430,0,3 Date of Service Edit: Clinical,CMS Policy
+J3465,0,3 Date of Service Edit: Clinical,CMS Policy
+J3470,0,3 Date of Service Edit: Clinical,CMS Policy
+J3471,0,3 Date of Service Edit: Clinical,CMS Policy
+J3472,0,3 Date of Service Edit: Clinical,CMS Policy
+J3473,0,3 Date of Service Edit: Clinical,CMS Policy
+J3475,0,3 Date of Service Edit: Clinical,CMS Policy
+J3480,0,3 Date of Service Edit: Clinical,CMS Policy
+J3485,0,3 Date of Service Edit: Clinical,CMS Policy
+J3486,0,3 Date of Service Edit: Clinical,CMS Policy
+J3489,0,3 Date of Service Edit: Clinical,CMS Policy
+J3520,0,3 Date of Service Edit: Clinical,Drug discontinued
+J3530,0,3 Date of Service Edit: Clinical,CMS Policy
+J3535,0,3 Date of Service Edit: Clinical,CMS Policy
+J3570,0,3 Date of Service Edit: Clinical,CMS Policy
+J7030,0,3 Date of Service Edit: Clinical,CMS Policy
+J7040,0,3 Date of Service Edit: Clinical,CMS Policy
+J7042,0,3 Date of Service Edit: Clinical,CMS Policy
+J7050,0,3 Date of Service Edit: Clinical,CMS Policy
+J7060,0,3 Date of Service Edit: Clinical,CMS Policy
+J7070,0,3 Date of Service Edit: Clinical,CMS Policy
+J7100,0,3 Date of Service Edit: Clinical,CMS Policy
+J7110,0,3 Date of Service Edit: Clinical,CMS Policy
+J7120,0,3 Date of Service Edit: Clinical,CMS Policy
+J7121,0,3 Date of Service Edit: Clinical,CMS Policy
+J7131,0,3 Date of Service Edit: Clinical,CMS Policy
+J7340,56,3 Date of Service Edit: Clinical,Clinical: Data
+J7345,600,3 Date of Service Edit: Clinical,Prescribing Information
+J7500,540,3 Date of Service Edit: Clinical,CMS Policy
+J7501,8,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+J7502,720,3 Date of Service Edit: Clinical,CMS Policy
+J7503,3600,3 Date of Service Edit: Clinical,Prescribing Information
+J7504,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+J7507,1200,3 Date of Service Edit: Clinical,Published Contractor Policy
+J7508,9000,3 Date of Service Edit: Clinical,Prescribing Information
+J7509,360,3 Date of Service Edit: Clinical,Clinical: Data
+J7510,240,3 Date of Service Edit: Clinical,Clinical: Data
+J7511,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+J7512,7000,3 Date of Service Edit: Clinical,Prescribing Information
+J7514,2700,3 Date of Service Edit: Clinical,Prescribing Information
+J7515,1800,3 Date of Service Edit: Clinical,CMS Policy
+J7516,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+J7517,1440,3 Date of Service Edit: Clinical,Prescribing Information
+J7518,720,3 Date of Service Edit: Clinical,CMS Policy
+J7519,500,3 Date of Service Edit: Clinical,CMS Policy
+J7520,600,3 Date of Service Edit: Clinical,Clinical: Data
+J7521,300,3 Date of Service Edit: Clinical,Prescribing Information
+J7525,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+J7527,960,3 Date of Service Edit: Clinical,Clinical: Data
+J7604,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7605,186,3 Date of Service Edit: Clinical,Prescribing Information
+J7606,186,3 Date of Service Edit: Clinical,Prescribing Information
+J7607,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7608,222,3 Date of Service Edit: Clinical,Published Contractor Policy
+J7609,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7610,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7611,1395,3 Date of Service Edit: Clinical,Published Contractor Policy
+J7612,900,3 Date of Service Edit: Clinical,Clinical: Data
+J7613,1395,3 Date of Service Edit: Clinical,Published Contractor Policy
+J7614,900,3 Date of Service Edit: Clinical,Clinical: Data
+J7615,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7620,558,3 Date of Service Edit: Clinical,Prescribing Information
+J7622,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7624,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7626,186,3 Date of Service Edit: Clinical,Published Contractor Policy
+J7627,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7628,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7629,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7631,744,3 Date of Service Edit: Clinical,Published Contractor Policy
+J7632,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7633,0,3 Date of Service Edit: Clinical,Drug discontinued
+J7634,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7635,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7636,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7637,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7638,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7639,234,3 Date of Service Edit: Clinical,Published Contractor Policy
+J7640,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7641,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7642,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7643,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7644,279,3 Date of Service Edit: Clinical,Published Contractor Policy
+J7645,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7647,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7648,0,3 Date of Service Edit: Clinical,Drug discontinued
+J7649,0,3 Date of Service Edit: Clinical,Drug discontinued
+J7650,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7657,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7658,0,3 Date of Service Edit: Clinical,Drug discontinued
+J7659,0,3 Date of Service Edit: Clinical,Drug discontinued
+J7660,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7665,127,3 Date of Service Edit: Clinical,Prescribing Information
+J7667,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7668,0,3 Date of Service Edit: Clinical,Drug discontinued
+J7669,0,3 Date of Service Edit: Clinical,Drug discontinued
+J7670,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7674,0,3 Date of Service Edit: Clinical,CMS Policy
+J7676,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7680,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7681,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7682,112,3 Date of Service Edit: Clinical,Prescribing Information
+J7683,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7684,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7685,0,3 Date of Service Edit: Clinical,Compounded Drug Policy
+J7686,28,3 Date of Service Edit: Clinical,Clinical: Data
+J7999,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+J8499,0,3 Date of Service Edit: Clinical,CMS Policy
+J8501,57,3 Date of Service Edit: Clinical,CMS Policy
+J8515,0,3 Date of Service Edit: Clinical,CMS Policy
+J8522,150,3 Date of Service Edit: Clinical,Prescribing Information
+J8530,180,3 Date of Service Edit: Clinical,Clinical: Data
+J8540,216,3 Date of Service Edit: Clinical,Clinical: Society Comment
+J8541,160,3 Date of Service Edit: Clinical,Prescribing Information
+J8565,0,3 Date of Service Edit: Clinical,CMS Policy
+J8610,12,3 Date of Service Edit: Clinical,Clinical: Data
+J8611,30,3 Date of Service Edit: Clinical,Prescribing Information
+J8612,36,3 Date of Service Edit: Clinical,Prescribing Information
+J8655,1,3 Date of Service Edit: Clinical,Prescribing Information
+J8670,180,3 Date of Service Edit: Clinical,CMS Policy
+J9000,20,3 Date of Service Edit: Clinical,Clinical: Data
+J9015,0,3 Date of Service Edit: Clinical,CMS Policy
+J9017,0,3 Date of Service Edit: Clinical,CMS Policy
+J9021,1500,3 Date of Service Edit: Clinical,Prescribing Information
+J9022,0,3 Date of Service Edit: Clinical,CMS Policy
+J9023,0,3 Date of Service Edit: Clinical,CMS Policy
+J9024,375,3 Date of Service Edit: Clinical,Prescribing Information
+J9025,0,3 Date of Service Edit: Clinical,CMS Policy
+J9027,0,3 Date of Service Edit: Clinical,CMS Policy
+J9030,0,3 Date of Service Edit: Clinical,CMS Policy
+J9032,0,3 Date of Service Edit: Clinical,CMS Policy
+J9033,0,3 Date of Service Edit: Clinical,CMS Policy
+J9034,0,3 Date of Service Edit: Clinical,CMS Policy
+J9038,360,3 Date of Service Edit: Clinical,CMS Policy
+J9039,280,3 Date of Service Edit: Clinical,Clinical: Data
+J9040,4,3 Date of Service Edit: Clinical,Prescribing Information
+J9041,35,3 Date of Service Edit: Clinical,Prescribing Information
+J9042,0,3 Date of Service Edit: Clinical,CMS Policy
+J9043,0,3 Date of Service Edit: Clinical,CMS Policy
+J9045,0,3 Date of Service Edit: Clinical,CMS Policy
+J9046,35,3 Date of Service Edit: Clinical,Prescribing Information
+J9047,0,3 Date of Service Edit: Clinical,CMS Policy
+J9048,35,3 Date of Service Edit: Clinical,Prescribing Information
+J9049,35,3 Date of Service Edit: Clinical,Prescribing Information
+J9050,0,3 Date of Service Edit: Clinical,CMS Policy
+J9051,35,3 Date of Service Edit: Clinical,Prescribing Information
+J9054,70,3 Date of Service Edit: Clinical,CMS Policy
+J9055,0,3 Date of Service Edit: Clinical,CMS Policy
+J9060,0,3 Date of Service Edit: Clinical,CMS Policy
+J9061,1050,3 Date of Service Edit: Clinical,Prescribing Information
+J9065,100,3 Date of Service Edit: Clinical,Prescribing Information
+J9072,1500,3 Date of Service Edit: Clinical,Prescribing Information
+J9073,1500,3 Date of Service Edit: Clinical,Prescribing Information
+J9074,1500,3 Date of Service Edit: Clinical,Prescribing Information
+J9075,1500,3 Date of Service Edit: Clinical,Prescribing Information
+J9076,1500,3 Date of Service Edit: Clinical,Prescribing Information
+J9100,60,3 Date of Service Edit: Clinical,Clinical: Data
+J9120,0,3 Date of Service Edit: Clinical,CMS Policy
+J9130,0,3 Date of Service Edit: Clinical,CMS Policy
+J9145,0,3 Date of Service Edit: Clinical,CMS Policy
+J9150,0,3 Date of Service Edit: Clinical,CMS Policy
+J9155,0,3 Date of Service Edit: Clinical,CMS Policy
+J9161,1500,3 Date of Service Edit: Clinical,CMS Policy
+J9171,300,3 Date of Service Edit: Clinical,Prescribing Information
+J9172,300,3 Date of Service Edit: Clinical,Prescribing Information
+J9174,320,3 Date of Service Edit: Clinical,CMS Policy
+J9175,0,3 Date of Service Edit: Clinical,CMS Policy
+J9176,0,3 Date of Service Edit: Clinical,CMS Policy
+J9178,0,3 Date of Service Edit: Clinical,CMS Policy
+J9179,0,3 Date of Service Edit: Clinical,CMS Policy
+J9181,11,3 Date of Service Edit: Clinical,Prescribing Information
+J9185,0,3 Date of Service Edit: Clinical,CMS Policy
+J9190,20,3 Date of Service Edit: Clinical,Clinical: Data
+J9200,16,3 Date of Service Edit: Clinical,Clinical: Data
+J9201,0,3 Date of Service Edit: Clinical,CMS Policy
+J9202,0,3 Date of Service Edit: Clinical,CMS Policy
+J9203,0,3 Date of Service Edit: Clinical,CMS Policy
+J9205,0,3 Date of Service Edit: Clinical,CMS Policy
+J9206,0,3 Date of Service Edit: Clinical,CMS Policy
+J9207,0,3 Date of Service Edit: Clinical,CMS Policy
+J9208,0,3 Date of Service Edit: Clinical,CMS Policy
+J9209,0,3 Date of Service Edit: Clinical,CMS Policy
+J9211,0,3 Date of Service Edit: Clinical,CMS Policy
+J9213,0,3 Date of Service Edit: Clinical,CMS Policy
+J9214,0,3 Date of Service Edit: Clinical,CMS Policy
+J9215,0,3 Date of Service Edit: Clinical,Drug discontinued
+J9216,0,3 Date of Service Edit: Clinical,CMS Policy
+J9217,0,3 Date of Service Edit: Clinical,CMS Policy
+J9218,0,3 Date of Service Edit: Clinical,CMS Policy
+J9219,0,3 Date of Service Edit: Clinical,CMS Policy
+J9225,0,3 Date of Service Edit: Clinical,CMS Policy
+J9226,0,3 Date of Service Edit: Clinical,CMS Policy
+J9228,0,3 Date of Service Edit: Clinical,CMS Policy
+J9230,0,3 Date of Service Edit: Clinical,CMS Policy
+J9245,0,3 Date of Service Edit: Clinical,CMS Policy
+J9248,250,3 Date of Service Edit: Clinical,Prescribing Information
+J9249,48,3 Date of Service Edit: Clinical,Prescribing Information
+J9260,400,3 Date of Service Edit: Clinical,Prescribing Information
+J9261,0,3 Date of Service Edit: Clinical,CMS Policy
+J9262,0,3 Date of Service Edit: Clinical,CMS Policy
+J9263,0,3 Date of Service Edit: Clinical,CMS Policy
+J9264,800,3 Date of Service Edit: Clinical,Prescribing Information
+J9266,0,3 Date of Service Edit: Clinical,CMS Policy
+J9267,0,3 Date of Service Edit: Clinical,CMS Policy
+J9268,0,3 Date of Service Edit: Clinical,CMS Policy
+J9271,0,3 Date of Service Edit: Clinical,CMS Policy
+J9275,600,3 Date of Service Edit: Clinical,Prescribing Information
+J9280,0,3 Date of Service Edit: Clinical,CMS Policy
+J9285,0,3 Date of Service Edit: Clinical,CMS Policy
+J9289,600,3 Date of Service Edit: Clinical,Prescribing Information
+J9292,150,3 Date of Service Edit: Clinical,Prescribing Information
+J9293,0,3 Date of Service Edit: Clinical,CMS Policy
+J9295,0,3 Date of Service Edit: Clinical,CMS Policy
+J9299,0,3 Date of Service Edit: Clinical,CMS Policy
+J9301,0,3 Date of Service Edit: Clinical,CMS Policy
+J9302,0,3 Date of Service Edit: Clinical,CMS Policy
+J9303,0,3 Date of Service Edit: Clinical,CMS Policy
+J9305,0,3 Date of Service Edit: Clinical,CMS Policy
+J9306,0,3 Date of Service Edit: Clinical,CMS Policy
+J9307,0,3 Date of Service Edit: Clinical,CMS Policy
+J9308,0,3 Date of Service Edit: Clinical,CMS Policy
+J9320,0,3 Date of Service Edit: Clinical,CMS Policy
+J9321,300,3 Date of Service Edit: Clinical,Prescribing Information
+J9325,0,3 Date of Service Edit: Clinical,CMS Policy
+J9328,0,3 Date of Service Edit: Clinical,CMS Policy
+J9329,200,3 Date of Service Edit: Clinical,Prescribing Information
+J9330,0,3 Date of Service Edit: Clinical,CMS Policy
+J9341,60,3 Date of Service Edit: Clinical,Prescribing Information
+J9342,60,3 Date of Service Edit: Clinical,Prescribing Information
+J9351,0,3 Date of Service Edit: Clinical,CMS Policy
+J9352,0,3 Date of Service Edit: Clinical,CMS Policy
+J9354,0,3 Date of Service Edit: Clinical,CMS Policy
+J9355,0,3 Date of Service Edit: Clinical,CMS Policy
+J9357,0,3 Date of Service Edit: Clinical,CMS Policy
+J9358,1000,3 Date of Service Edit: Clinical,CMS Policy
+J9360,45,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+J9361,40,3 Date of Service Edit: Clinical,Prescribing Information
+J9370,4,3 Date of Service Edit: Clinical,Clinical: Data
+J9376,4800,3 Date of Service Edit: Clinical,Prescribing Information
+J9380,612,3 Date of Service Edit: Clinical,Prescribing Information
+J9382,750,3 Date of Service Edit: Clinical,Prescribing Information
+J9390,0,3 Date of Service Edit: Clinical,CMS Policy
+J9393,20,3 Date of Service Edit: Clinical,Prescribing Information
+J9394,20,3 Date of Service Edit: Clinical,Prescribing Information
+J9395,20,3 Date of Service Edit: Clinical,Prescribing Information
+J9400,0,3 Date of Service Edit: Clinical,CMS Policy
+J9600,0,3 Date of Service Edit: Clinical,CMS Policy
+J9999,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+K0001,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0002,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0003,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0004,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0005,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0006,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0007,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0008,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0009,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0010,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+K0011,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+K0012,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+K0013,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0014,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+K0015,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0017,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0018,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0019,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0020,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0037,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0038,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+K0039,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+K0040,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0041,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0042,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0043,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0044,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0045,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0046,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0047,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0050,2,3 Date of Service Edit: Clinical,Nature of Equipment
+K0051,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0052,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0053,2,2 Date of Service Edit: Policy,Anatomic Consideration
+K0056,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0065,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0069,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0070,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0071,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0072,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0073,2,3 Date of Service Edit: Clinical,Nature of Equipment
+K0077,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0098,2,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+K0105,1,3 Date of Service Edit: Clinical,Nature of Equipment
+K0195,1,3 Date of Service Edit: Clinical,Code Descriptor / CPT Instruction
+K0455,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0462,1,3 Date of Service Edit: Clinical,Clinical: Data
+K0602,12,3 Date of Service Edit: Clinical,Clinical: Data
+K0603,10,3 Date of Service Edit: Clinical,Clinical: Data
+K0604,6,3 Date of Service Edit: Clinical,Clinical: Data
+K0605,4,3 Date of Service Edit: Clinical,Clinical: Data
+K0606,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0607,1,3 Date of Service Edit: Clinical,Nature of Equipment
+K0608,1,3 Date of Service Edit: Clinical,Nature of Equipment
+K0609,1,3 Date of Service Edit: Clinical,Nature of Equipment
+K0669,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+K0672,4,3 Date of Service Edit: Clinical,Nature of Equipment
+K0730,1,3 Date of Service Edit: Clinical,Nature of Equipment
+K0733,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0738,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0740,0,3 Date of Service Edit: Clinical,CMS Policy
+K0743,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+K0800,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0801,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0802,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0806,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0807,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0808,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0812,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0813,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0814,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0815,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0816,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0820,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0821,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0822,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0823,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0824,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0825,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0826,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0827,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0828,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0829,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0830,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0831,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0835,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0836,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0837,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0838,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0839,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0840,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0841,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0842,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0843,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0848,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0849,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0850,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0851,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0852,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0853,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0854,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0855,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0856,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0857,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0858,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0859,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0860,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0861,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0862,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0863,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0864,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0868,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0869,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0870,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0871,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0877,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0878,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0879,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0880,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0884,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0885,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0886,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0890,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0891,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0898,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K0899,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+K0900,1,3 Date of Service Edit: Clinical,Nature of Equipment
+K1004,1,3 Date of Service Edit: Clinical,Nature of Equipment
+K1007,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+K1027,1,3 Date of Service Edit: Clinical,Nature of Equipment
+K1030,1,3 Date of Service Edit: Clinical,Nature of Equipment
+K1035,1,3 Date of Service Edit: Clinical,Nature of Equipment
+K1037,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L0112,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0113,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0120,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0130,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0140,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0150,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0160,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0170,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0172,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0174,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0180,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L0190,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L0200,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L0220,1,3 Date of Service Edit: Clinical,Anatomic Consideration
+L0450,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0452,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0454,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0455,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0456,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0457,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0458,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0460,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0462,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0464,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0466,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0467,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0468,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0469,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0470,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0472,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0480,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0482,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0484,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0486,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0488,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0490,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0491,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0492,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0621,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0622,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0623,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0624,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0625,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0626,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0627,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0628,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0629,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0630,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0631,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0632,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0633,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0634,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0635,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0636,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0637,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0638,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0639,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0640,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0641,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0642,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0643,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0648,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0649,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0650,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0651,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0700,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0710,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0720,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0810,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0820,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0830,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0859,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L0861,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L0970,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0972,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0974,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0976,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L0978,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L0980,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L0982,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L0984,0,3 Date of Service Edit: Clinical,CMS Policy
+L1000,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L1001,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L1005,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L1006,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L1010,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1020,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L1025,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L1030,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L1040,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L1050,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L1060,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L1070,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1080,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1085,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1090,1,3 Date of Service Edit: Clinical,Anatomic Consideration
+L1100,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1110,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1120,3,3 Date of Service Edit: Clinical,Nature of Equipment
+L1200,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L1210,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L1220,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L1230,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1240,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L1250,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L1260,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L1270,3,3 Date of Service Edit: Clinical,Nature of Equipment
+L1280,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L1290,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L1300,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L1310,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L1320,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L1499,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L1600,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1610,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1620,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1630,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1640,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1650,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1652,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1653,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1660,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1680,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1681,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1685,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1686,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L1690,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1700,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1710,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1720,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1730,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L1755,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1810,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1812,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1820,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1821,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1830,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1831,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1832,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1833,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1834,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1836,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1840,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1843,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1844,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1845,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1846,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1847,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1848,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1850,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1851,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1852,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1860,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1900,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1902,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1904,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1906,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1907,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1910,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1920,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1930,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1932,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1933,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1940,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1945,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1950,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1951,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1952,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1960,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1970,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1971,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1980,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L1990,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2000,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2005,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2006,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2010,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2020,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2030,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2034,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2035,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2036,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2037,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2038,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2040,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L2050,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L2060,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L2070,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L2080,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L2090,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L2106,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2108,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2112,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2114,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2116,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2126,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2128,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2132,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2134,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2136,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2180,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2182,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L2184,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L2186,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L2188,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2190,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2192,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2200,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2210,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2220,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2230,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2232,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2240,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2250,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2260,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2265,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2270,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L2275,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L2280,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2300,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L2310,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L2320,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L2330,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L2335,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2340,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2350,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2360,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2370,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2375,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2380,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L2385,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2387,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2390,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2395,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2397,4,3 Date of Service Edit: Clinical,Anatomic Consideration
+L2405,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2415,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2425,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2430,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2492,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2500,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2510,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2520,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2525,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2526,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2530,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2540,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2550,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2570,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2580,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2600,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2610,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2620,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2622,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2624,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2627,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L2628,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L2630,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L2640,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L2650,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L2660,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L2670,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L2680,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L2750,8,3 Date of Service Edit: Clinical,Clinical: Data
+L2755,8,3 Date of Service Edit: Clinical,Clinical: Data
+L2760,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L2768,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L2780,8,3 Date of Service Edit: Clinical,Clinical: Data
+L2785,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L2795,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2800,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L2810,4,2 Date of Service Edit: Policy,Anatomic Consideration
+L2820,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L2830,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L2840,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+L2850,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+L2861,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+L3000,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3001,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3002,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3003,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3010,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3020,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3030,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3031,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3040,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3050,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3060,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3070,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3080,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3090,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3100,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3140,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L3150,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L3160,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3170,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3201,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3202,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3203,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3204,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3206,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3207,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3208,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3209,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3211,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3212,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3213,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3214,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3215,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+L3216,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3217,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3219,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+L3221,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3222,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3224,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3225,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3230,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3250,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3251,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3252,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3253,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3254,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3255,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3257,1,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3260,0,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3265,0,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3300,4,3 Date of Service Edit: Clinical,Clinical: Data
+L3310,4,3 Date of Service Edit: Clinical,Clinical: Data
+L3320,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L3330,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3332,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3334,4,3 Date of Service Edit: Clinical,Clinical: Data
+L3340,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3350,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3360,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3370,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3380,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3390,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3400,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3410,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3420,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3430,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3440,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3450,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3455,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3460,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3465,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3470,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3480,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3485,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3500,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3510,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3520,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3530,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3540,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3550,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3560,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3570,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3580,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3590,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3595,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3600,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L3610,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L3620,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L3630,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L3640,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L3650,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L3671,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L3674,1,3 Date of Service Edit: Clinical,Clinical: Data
+L3677,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L3678,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L3702,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3710,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3720,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3730,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3740,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3760,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3761,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3762,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3763,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3764,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3765,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3766,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3806,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3807,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3808,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3809,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3891,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+L3900,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3901,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3904,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3905,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3906,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3908,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3912,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3913,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3915,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3916,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L3917,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3918,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3919,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3921,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3923,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3924,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3925,4,3 Date of Service Edit: Clinical,Code Descriptor / CPT Instruction
+L3927,4,3 Date of Service Edit: Clinical,Clinical: Data
+L3929,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3930,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3931,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3933,3,3 Date of Service Edit: Clinical,Clinical: Data
+L3935,3,3 Date of Service Edit: Clinical,Clinical: Data
+L3956,4,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L3960,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L3961,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L3962,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L3967,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L3971,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L3973,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L3975,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L3976,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L3977,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L3978,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L3980,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3981,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3982,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3984,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L3995,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L4000,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L4002,8,3 Date of Service Edit: Clinical,Clinical: Data
+L4010,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4020,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4030,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4040,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4045,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4050,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4055,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4060,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4070,2,3 Date of Service Edit: Clinical,Clinical: Data
+L4080,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4090,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L4100,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4110,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L4130,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4205,8,3 Date of Service Edit: Clinical,Clinical: Data
+L4210,4,3 Date of Service Edit: Clinical,Clinical: Data
+L4350,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4360,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4361,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4370,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4386,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4387,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4392,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L4394,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L4396,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4397,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4398,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L4631,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5000,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5010,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5020,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5050,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5060,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5100,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5105,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5150,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5160,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5200,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5210,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5220,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5230,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5250,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5270,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5280,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L5301,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5312,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5321,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5331,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5341,2,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L5400,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5410,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L5420,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5430,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L5450,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5460,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5500,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5505,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5510,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5520,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5530,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5535,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5540,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5560,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5570,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5580,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5585,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5590,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5595,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5600,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5610,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5611,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5613,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5614,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5616,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5617,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5618,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L5620,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L5622,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L5624,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L5626,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L5628,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L5629,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5630,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5631,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5632,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5634,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5636,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5637,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5638,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5639,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5640,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5642,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5643,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5644,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5645,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5646,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5647,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5648,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5649,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5650,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5651,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5652,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5653,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5654,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5655,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5656,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5658,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5661,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5665,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5666,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5668,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5670,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5671,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5672,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5673,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L5676,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5677,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5678,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5679,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L5680,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5681,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5682,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5683,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5684,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5685,4,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5686,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5688,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5690,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5692,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5694,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5695,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5696,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5697,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5698,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5699,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5700,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5701,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5702,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5703,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5704,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5705,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5706,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5707,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5710,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5711,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5712,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5714,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5716,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5718,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5722,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5724,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5726,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5728,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5780,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5781,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5782,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5783,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5785,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5790,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5795,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5810,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5811,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5812,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5814,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5816,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5818,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5822,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5824,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5826,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5827,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5828,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5830,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5840,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5841,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5845,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5848,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5850,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5855,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5856,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5857,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5858,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5859,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L5910,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5920,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5925,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L5930,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5940,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5950,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5960,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5961,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L5962,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5964,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5966,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5968,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5969,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+L5970,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5971,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5972,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5973,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5974,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5975,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5976,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5978,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5979,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5980,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5981,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5982,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5984,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5985,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5986,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5987,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5988,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5990,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L5991,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6000,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6010,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6020,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6026,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6028,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6029,4,2 Date of Service Edit: Policy,Nature of Equipment
+L6030,4,2 Date of Service Edit: Policy,Nature of Equipment
+L6031,4,2 Date of Service Edit: Policy,Nature of Equipment
+L6032,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6033,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6037,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6050,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6055,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6100,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6110,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6120,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6130,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6200,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6205,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6250,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6300,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6310,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6320,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6350,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6360,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6370,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6380,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6382,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6384,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6386,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L6388,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6400,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6450,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6500,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6550,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6570,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6580,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6582,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6584,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6586,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6588,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6590,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6600,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6605,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6610,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6611,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L6615,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6616,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6620,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6621,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6623,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6624,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6625,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6628,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6629,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6630,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6632,4,3 Date of Service Edit: Clinical,Clinical: Data
+L6635,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6637,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6638,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6640,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6641,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L6642,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L6645,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6646,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6647,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6648,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6650,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6655,4,3 Date of Service Edit: Clinical,Clinical: Data
+L6660,4,3 Date of Service Edit: Clinical,Clinical: Data
+L6665,4,3 Date of Service Edit: Clinical,Clinical: Data
+L6670,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6672,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6675,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6676,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6677,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6680,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L6682,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L6684,4,3 Date of Service Edit: Clinical,Nature of Equipment
+L6686,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6687,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6688,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6689,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6690,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6691,2,3 Date of Service Edit: Clinical,Clinical: Data
+L6692,2,3 Date of Service Edit: Clinical,Clinical: Data
+L6693,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6694,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L6695,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L6696,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6697,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6698,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6700,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6703,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6704,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6706,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6707,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6708,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6709,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6711,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6712,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6713,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6714,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6715,5,3 Date of Service Edit: Clinical,Anatomic Consideration
+L6721,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6722,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6805,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6810,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L6880,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6881,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6882,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6883,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6884,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6885,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6890,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L6895,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L6900,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6905,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6910,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6915,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6920,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6925,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6930,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6935,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6940,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6945,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6950,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6955,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6960,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6965,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6970,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L6975,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7007,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7008,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7009,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7040,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7045,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7170,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7180,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7181,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7185,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7186,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7190,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7191,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7259,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7360,1,3 Date of Service Edit: Clinical,Clinical: Data
+L7362,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L7364,1,3 Date of Service Edit: Clinical,Clinical: Data
+L7366,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L7367,2,3 Date of Service Edit: Clinical,Clinical: Data
+L7368,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L7400,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7401,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7402,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7403,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7404,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7405,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7406,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L7510,4,3 Date of Service Edit: Clinical,Clinical: Data
+L7520,12,3 Date of Service Edit: Clinical,Clinical: Data
+L7600,0,3 Date of Service Edit: Clinical,CMS Policy
+L7700,2,1 Line Edit,Clinical: CMS Workgroup
+L7900,0,3 Date of Service Edit: Clinical,CMS Policy
+L7902,0,3 Date of Service Edit: Clinical,CMS Policy
+L8000,6,3 Date of Service Edit: Clinical,Clinical: Data
+L8001,4,3 Date of Service Edit: Clinical,Clinical: Data
+L8002,4,3 Date of Service Edit: Clinical,Clinical: Data
+L8015,4,3 Date of Service Edit: Clinical,Clinical: Data
+L8020,4,3 Date of Service Edit: Clinical,Clinical: Data
+L8030,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L8031,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L8032,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L8033,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L8035,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L8039,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+L8040,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L8041,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L8042,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L8043,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L8044,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L8045,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L8046,1,3 Date of Service Edit: Clinical,Anatomic Consideration
+L8047,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L8048,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L8049,6,3 Date of Service Edit: Clinical,Clinical: Data
+L8300,1,3 Date of Service Edit: Clinical,Clinical: Data
+L8310,1,3 Date of Service Edit: Clinical,Clinical: Data
+L8320,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L8330,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L8400,12,3 Date of Service Edit: Clinical,Clinical: Data
+L8410,12,3 Date of Service Edit: Clinical,Clinical: Data
+L8415,6,3 Date of Service Edit: Clinical,Clinical: Data
+L8417,12,3 Date of Service Edit: Clinical,Clinical: Data
+L8420,24,3 Date of Service Edit: Clinical,Clinical: Data
+L8430,24,3 Date of Service Edit: Clinical,Clinical: Data
+L8435,12,3 Date of Service Edit: Clinical,Clinical: Data
+L8440,4,3 Date of Service Edit: Clinical,Clinical: Data
+L8460,4,3 Date of Service Edit: Clinical,Clinical: Data
+L8465,4,3 Date of Service Edit: Clinical,Clinical: Data
+L8470,24,3 Date of Service Edit: Clinical,Clinical: Data
+L8480,24,3 Date of Service Edit: Clinical,Clinical: Data
+L8485,12,3 Date of Service Edit: Clinical,Clinical: Data
+L8500,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L8501,2,3 Date of Service Edit: Clinical,Clinical: Data
+L8505,8,3 Date of Service Edit: Clinical,Clinical: CMS Workgroup
+L8507,3,3 Date of Service Edit: Clinical,Clinical: Data
+L8509,0,3 Date of Service Edit: Clinical,CMS Policy
+L8510,1,2 Date of Service Edit: Policy,Anatomic Consideration
+L8511,1,3 Date of Service Edit: Clinical,Clinical: Data
+L8512,9,3 Date of Service Edit: Clinical,Clinical: Data
+L8513,6,3 Date of Service Edit: Clinical,Clinical: Data
+L8514,1,3 Date of Service Edit: Clinical,Clinical: Data
+L8515,1,3 Date of Service Edit: Clinical,Clinical: Data
+L8600,0,3 Date of Service Edit: Clinical,CMS Policy
+L8609,0,3 Date of Service Edit: Clinical,CMS Policy
+L8610,0,3 Date of Service Edit: Clinical,CMS Policy
+L8612,0,3 Date of Service Edit: Clinical,CMS Policy
+L8613,0,3 Date of Service Edit: Clinical,CMS Policy
+L8614,0,3 Date of Service Edit: Clinical,CMS Policy
+L8615,0,3 Date of Service Edit: Clinical,CMS Policy
+L8616,0,3 Date of Service Edit: Clinical,CMS Policy
+L8617,0,3 Date of Service Edit: Clinical,CMS Policy
+L8618,0,3 Date of Service Edit: Clinical,CMS Policy
+L8619,0,3 Date of Service Edit: Clinical,CMS Policy
+L8621,0,3 Date of Service Edit: Clinical,CMS Policy
+L8622,0,3 Date of Service Edit: Clinical,CMS Policy
+L8623,0,3 Date of Service Edit: Clinical,CMS Policy
+L8624,0,3 Date of Service Edit: Clinical,CMS Policy
+L8630,0,3 Date of Service Edit: Clinical,CMS Policy
+L8631,0,3 Date of Service Edit: Clinical,CMS Policy
+L8641,0,3 Date of Service Edit: Clinical,CMS Policy
+L8642,0,3 Date of Service Edit: Clinical,CMS Policy
+L8658,0,3 Date of Service Edit: Clinical,CMS Policy
+L8659,0,3 Date of Service Edit: Clinical,CMS Policy
+L8670,0,3 Date of Service Edit: Clinical,CMS Policy
+L8678,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+L8680,0,3 Date of Service Edit: Clinical,CMS Policy
+L8681,0,3 Date of Service Edit: Clinical,CMS Policy
+L8682,0,3 Date of Service Edit: Clinical,CMS Policy
+L8683,0,3 Date of Service Edit: Clinical,CMS Policy
+L8684,0,3 Date of Service Edit: Clinical,CMS Policy
+L8685,0,3 Date of Service Edit: Clinical,CMS Policy
+L8686,0,3 Date of Service Edit: Clinical,CMS Policy
+L8687,0,3 Date of Service Edit: Clinical,CMS Policy
+L8688,0,3 Date of Service Edit: Clinical,CMS Policy
+L8689,0,3 Date of Service Edit: Clinical,CMS Policy
+L8690,0,3 Date of Service Edit: Clinical,CMS Policy
+L8691,0,3 Date of Service Edit: Clinical,CMS Policy
+L8692,0,3 Date of Service Edit: Clinical,CMS Policy
+L8693,0,3 Date of Service Edit: Clinical,CMS Policy
+L8695,0,3 Date of Service Edit: Clinical,CMS Policy
+L8701,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L8702,1,3 Date of Service Edit: Clinical,Nature of Equipment
+L8720,2,2 Date of Service Edit: Policy,Anatomic Consideration
+L8721,2,3 Date of Service Edit: Clinical,Nature of Equipment
+L9900,0,3 Date of Service Edit: Clinical,Code Descriptor / CPT Instruction
+Q0035,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0091,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0092,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0111,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0112,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0113,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0114,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0115,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0144,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0155,2268,3 Date of Service Edit: Clinical,Prescribing Information
+Q0161,66,3 Date of Service Edit: Clinical,Clinical: Data
+Q0162,40,3 Date of Service Edit: Clinical,CMS Policy
+Q0163,13,3 Date of Service Edit: Clinical,CMS Policy
+Q0164,18,3 Date of Service Edit: Clinical,CMS Policy
+Q0166,2,3 Date of Service Edit: Clinical,Prescribing Information
+Q0167,108,3 Date of Service Edit: Clinical,Prescribing Information
+Q0169,26,3 Date of Service Edit: Clinical,CMS Policy
+Q0173,11,3 Date of Service Edit: Clinical,CMS Policy
+Q0175,14,3 Date of Service Edit: Clinical,CMS Policy
+Q0177,36,3 Date of Service Edit: Clinical,CMS Policy
+Q0180,1,3 Date of Service Edit: Clinical,Prescribing Information
+Q0478,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0479,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0480,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0481,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0482,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0483,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0484,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0485,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0486,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0487,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0488,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0489,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0490,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0491,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0492,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0493,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0494,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0495,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0496,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0497,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0498,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0499,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0500,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0501,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0502,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0503,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0504,0,3 Date of Service Edit: Clinical,CMS Policy
+Q0510,1,2 Date of Service Edit: Policy,CMS Policy
+Q0511,1,2 Date of Service Edit: Policy,CMS Policy
+Q0512,4,3 Date of Service Edit: Clinical,Clinical: Data
+Q0513,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+Q0514,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+Q0521,1,2 Date of Service Edit: Policy,Code Descriptor / CPT Instruction
+Q1004,0,3 Date of Service Edit: Clinical,CMS Policy
+Q1005,0,3 Date of Service Edit: Clinical,CMS Policy
+Q2049,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+Q2050,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+Q4001,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4002,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4003,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4004,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4005,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4006,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4007,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4008,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4009,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4010,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4011,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4012,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4013,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4014,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4015,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4016,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4017,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4018,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4019,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4020,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4021,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4022,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4023,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4024,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4025,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4026,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4027,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4028,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4029,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4030,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4031,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4032,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4033,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4034,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4035,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4036,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4037,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4038,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4039,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4040,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4041,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4042,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4043,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4044,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4045,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4046,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4047,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4048,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4049,0,3 Date of Service Edit: Clinical,CMS Policy
+Q4074,279,3 Date of Service Edit: Clinical,Clinical: Data
+Q5098,520,3 Date of Service Edit: Clinical,Prescribing Information
+Q5099,520,3 Date of Service Edit: Clinical,Prescribing Information
+Q5100,520,3 Date of Service Edit: Clinical,Prescribing Information
+Q5101,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+Q5103,0,3 Date of Service Edit: Clinical,CMS Policy
+Q5104,0,3 Date of Service Edit: Clinical,CMS Policy
+Q5111,0,3 Date of Service Edit: Clinical,CMS Policy
+Q5133,1200,3 Date of Service Edit: Clinical,Prescribing Information
+Q5134,300,3 Date of Service Edit: Clinical,Prescribing Information
+Q5135,1200,3 Date of Service Edit: Clinical,Prescribing Information
+Q5136,120,3 Date of Service Edit: Clinical,Prescribing Information
+Q5140,160,3 Date of Service Edit: Clinical,Prescribing Information
+Q5141,160,3 Date of Service Edit: Clinical,Prescribing Information
+Q5142,160,3 Date of Service Edit: Clinical,Prescribing Information
+Q5143,160,3 Date of Service Edit: Clinical,Prescribing Information
+Q5144,160,3 Date of Service Edit: Clinical,Prescribing Information
+Q5145,160,3 Date of Service Edit: Clinical,Prescribing Information
+Q5146,120,3 Date of Service Edit: Clinical,Prescribing Information
+Q5147,4,2 Date of Service Edit: Policy,Anatomic Consideration
+Q5148,1500,3 Date of Service Edit: Clinical,Prescribing Information
+Q5149,4,2 Date of Service Edit: Policy,Anatomic Consideration
+Q5150,4,2 Date of Service Edit: Policy,Anatomic Consideration
+Q5151,600,3 Date of Service Edit: Clinical,Prescribing Information
+Q5152,600,3 Date of Service Edit: Clinical,Prescribing Information
+Q5153,4,2 Date of Service Edit: Policy,Anatomic Consideration
+Q9996,90,3 Date of Service Edit: Clinical,Prescribing Information
+Q9997,520,3 Date of Service Edit: Clinical,Prescribing Information
+Q9998,520,3 Date of Service Edit: Clinical,Prescribing Information
+Q9999,520,3 Date of Service Edit: Clinical,Prescribing Information
+V2020,1,3 Date of Service Edit: Clinical,Clinical: Data
+V2025,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+V2100,2,3 Date of Service Edit: Clinical,Clinical: Data
+V2101,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2102,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2103,2,3 Date of Service Edit: Clinical,Clinical: Data
+V2104,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2105,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2106,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2107,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2108,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2109,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2110,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2111,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2112,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2113,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2114,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2115,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2118,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2121,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2199,2,3 Date of Service Edit: Clinical,Nature of Equipment
+V2200,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2201,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2202,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2203,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2204,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2205,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2206,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2207,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2208,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2209,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2210,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2211,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2212,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2213,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2214,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2215,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2218,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2219,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2220,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2221,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2299,2,3 Date of Service Edit: Clinical,Nature of Equipment
+V2300,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2301,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2302,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2303,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2304,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2305,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2306,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2307,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2308,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2309,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2310,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2311,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2312,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2313,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2314,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2315,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2318,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2319,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2320,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2321,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2399,2,3 Date of Service Edit: Clinical,Nature of Equipment
+V2410,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2430,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2499,2,3 Date of Service Edit: Clinical,Nature of Equipment
+V2500,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2501,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2502,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2503,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2510,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2511,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2512,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2513,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2520,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2521,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2522,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2523,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2530,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2531,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2599,2,3 Date of Service Edit: Clinical,Nature of Equipment
+V2600,0,2 Date of Service Edit: Policy,CMS Policy
+V2610,0,2 Date of Service Edit: Policy,CMS Policy
+V2615,0,2 Date of Service Edit: Policy,CMS Policy
+V2623,2,2 Date of Service Edit: Policy,Anatomic Consideration
+V2624,2,2 Date of Service Edit: Policy,Anatomic Consideration
+V2625,2,2 Date of Service Edit: Policy,Anatomic Consideration
+V2626,2,2 Date of Service Edit: Policy,Anatomic Consideration
+V2627,2,2 Date of Service Edit: Policy,Anatomic Consideration
+V2628,2,3 Date of Service Edit: Clinical,Nature of Service/Procedure
+V2629,2,2 Date of Service Edit: Policy,Anatomic Consideration
+V2630,0,3 Date of Service Edit: Clinical,CMS Policy
+V2631,0,3 Date of Service Edit: Clinical,CMS Policy
+V2632,0,3 Date of Service Edit: Clinical,CMS Policy
+V2700,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2702,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+V2710,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2715,4,3 Date of Service Edit: Clinical,Clinical: Data
+V2718,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2730,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2744,2,3 Date of Service Edit: Clinical,Clinical: Data
+V2745,2,3 Date of Service Edit: Clinical,Clinical: Data
+V2750,2,3 Date of Service Edit: Clinical,Clinical: Data
+V2755,2,3 Date of Service Edit: Clinical,Clinical: Data
+V2756,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+V2760,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+V2761,0,2 Date of Service Edit: Policy,CMS Policy
+V2762,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+V2770,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2780,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2781,0,2 Date of Service Edit: Policy,CMS Policy
+V2782,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2783,2,3 Date of Service Edit: Clinical,Anatomic Consideration
+V2784,2,3 Date of Service Edit: Clinical,Clinical: Data
+V2785,0,3 Date of Service Edit: Clinical,CMS Policy
+V2786,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+V2790,0,3 Date of Service Edit: Clinical,CMS Policy
+V2797,0,3 Date of Service Edit: Clinical,Published Contractor Policy
+V5008,0,3 Date of Service Edit: Clinical,CMS Policy
+V5010,0,3 Date of Service Edit: Clinical,CMS Policy
+V5011,0,3 Date of Service Edit: Clinical,CMS Policy
+V5274,0,3 Date of Service Edit: Clinical,CMS Policy
+V5336,0,3 Date of Service Edit: Clinical,CMS Policy
