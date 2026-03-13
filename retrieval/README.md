@@ -135,3 +135,7 @@ uv run python evaluate.py
 ```
 
 ---
+
+
+#install
+pip install easyocr pdf2image google-generativeai

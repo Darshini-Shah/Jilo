@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from src.retrieval.pipeline import RetrievalPipeline
 
 # Load database credentials
-load_dotenv(dotenv_path="config/.env")
+load_dotenv(dotenv_path="retrieval/.env")
 
 class StandaloneRetriever:
     def __init__(self):

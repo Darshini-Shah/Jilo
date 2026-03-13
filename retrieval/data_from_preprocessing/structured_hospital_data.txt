@@ -1,0 +1,152 @@
+Here's the cleaned and structured information from the hospital document:
+
+---
+
+## Patient Info
+
+*   **Individuals Checked Up:**
+    *   Sachin Khamitkar
+    *   Pandurang Khamitkar
+    *   Shashikala Khamitkar
+
+---
+
+## Billing/Charges
+
+**Invoice Details:**
+*   **Invoice Number:** 2602196
+*   **Invoice Date:** July 25, 2021
+*   **Booking ID:** 4582993581
+*   **Sample Collection Date:** July 24, 2021
+*   **SAC Code:** 999316
+
+**Bill From (Service Provider):**
+*   **Organization:** Expedient Healthcare Marketing Pvt Ltd
+*   **Address:** Plot No. 518, Udyog Vihar, Phase 3, Gurugram, Haryana, India
+*   **CIN Number:** U93000HR2O13PTCO51132
+
+**Customer Billing Details:**
+*   **Customer Name:** Sachin Khamitkar
+*   **Address:** Flat No- 503 Swami Vivekanand Nagar, Famous Chowk, New Sangvi, Pune, Maharashtra 412206
+*   **GST No:** Not Applicable
+
+**Billing Items:**
+
+| Patient Name        | Test Description                                    | Amount (₹) |
+| :------------------ | :-------------------------------------------------- | :--------- |
+| Sachin Khamitkar    | Healthy India 2021 Full Body Checkup With Vitamin Screening | 5,350.00   |
+| Pandurang Khamitkar | Healthy India 2021 Full Body Checkup With Vitamin Screening | 5,490.00   |
+| Shashikala Khamitkar| Healthy India 2021 Full Body Checkup With Vitamin Screening | 5,490.00   |
+
+**Summary:**
+*   **Total Amount:** ₹16,330.00
+*   **Grand Total:** ₹16,330.00
+*   **Paid Amount:** ₹16,330.00
+
+---
+
+## Medications
+
+None found.
+
+---
+
+## Diagnosis
+
+No specific diagnosis found; services listed are for a preventative full body checkup and vitamin screening.
+
+---
+
+Here's the cleaned and structured information from the hospital document:
+
+---
+
+### Patient Information
+
+*   **Name:** Raja Tyagi
+*   **Age/Gender:** 26 years / Male
+*   **Date:** 03 Nov 2023
+*   **Address:** H.No: 26, A-Block, Behind DPS, Sector 30, Noida, Uttar Pradesh 201301
+*   **Attending Physician:** Dr. Sangeeta (MD-Physician)
+
+### Diagnosis
+
+*   **Chief Complaints:** Fever since 2 days, Cold
+*   **Allergies:** No drug allergy
+*   **Diagnosis:** Tiredness, Viral Fever (suspected)
+
+### Diagnostic Tests
+
+| Test Name                      | Notes           |
+| :----------------------------- | :-------------- |
+| Complete Haemogram             | Immediate       |
+| Dengue Profile (IgM & NS1)     | Quantitative, Immediate |
+| CBC                            |                 |
+| CRP Test                       |                 |
+| Typhidot IgG IgM               |                 |
+| MP QBC                         |                 |
+
+### Medications
+
+| Sl. | Medicine Name                 | Dosage  | Frequency | Duration | Instructions |
+| :-- | :---------------------------- | :------ | :-------- | :------- | :----------- |
+| 1.  | AZEE FILM COATED TAB 250mg    | 1 tab   | 1-0-1     | 5 days   | After Food   |
+|     | *(Azithromycin Dihydrate 250mg)* |         |           |          |              |
+
+---
+
+Here is the cleaned and structured information from the provided hospital document:
+
+---
+
+## Patient Info
+
+*   **Name:** Surya Singh
+*   **Date:** 30-08-2023
+*   **Age:** 24 Years
+*   **Patient ID:** 19335171
+*   **Gender:** Male
+*   **Height:** 175 cm
+*   **Weight:** 62 kg
+*   **Drug Allergies:** No known Allergies
+*   **Prescribing Doctor:** Dr. Girish Ghanate (MBBS, General Medicine)
+*   **MediBuddy ID:** KMC 126501
+*   **Prescription ID:** 520830977
+
+## Billing/Charges
+
+*   *No explicit billing items or charges found in the document.*
+
+## Medications
+
+| S.No. | Medicine                  | Dosage Pattern | Instructions | Duration |
+| :---- | :------------------------ | :------------- | :----------- | :------- |
+| 1     | TABLET AZITHROMYCIN (250mg) | Daily: 1-0-1   | After Meal   | 3 Days   |
+| 2     | TABLET SINAREST (180mg)   | Daily: 1-0-1   | After Meal   | 3 Days   |
+| 3     | TABLET DOLO PARACETAMOL (650mg) | Daily: 1-0-1   | After Meal   | 3 Days   |
+
+## Diagnosis
+
+*   **Primary Diagnosis:** Viral Fever
+*   **Description:** Fever, cold, myalgia
+
+**Recommended Lab Tests:**
+
+| S.No. | Test Name                                                          |
+| :---- | :----------------------------------------------------------------- |
+| 1     | RT PCR FOR COVID 19                                                |
+| 2     | Fever Profile (CBC, ESR, Complete Urine Examination, Smear for Malarial Parasite, Widal, SGPT) |
+| 3     | Dengue Antigen NS1, IgG & IgM                                      |
+
+**Doctor's Advice:**
+
+1.  Steam inhalation before sleep.
+2.  Get RT-PCR tested if symptoms don't reduce.
+3.  Keep checking oxygen saturation every 2 hourly.
+4.  Isolate yourself.
+5.  Avoid cold water.
+6.  Hospitalized if you feel symptoms are worsening.
+7.  Do not panic.
+
+**Follow Up:** 3 Days
+
