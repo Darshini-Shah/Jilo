@@ -20,7 +20,7 @@ google-generativeai
 pillow
 numpy
 torch
-opencv-python
+opencv-python 
 >>>>>>> 9c982059d7c75dccfab717604f6ebdd5506b7441
 
 pandas
