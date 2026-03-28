@@ -14,6 +14,8 @@ export function useDashboardLogic() {
   const [userProfile, setUserProfile] = useState(null);
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
   const [processingStatus, setProcessingStatus] = useState("");
+  const [isSubmittingPatient, setIsSubmittingPatient] = useState(false);
+  const [patientError, setPatientError] = useState("");
 
   const [patientForm, setPatientForm] = useState({
     name: "", gender: "", contact: "", dob: "", age: "", policy_number: "", employee_id: "", insurer_id: "", medical_claim: false, occupation: "", address: ""
@@ -27,11 +29,12 @@ export function useDashboardLogic() {
     supabase.auth.getSession().then(({ data: { session: cur } }) => {
       setSession(cur);
       if (cur) { fetchProfile(cur); fetchPatients(cur); }
-      else { setLoading(false); }
+      else { setLoading(false); navigate('/', { replace: true }); }
     });
     const { data: authListener } = supabase.auth.onAuthStateChange((_e, s) => {
       setSession(s);
       if (s) { fetchProfile(s); fetchPatients(s); }
+      else { navigate('/', { replace: true }); }
     });
     return () => authListener.subscription.unsubscribe();
   }, []);
@@ -59,7 +62,7 @@ export function useDashboardLogic() {
           docs = raw.map(d => {
             const stage = d.file_name?.includes('__') ? d.file_name.split('__')[0] : 'admitted';
             const name = d.file_name?.includes('__') ? d.file_name.split('__').slice(1).join('__') : (d.file_name || 'Doc.pdf');
-            
+
             return { ...d, name, stage, status: 'pending', url: d.file_url };
           });
         }
@@ -88,15 +91,55 @@ export function useDashboardLogic() {
 
   const handleCreatePatient = async (e) => {
     e.preventDefault();
-    const res = await fetch(`${API_BASE}/patients/`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${session.access_token}` },
-      body: JSON.stringify({ ...patientForm, age: patientForm.age ? parseInt(patientForm.age) : null })
-    });
-    const newPat = await res.json();
-    setPatients([{ ...newPat, documents: [] }, ...patients]);
-    setIsNewPatientOpen(false);
-    setPatientForm({ name: "", gender: "", contact: "", dob: "", age: "", policy_number: "", employee_id: "", insurer_id: "", medical_claim: false, occupation: "", address: "" });
+    if (!session) { setPatientError("Session expired. Please log in again."); return; }
+    setIsSubmittingPatient(true);
+    setPatientError("");
+    try {
+      const res = await fetch(`${API_BASE}/patients/`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${session.access_token}` },
+        body: JSON.stringify({ ...patientForm, age: patientForm.age ? parseInt(patientForm.age) : null })
+      });
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData.detail || `Server error ${res.status}`);
+      }
+      const newPat = await res.json();
+      setPatients([{ ...newPat, documents: [] }, ...patients]);
+      setIsNewPatientOpen(false);
+      setPatientForm({ name: "", gender: "", contact: "", dob: "", age: "", policy_number: "", employee_id: "", insurer_id: "", medical_claim: false, occupation: "", address: "" });
+    } catch (err) {
+      console.error("Patient create error:", err);
+      setPatientError(err.message || "Failed to create patient. Check connection.");
+    } finally {
+      setIsSubmittingPatient(false);
+    }
+  };
+
+  const updatePatientStep = async (patientId, newStep) => {
+    if (!session) return;
+    try {
+      // Optimistic update
+      setPatients(ps => ps.map(p => p.id === patientId ? { ...p, step: newStep } : p));
+      
+      const res = await fetch(`${API_BASE}/patients/${patientId}`, {
+        method: 'PUT',
+        headers: { 
+          'Content-Type': 'application/json', 
+          'Authorization': `Bearer ${session.access_token}` 
+        },
+        body: JSON.stringify({ step: newStep })
+      });
+      
+      if (!res.ok) {
+        // Revert on error
+        fetchPatients(session);
+        throw new Error("Failed to update patient step");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Failed to update status. Check connection.");
+    }
   };
 
   const handleFileAttached = async (e, patientId, stage) => {
@@ -113,6 +156,7 @@ export function useDashboardLogic() {
   };
 
   const processBatch = async (patient, stage) => {
+    if (!session) { alert("Session expired. Please log in again."); return; }
     const sDocs = patient.documents.filter(d => d.stage === stage);
     setLoading(true);
     setProcessingStatus("Aggregating Records...");
@@ -123,7 +167,7 @@ export function useDashboardLogic() {
       return new File([b], d.name, { type: 'application/pdf' });
     }));
 
-    setProcessingStatus("Analyzing Unified Context...");
+    setProcessingStatus("Running AI Pipeline — This May Take A Moment...");
     const bfd = new FormData();
     blobs.forEach(f => bfd.append("pdf_files", f));
 
@@ -132,8 +176,14 @@ export function useDashboardLogic() {
       if (!res.ok) throw new Error("API failed");
       const data = await res.json();
       setProcessingStatus("Finalizing Extraction...");
-      // Reverting to sequential results handling: use the first result for the immediate view or the whole array
-      navigate('/process', { state: { batchResult: data.results[0], results: data.results, files: blobs } });
+      navigate('/process', { 
+        state: { 
+          batchResult: data.results[0], 
+          results: data.results, 
+          files: sDocs.map(d => ({ name: d.name, url: d.url })),
+          patient: patient
+        } 
+      });
     } catch (err) {
       console.error(err);
       alert("Batch processing failed. Check backend logs for tracebacks.");
@@ -144,9 +194,10 @@ export function useDashboardLogic() {
   };
 
   return {
-    patients, loading, activePatientId, setActivePatientId, 
+    patients: patients.filter(p => !['setteled', 'settled'].includes(p.step?.toLowerCase())), loading, activePatientId, setActivePatientId, 
     isNewPatientOpen, setIsNewPatientOpen, userProfile, isOnboardingOpen,
     processingStatus, patientForm, setPatientForm, hospitalForm, setHospitalForm,
-    handleOnboardingSubmit, handleCreatePatient, handleFileAttached, processBatch
+    handleOnboardingSubmit, handleCreatePatient, handleFileAttached, processBatch,
+    isSubmittingPatient, patientError, setPatientError, updatePatientStep
   };
 }

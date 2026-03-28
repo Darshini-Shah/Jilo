@@ -23,6 +23,7 @@ export default function ProcessingPipeline() {
   const [apiResults, setApiResults] = useState([]);
   const [isProcessing, setIsProcessing] = useState(false);
   const [hasAutoTriggered, setHasAutoTriggered] = useState(false);
+  const [patient, setPatient] = useState(null);
 
   useEffect(() => {
     if (hasAutoTriggered) return;
@@ -32,6 +33,7 @@ export default function ProcessingPipeline() {
       setHasAutoTriggered(true);
       setUploadedFiles(location.state.files);
       setApiResults(location.state.results);
+      if (location.state.patient) setPatient(location.state.patient);
       setCurrentStep(2);
       return;
     }
@@ -96,44 +98,44 @@ export default function ProcessingPipeline() {
       {/* Modern Enterprise Header */}
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-             <Button variant="ghost" size="icon" onClick={() => navigate('/dashboard')} className="mr-2">
-                <ArrowLeft className="w-5 h-5 text-muted-foreground" />
+          <div className="flex items-center gap-2">
+             <Button variant="ghost" size="icon" onClick={() => navigate('/dashboard')} className="h-7 w-7">
+                <ArrowLeft className="w-4 h-4 text-muted-foreground" />
              </Button>
             <div>
-              <h1 className="text-lg font-bold tracking-tight leading-none uppercase">RCM Normalize</h1>
-              <p className="text-[10px] uppercase font-semibold text-muted-foreground tracking-widest mt-0.5">Pipeline Processing</p>
+              <h1 className="text-xs font-bold tracking-widest leading-none uppercase">Ctrl PluZ</h1>
+              <p className="text-[9px] uppercase font-semibold text-muted-foreground tracking-widest mt-px">Pipeline Processing</p>
             </div>
           </div>
 
-          <div className="hidden md:flex flex-1 mx-12 items-center justify-center max-w-xl">
+          <div className="hidden md:flex flex-1 mx-8 items-center justify-center max-w-xl">
              <div className="flex items-center w-full justify-between">
                {steps.map((step, idx) => (
                  <React.Fragment key={step.id}>
                    <div className="flex flex-col items-center group">
-                     <div className={`flex items-center justify-center w-8 h-8 rounded-full border-2 text-xs font-bold transition-all
+                     <div className={`flex items-center justify-center w-6 h-6 rounded-full border-2 text-[10px] font-bold transition-all
                        ${currentStep > step.id ? 'bg-primary border-primary text-primary-foreground' : 
                         currentStep === step.id ? 'border-primary text-primary bg-background shadow-sm' : 
                         'border-muted bg-muted text-muted-foreground'}
                      `}>
-                       {currentStep > step.id ? <CheckCircle2 className="w-5 h-5" /> : step.id}
+                       {currentStep > step.id ? <CheckCircle2 className="w-3.5 h-3.5" /> : step.id}
                      </div>
-                     <span className={`text-[10px] mt-1.5 uppercase font-bold tracking-wider ${currentStep >= step.id ? 'text-foreground' : 'text-muted-foreground'}`}>
+                     <span className={`text-[9px] mt-1 uppercase font-bold tracking-wider ${currentStep >= step.id ? 'text-foreground' : 'text-muted-foreground'}`}>
                        {step.label}
                      </span>
                    </div>
                    {idx !== steps.length - 1 && (
-                     <div className={`flex-1 h-[2px] mx-2 rounded-full transition-all ${currentStep > step.id ? 'bg-primary' : 'bg-muted'}`} />
+                     <div className={`flex-1 h-px mx-1.5 rounded-full transition-all ${currentStep > step.id ? 'bg-primary' : 'bg-muted'}`} />
                    )}
                  </React.Fragment>
                ))}
              </div>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             {uploadedFiles.length > 0 && (
-              <Badge variant="secondary" className="hidden sm:flex">
-                {uploadedFiles.length} Docs in Pipeline
+              <Badge variant="secondary" className="hidden sm:flex text-[10px] py-0.5">
+                {uploadedFiles.length} Docs
               </Badge>
             )}
           </div>
@@ -141,12 +143,12 @@ export default function ProcessingPipeline() {
       </header>
 
       {/* Dynamic Mobile Step Progress */}
-      <div className="md:hidden w-full border-b bg-card p-3">
-         <div className="flex items-center justify-between mb-2">
-           <span className="text-xs font-bold text-muted-foreground uppercase">{steps[currentStep-1].label}</span>
-           <span className="text-xs font-bold text-muted-foreground">Step {currentStep} of 4</span>
+      <div className="md:hidden w-full border-b bg-card px-4 py-2">
+         <div className="flex items-center justify-between mb-1.5">
+           <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-wider">{steps[currentStep-1].label}</span>
+           <span className="text-[9px] font-bold text-muted-foreground">Step {currentStep} of 4</span>
          </div>
-         <Progress value={(currentStep / 4) * 100} className="h-2" />
+         <Progress value={(currentStep / 4) * 100} className="h-1" />
       </div>
 
       {/* Main Application Workspace */}
@@ -210,6 +212,7 @@ export default function ProcessingPipeline() {
             <ReconciliationDashboard 
               files={uploadedFiles}
               apiResults={apiResults}
+              patient={patient}
               onRestart={() => {
                 setUploadedFiles([]);
                 setApiResults([]);

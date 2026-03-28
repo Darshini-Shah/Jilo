@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import LandingPage from './features/LandingPage';
 import Auth from './features/Auth';
 import OfficerDashboard from './features/OfficerDashboard';
 import ProcessingPipeline from './features/ProcessingPipeline';
@@ -10,7 +11,8 @@ function App() {
     <ThemeProvider defaultTheme="system" storageKey="rcm-ui-theme">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Auth />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<Auth />} />
           <Route path="/dashboard" element={<OfficerDashboard />} />
           <Route path="/process" element={<ProcessingPipeline />} />
           <Route path="*" element={<Navigate to="/" replace />} />

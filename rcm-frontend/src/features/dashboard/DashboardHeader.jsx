@@ -13,18 +13,18 @@ const DashboardHeader = ({ userProfile, onLogout }) => {
             <FolderOpen className="w-4 h-4" />
           </div>
           <div>
-            <h1 className="text-sm font-bold tracking-widest leading-none uppercase">RCM Normalize</h1>
-            <p className="text-[10px] uppercase font-semibold text-muted-foreground tracking-widest mt-0.5">
+            <h1 className="text-xs p-4 font-bold tracking-widest leading-none uppercase">Ctrl PluZ</h1>
+            <p className="text-[9px] uppercase font-semibold text-muted-foreground tracking-widest mt-px">
               Officer Profile
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-4">
+        <div className="flex items-center gap-1.5 sm:gap-3">
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="ghost" size="icon" className="rounded-full text-muted-foreground hover:bg-muted border shadow-sm bg-background">
-                <Info className="w-4 h-4" />
+              <Button variant="ghost" size="icon" className="h-7 w-7 rounded-full text-muted-foreground hover:bg-muted border shadow-sm bg-background">
+                <Info className="w-3.5 h-3.5" />
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">
@@ -40,12 +40,12 @@ const DashboardHeader = ({ userProfile, onLogout }) => {
             </DialogContent>
           </Dialog>
 
-          <div className="flex flex-col items-end mr-2">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-foreground">{userProfile?.hospital_name || 'Medical Center'}</p>
+          <div className="flex flex-col items-end">
+            <p className="text-[9px] font-bold uppercase tracking-widest text-foreground">{userProfile?.hospital_name || 'Medical Center'}</p>
           </div>
           <ThemeToggle />
-          <Button variant="outline" size="sm" onClick={onLogout} className="text-[10px] uppercase tracking-widest font-bold hidden sm:flex">
-            <LogOut className="w-3 h-3 mr-2" /> End Session
+          <Button variant="outline" size="sm" onClick={onLogout} className="h-7 text-[9px] px-2 uppercase tracking-widest font-bold hidden sm:flex">
+            <LogOut className="w-3 h-3 mr-1.5" /> End Session
           </Button>
         </div>
       </div>

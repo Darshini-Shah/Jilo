@@ -2,10 +2,23 @@ import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Clock } from 'lucide-react';
 
+const getStepColor = (step) => {
+  if (!step) return 'bg-muted-foreground/30';
+  const s = step.toLowerCase();
+  if (s.includes('pre') || s.includes('auth')) return 'bg-emerald-500';
+  if (s.includes('admit')) return 'bg-orange-500';
+  if (s.includes('discharge')) return 'bg-blue-500';
+  if (s.includes('settle')) return 'bg-purple-500';
+  return 'bg-muted-foreground/30';
+};
+
 const PatientCard = ({ patient, onSelect }) => {
   return (
-    <Card onClick={() => onSelect(patient.id)} className="shadow-sm border border-border cursor-pointer hover:border-foreground transition-colors group rounded-sm">
-      <div className="p-5 flex flex-col gap-5">
+    <Card onClick={() => onSelect(patient.id)} className="shadow-sm border border-border cursor-pointer hover:border-foreground transition-colors group rounded-sm relative overflow-hidden">
+      {/* Status Strip */}
+      <div className={`absolute left-0 top-0 bottom-0 w-1.5 ${getStepColor(patient.step)} transition-colors duration-300`} />
+      
+      <div className="p-5 flex flex-col gap-5 pl-7">
         <div className="flex justify-between items-start">
           <div className="flex flex-col">
             <h3 className="font-bold text-foreground leading-tight tracking-tight text-lg group-hover:underline underline-offset-4">{patient.name}</h3>

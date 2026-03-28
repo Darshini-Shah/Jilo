@@ -18,6 +18,7 @@ class PatientCreate(BaseModel):
     medical_claim: Optional[bool] = False
     occupation: Optional[str] = None
     address: Optional[str] = None
+    step: Optional[str] = "pre auth"
 
 
 class PatientUpdate(BaseModel):
@@ -32,6 +33,7 @@ class PatientUpdate(BaseModel):
     medical_claim: Optional[bool] = None
     occupation: Optional[str] = None
     address: Optional[str] = None
+    step: Optional[str] = None
 
 
 class PatientOut(BaseModel):
@@ -48,4 +50,5 @@ class PatientOut(BaseModel):
     medical_claim: Optional[bool] = None
     occupation: Optional[str] = None
     address: Optional[str] = None
+    step: Optional[str] = None
     created_at: Optional[str] = None
