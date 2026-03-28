@@ -20,7 +20,7 @@ def extract_diagnoses(ocr_text: str) -> list[str]:
     Ignore medications, billing items, lab test names, and patient info.
     If the text says "No specific diagnosis found" or only lists preventative checkups, return an empty list.
     
-    CRITICAL: Translate colloquial symptoms into standard clinical terminology that closely matches the ICD-10 vocabulary before outputting (e.g., convert "Cold" to "Acute nasopharyngitis", "Tiredness" to "Fatigue").
+    CRITICAL: Translate colloquial symptoms into standard clinical terminology short description precise so that it closely matches the ICD-10 vocabulary before outputting (e.g., convert "Cold" to "Acute nasopharyngitis").
     
     Output strictly as a JSON list of strings. Do not include markdown formatting like ```json.
     

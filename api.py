@@ -16,6 +16,7 @@ from routers.hospitals import router as hospitals_router
 from routers.patients import router as patients_router
 from routers.documents import router as documents_router
 from routers.fhir_records import router as fhir_records_router
+from routers.pipeline import router as pipeline_router
 
 # ---------------------------
 # Local Pipeline Imports
@@ -50,6 +51,7 @@ async def lifespan(app: FastAPI):
     CMS_DICTS["mue_limits"] = mue
     CMS_DICTS["gender_codes"] = gender
     CMS_DICTS["ncd_map"] = ncd
+    app.state.cms_dicts = CMS_DICTS
     print("✅ Initialization Complete.")
     yield
     print("🛑 Shutting down.")
@@ -77,7 +79,7 @@ app.include_router(hospitals_router)
 app.include_router(patients_router)
 app.include_router(documents_router)
 app.include_router(fhir_records_router)
-
+app.include_router(pipeline_router)
 
 # ---------------------------
 # Pipeline endpoints (preserved)

@@ -186,8 +186,32 @@ export default function ProcessingPipeline() {
             <ExtractionDashboard 
               files={uploadedFiles} 
               apiResults={apiResults}
-              isBatch={apiResults.length === 1 && uploadedFiles.length > 1}
+              stage={location.state?.stage || 'preAuth'}
+              patient={location.state?.patient}
               onConfirm={() => setCurrentStep(3)} 
+              onAction={async (action) => {
+                 try {
+                   const { supabase } = await import('@/lib/supabase');
+                   let newStep;
+                   if (action === 'admit') newStep = 'admitted';
+                   else if (action === 'discharge') newStep = 'settled';
+                   else newStep = action;
+
+                   const { error } = await supabase
+                     .from('patients')
+                     .update({ step: newStep })
+                     .eq('id', location.state?.patient?.id);
+
+                   if (error) throw error;
+
+                   const label = action === 'admit' ? 'Admitted' : 'Discharged';
+                   alert(`Patient ${label} successfully!`);
+                   navigate('/dashboard');
+                 } catch(err) {
+                   console.error('Status update failed:', err);
+                   alert(`Failed to update patient status: ${err.message || 'Unknown error'}`);
+                 }
+              }}
               onBack={() => {
                 setUploadedFiles([]);
                 setApiResults([]);
@@ -201,6 +225,8 @@ export default function ProcessingPipeline() {
             <FhirViewer 
               files={uploadedFiles}
               apiResults={apiResults}
+              stage={location.state?.stage || 'admitted'}
+              patient={location.state?.patient}
               onProceed={() => setCurrentStep(4)} 
               onBack={() => setCurrentStep(2)} 
             />
