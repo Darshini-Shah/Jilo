@@ -12,14 +12,26 @@ const ExtractionDashboard = ({ files = [], apiResults = [], isBatch = false, onC
 
   const handleExportMediAssist = async () => {
     try {
-      const resp = await fetch('http://localhost:8000/api/generate-mediassist');
-      const json = await resp.json();
-      if(json.status === 'success') {
-         const blob = new Blob([JSON.stringify(json.data, null, 2)], { type: 'application/json' });
+      const activeData = isBatch ? (apiResults[0] || {}) : (apiResults[parseInt(activeFileId.split('-')[1])] || {});
+      const preauthForm = activeData?.preauth_form_json;
+
+      if (!preauthForm) {
+        alert("Pre-Auth form data is not available for export.");
+        return;
+      }
+
+      const resp = await fetch('http://localhost:8000/pipeline/export-html', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify(preauthForm)
+      });
+
+      if(resp.ok) {
+         const blob = await resp.blob();
          const url = URL.createObjectURL(blob);
          const a = document.createElement('a');
          a.href = url;
-         a.download = `MediAssist_Export.json`;
+         a.download = `MediAssist_Export.html`;
          a.click();
       } else {
          alert('Export failed.');

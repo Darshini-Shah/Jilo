@@ -64,13 +64,14 @@ async def _upsert_fhir_record(patient_id: str, tpa_id: str, fhir_bundle: dict, i
 # ---------------------------------------------------------------------------
 # Build medi_assist form JSON from the AI extraction (real schema)
 # ---------------------------------------------------------------------------
-def _build_preauth_form_json(ai_extract: dict, patient_db: dict = None) -> dict:
+def _build_preauth_form_json(ai_extract: dict, patient_db: dict = None, hospital_db: dict = None) -> dict:
     """Map AI-extracted data into the exact medi_assist.html formData schema."""
     patients = ai_extract.get("patients", [])
     pat = patients[0] if patients else {}
     diagnoses = pat.get("diagnoses", [])
     services = pat.get("services", [])
     diag0 = diagnoses[0] if diagnoses else {}
+    hospital_db = hospital_db or {}
 
     # Try to figure out doctor name from extraction
     doctor_name = pat.get("doctor_name", "")
@@ -84,11 +85,11 @@ def _build_preauth_form_json(ai_extract: dict, patient_db: dict = None) -> dict:
 
     form = {
         "hospital": {
-            "name":       patient_db.get("hospital_name", "") if patient_db else "",
-            "location":   "",
-            "hospitalId": "",
-            "emailId":    "",
-            "rohiniId":   ""
+            "name":       hospital_db.get("name", patient_db.get("hospital_name", "") if patient_db else ""),
+            "location":   hospital_db.get("location", ""),
+            "hospitalId": str(hospital_db.get("id", "")),
+            "emailId":    hospital_db.get("email_id", ""),
+            "rohiniId":   hospital_db.get("rohini_id", "")
         },
         "patient": {
             "name":                 pat.get("full_name", patient_db.get("name", "") if patient_db else ""),
@@ -307,8 +308,21 @@ async def run_preauth_pipeline(files: List[UploadFile], patient_id: str, cms_dic
         except Exception:
             pass
 
+        # Fetch TPA/Hospital data
+        hospital_db = {}
+        try:
+            if tpa_id:
+                user_res = supabase.table("users").select("hospital_id").eq("id", tpa_id).single().execute()
+                h_id = (user_res.data or {}).get("hospital_id")
+                if h_id:
+                    hosp_res = supabase.table("hospitals").select("*").eq("id", h_id).single().execute()
+                    hospital_db = hosp_res.data or {}
+                    print(hospital_db)
+        except Exception as e:
+            print(f"⚠️ Failed to fetch hospital details for TPA: {e}")
+
         # Build the real medi_assist form JSON
-        preauth_form_json = _build_preauth_form_json(results[0]["ai_extract"], patient_db)
+        preauth_form_json = _build_preauth_form_json(results[0]["ai_extract"], patient_db, hospital_db)
         results[0]["preauth_form_json"] = preauth_form_json
 
         return {"status": "success", "results": results}
