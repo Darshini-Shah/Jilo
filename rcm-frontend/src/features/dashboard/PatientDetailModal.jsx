@@ -21,12 +21,16 @@ const PatientDetailModal = ({
   };
 
   const getVisibleStages = () => {
+    // Always show at least the stage the patient is currently in
+    const stepMap = { 'pre auth': 0, 'preauth': 0, 'pre_auth': 0, 'admitted': 1, 'settled': 2, 'discharged': 2 };
+    const currentStepIdx = stepMap[(patient.step || 'pre auth').toLowerCase().trim()] ?? 0;
+
     let highestDocIndex = -1;
     patient.documents.forEach(doc => {
       const idx = STAGE_ORDER.indexOf(doc.stage);
       if (idx > highestDocIndex) highestDocIndex = idx;
     });
-    const maxVisibleIndex = Math.min(STAGE_ORDER.length - 1, highestDocIndex + 1);
+    const maxVisibleIndex = Math.max(currentStepIdx, Math.min(STAGE_ORDER.length - 1, highestDocIndex + 1));
     return STAGE_ORDER.slice(0, maxVisibleIndex + 1);
   };
 

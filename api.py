@@ -23,10 +23,21 @@ from routers.patients import router as patients_router
 from routers.documents import router as documents_router
 from routers.fhir_records import router as fhir_records_router
 from routers.pipeline import router as pipeline_router
-from routers.settlement import router as settlement_router
 
-# Legacy sub-module imports for validation initialization
-from validator.final_val import load_all_dictionaries
+# ---------------------------
+# Local Pipeline Imports
+# ---------------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(BASE_DIR, "preprocessing"))
+sys.path.append(os.path.join(BASE_DIR, "retrieval"))
+sys.path.append(os.path.join(BASE_DIR, "formatting"))
+sys.path.append(os.path.join(BASE_DIR, "validator"))
+
+from preprocessing.pdf_to_text import run_pdf_pipeline, process_single_pdf, structure_text_with_gemini
+from retrieval.generate_handoff import run_retrieval_pipeline
+from formatting.fhir_gen import run_fhir_generation
+from validator.final_val import load_all_dictionaries, run_validation
+import dotenv
 
 dotenv.load_dotenv()
 
@@ -34,20 +45,13 @@ dotenv.load_dotenv()
 async def lifespan(app: FastAPI):
     """Initializes global resources on startup."""
     print("🚀 Initializing CMS Validation Dictionaries...")
-    # Store in app.state for retrieval by routers/controllers
-    try:
-        ptp, mue, gender, ncd = load_all_dictionaries()
-        app.state.cms_dicts = {
-            "ptp_edits": ptp,
-            "mue_limits": mue,
-            "gender_codes": gender,
-            "ncd_map": ncd
-        }
-        print("✅ Initialization Complete.")
-    except Exception as e:
-        print(f"⚠️ Warning: Failed to load CMS dictionaries: {e}")
-        app.state.cms_dicts = {}
-        
+    ptp, mue, gender, ncd = load_all_dictionaries()
+    CMS_DICTS["ptp_edits"] = ptp
+    CMS_DICTS["mue_limits"] = mue
+    CMS_DICTS["gender_codes"] = gender
+    CMS_DICTS["ncd_map"] = ncd
+    app.state.cms_dicts = CMS_DICTS
+    print("✅ Initialization Complete.")
     yield
     print("🛑 Shutting down.")
 
@@ -74,7 +78,6 @@ app.include_router(patients_router)
 app.include_router(documents_router)
 app.include_router(fhir_records_router)
 app.include_router(pipeline_router)
-app.include_router(settlement_router)
 
 # ---------------------------
 # Utility Endpoints

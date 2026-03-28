@@ -1,111 +1,66 @@
 === VERITAS AI: NORMALIZED CLINICAL CONTEXT ===
 
-Source Entity: Cholelithiasis
+Source Entity: Aplastic Anemia
 --------------------------------------------------
-  Result 1 [ICD: D57 | Score: 0.7996]: Sickle-cell disorders
-  Context: **Use additional** code to identify complications, such as: cholelithiasis (K80.-) priapism (N48.32) **D57.459 Sickle-cell thalassemia beta plus with crisis, unspecified** HbS-beta plus with crisis with unspecified complication Sickle-cell beta plus with crisis with unspecified complication
+  Result 1 [ICD: D63 | Score: 0.7923]: Anemia in chronic diseases classified elsewhere
+  Context: **D63 Anemia in chronic diseases classified elsewhere** **D63.0 Anemia in neoplastic disease** **Code first** neoplasm (C00-D49) **Excludes1:** aplastic anemia due to antineoplastic chemotherapy (D61.1) **Excludes2:** anemia due to antineoplastic chemotherapy (D64.81)
 
-  Result 2 [ICD: K80 | Score: 0.7581]: Cholelithiasis
-  Context: **K80 Cholelithiasis** **Excludes1:** retained cholelithiasis following cholecystectomy (K91.86) **K80.0 Calculus of gallbladder with acute cholecystitis** Any condition listed in K80.2 with acute cholecystitis
+  Result 2 [ICD: D61 | Score: 0.7910]: Other aplastic anemias and other bone marrow failure syndromes
+  Context: **D61.1 Drug-induced aplastic anemia** **Use additional** code for adverse effect, if applicable, to identify drug (T36-T50 with fifth or sixth character 5) **D61.2 Aplastic anemia due to other external agents**
 
 
-Source Entity: Cholecystitis
+Source Entity: Drowsiness
 --------------------------------------------------
-  Result 1 [ICD: K81 | Score: 0.8319]: Cholecystitis
-  Context: **K81 Cholecystitis** **Use additional** code if applicable for associated gangrene of gallbladder (K82.A1), or perforation of gallbladder (K82.A2) **Excludes1:** cholecystitis with cholelithiasis (K80.-) **K81.0 Acute cholecystitis** Abscess of gallbladder Angiocholecystitis
+  Result 1 [ICD: R40 | Score: 0.7417]: Somnolence, stupor and coma
+  Context: **R40.0 Somnolence** Drowsiness **Excludes1:** coma (R40.2-) **R40.1 Stupor** Catatonic stupor Semicoma **Excludes1:** catatonic schizophrenia (F20.2) coma (R40.2-) depressive stupor (F31.-, F32.-, F33.-) dissociative stupor (F44.2) manic stupor (F30.2) **R40.2 Coma** **Code first** any associated:
 
-  Result 2 [ICD: K81 | Score: 0.7751]: Cholecystitis
-  Context: Abscess of gallbladder Angiocholecystitis Emphysematous (acute) cholecystitis Empyema of gallbladder Gangrene of gallbladder Gangrenous cholecystitis Suppurative cholecystitis **K81.1 Chronic cholecystitis** **K81.2 Acute cholecystitis with chronic cholecystitis**
+  Result 2 [ICD: R40 | Score: 0.6768]: Somnolence, stupor and coma
+  Context: **R40 Somnolence, stupor and coma** **Excludes1:** neonatal coma (P91.5) somnolence, stupor and coma in diabetes (E08-E13) somnolence, stupor and coma in hepatic failure (K72.-) somnolence, stupor and coma in hypoglycemia (nondiabetic) (E15) **R40.0 Somnolence** Drowsiness
 
 
-Source Entity: Hepatic steatosis
+Source Entity: Generalized weakness
 --------------------------------------------------
-  Result 1 [ICD: K76 | Score: 0.1322]: Other diseases of liver
-  Context: portal vein thrombosis (I81) toxic liver disease (K71.-) **K76.0 Fatty (change of) liver, not elsewhere classified** Metabolic dysfunction-associated steatotic liver disease (MASLD) Nonalcoholic fatty liver disease (NAFLD) **Excludes1:** nonalcoholic steatohepatitis (NASH) (K75.81)
+  Result 1 [ICD: R53 | Score: 0.9324]: Malaise and fatigue
+  Context: **R53 Malaise and fatigue** **R53.0 Neoplastic (malignant) related fatigue** **Code first** associated neoplasm **R53.1 Weakness** Asthenia NOS **Excludes1:** age-related weakness (R54) muscle weakness (generalized) (M62.81) sarcopenia (M62.84) senile asthenia (R54) **R53.2 Functional quadriplegia**
 
-  Result 2 [ICD: K75 | Score: 0.0790]: Other inflammatory liver diseases
-  Context: **K75.81 Nonalcoholic steatohepatitis (NASH)** Metabolic dysfunction-associated steatohepatitis (MASH) **Use additional** code, if applicable, hepatic fibrosis (K74.0-) **K75.89 Other specified inflammatory liver diseases** **K75.9 Inflammatory liver disease, unspecified** Hepatitis NOS
+  Result 2 [ICD: M62 | Score: 0.9023]: Other disorders of muscle
+  Context: **M62.81 Muscle weakness (generalized)** **Excludes1:** muscle weakness in sarcopenia (M62.84) **M62.82 Rhabdomyolysis** **Excludes1:** traumatic rhabdomyolysis (T79.6) **M62.83 Muscle spasm** **M62.830 Muscle spasm of back** **M62.831 Muscle spasm of calf** Charley-horse
 
 
-Source Entity: Intrahepatic cholelithiasis
+Source Entity: Fever
 --------------------------------------------------
-  Result 1 [ICD: K80 | Score: 0.1181]: Cholelithiasis
-  Context: Gallstone (impacted) of hepatic duct (without cholangitis or cholecystitis) Hepatic cholelithiasis (without cholangitis or cholecystitis) Hepatic colic (recurrent) (without cholangitis or cholecystitis) **K80.50 Calculus of bile duct without cholangitis or cholecystitis without obstruction**
+  Result 1 [ICD: R50 | Score: 0.8664]: Fever of other and unknown origin
+  Context: FNHTR Posttransfusion fever **R50.9 Fever, unspecified** Fever NOS Fever of unknown origin [FUO] Fever with chills Fever with rigors Hyperpyrexia NOS Persistent fever Pyrexia NOS
 
-  Result 2 [ICD: Q44 | Score: 0.0460]: Congenital malformations of gallbladder, bile ducts and liver
-  Context: Intrahepatic gallbladder **Q44.2 Atresia of bile ducts** **Q44.3 Congenital stenosis and stricture of bile ducts** **Q44.4 Choledochal cyst** **Q44.5 Other congenital malformations of bile ducts** Accessory hepatic duct Biliary duct duplication Congenital malformation of bile duct NOS
+  Result 2 [ICD: A95 | Score: 0.8190]: Yellow fever
+  Context: **A95 Yellow fever** **A95.0 Sylvatic yellow fever** Jungle yellow fever **A95.1 Urban yellow fever** **A95.9 Yellow fever, unspecified**
 
 
-Source Entity: Hepatomegaly
+Source Entity: Chills
 --------------------------------------------------
-  Result 1 [ICD: R16 | Score: 0.8925]: Hepatomegaly and splenomegaly, not elsewhere classified
-  Context: **R16 Hepatomegaly and splenomegaly, not elsewhere classified** **R16.0 Hepatomegaly, not elsewhere classified** Hepatomegaly NOS **R16.1 Splenomegaly, not elsewhere classified** Splenomegaly NOS **R16.2 Hepatomegaly with splenomegaly, not elsewhere classified** Hepatosplenomegaly NOS
+  Result 1 [ICD: R68 | Score: 0.7203]: Other general symptoms and signs
+  Context: **R68.82 Decreased libido** Decreased sexual desire **R68.83 Chills (without fever)** Chills NOS **Excludes1:** chills with fever (R50.9) **R68.84 Jaw pain** Mandibular pain Maxilla pain **Excludes1:** temporomandibular joint arthralgia (M26.62-) **R68.89 Other general symptoms and signs**
 
-  Result 2 [ICD: B27 | Score: 0.5751]: Infectious mononucleosis
-  Context: **B27.01 Gammaherpesviral mononucleosis with polyneuropathy** **B27.02 Gammaherpesviral mononucleosis with meningitis** **B27.09 Gammaherpesviral mononucleosis with other complications** Hepatomegaly in gammaherpesviral mononucleosis **B27.1 Cytomegaloviral mononucleosis**
+  Result 2 [ICD: R50 | Score: 0.2458]: Fever of other and unknown origin
+  Context: **R50 Fever of other and unknown origin** **Excludes1:** chills without fever (R68.83) febrile convulsions (R56.0-) fever of unknown origin during labor (O75.2) fever of unknown origin in newborn (P81.9) hypothermia due to illness (R68.0) malignant hyperthermia due to anesthesia (T88.3)
 
 
-Source Entity: Hyponatremia
+Source Entity: Sepsis
 --------------------------------------------------
-  Result 1 [ICD: P74 | Score: 0.8229]: Other transitory neonatal electrolyte and metabolic disturbances
-  Context: **P74.21 Hypernatremia of newborn** **P74.22 Hyponatremia of newborn** **P74.3 Disturbances of potassium balance of newborn** **P74.31 Hyperkalemia of newborn** **P74.32 Hypokalemia of newborn** **P74.4 Other transitory electrolyte disturbances of newborn** **P74.41 Alkalosis of newborn**
+  Result 1 [ICD: A41 | Score: 0.9340]: Other sepsis
+  Context: sepsis (due to) (in) anthrax (A22.7) sepsis (due to) (in) candidal (B37.7) sepsis (due to) (in) Erysipelothrix (A26.7) sepsis (due to) (in) extraintestinal yersiniosis (A28.2) sepsis (due to) (in) gonococcal (A54.86) sepsis (due to) (in) herpesviral (B00.7) sepsis (due to) (in) listerial (A32.7)
 
-  Result 2 [ICD: E87 | Score: 0.4267]: Other disorders of fluid, electrolyte and acid-base balance
-  Context: **E87.1 Hypo-osmolality and hyponatremia** Sodium [Na] deficiency **Excludes1:** syndrome of inappropriate secretion of antidiuretic hormone (E22.2) **E87.2 Acidosis** **Excludes1:** diabetic acidosis - see categories E08-E10, E11, E13 with ketoacidosis **E87.20 Acidosis, unspecified**
+  Result 2 [ICD: A41 | Score: 0.9030]: Other sepsis
+  Context: sepsis (due to) (in) listerial (A32.7) sepsis (due to) (in) melioidosis (A24.1) sepsis (due to) (in) meningococcal (A39.2-A39.4) sepsis (due to) (in) plague (A20.7) sepsis (due to) (in) tularemia (A21.7) toxic shock syndrome (A48.3) **A41.0 Sepsis due to Staphylococcus aureus**
 
 
-Source Entity: Lymphopenia
+Source Entity: Pancytopenia
 --------------------------------------------------
-  Result 1 [ICD: C91 | Score: 0.0097]: Lymphoid leukemia
-  Context: **C91.Z0 Other lymphoid leukemia not having achieved remission** Other lymphoid leukemia with failed remission Other lymphoid leukemia NOS **C91.Z1 Other lymphoid leukemia, in remission** **C91.Z2 Other lymphoid leukemia, in relapse** **C91.9 Lymphoid leukemia, unspecified**
+  Result 1 [ICD: D61 | Score: 0.9635]: Other aplastic anemias and other bone marrow failure syndromes
+  Context: pancytopenia (due to) (with) human immunodeficiency virus disease (B20.-) pancytopenia (due to) (with) leukoerythroblastic anemia (D61.82) pancytopenia (due to) (with) myeloproliferative disease (D47.1) **Excludes2:** pancytopenia (due to) (with) myelodysplastic syndromes (D46.-)
 
-  Result 2 [ICD: C91 | Score: 0.0075]: Lymphoid leukemia
-  Context: Lymphoplasmacytic leukemia Richter syndrome **Excludes1:** lymphoplasmacytic lymphoma (C83.0-) **C91.10 Chronic lymphocytic leukemia of B-cell type not having achieved remission** Chronic lymphocytic leukemia of B-cell type with failed remission Chronic lymphocytic leukemia of B-cell type NOS
-
-
-Source Entity: Hypoalbuminemia
---------------------------------------------------
-  Result 1 [ICD: E60 | Score: 0.1205]: Dietary zinc deficiency
-  Context: **E60 Dietary zinc deficiency**
-
-  Result 2 [ICD: R77 | Score: 0.0644]: Other abnormalities of plasma proteins
-  Context: **R77 Other abnormalities of plasma proteins** **Excludes1:** disorders of plasma-protein metabolism (E88.0-) **R77.0 Abnormality of albumin** **R77.1 Abnormality of globulin** Hyperglobulinemia NOS **R77.2 Abnormality of alphafetoprotein** **R77.8 Other specified abnormalities of plasma proteins**
-
-
-Source Entity: Neutrophilia
---------------------------------------------------
-  Result 1 [ICD: D72 | Score: 0.2021]: Other disorders of white blood cells
-  Context: Neutrophilic leukemoid reaction **D72.824 Basophilia** **D72.825 Bandemia** Bandemia without diagnosis of specific infection **Excludes1:** confirmed infection - code to infection leukemia (C91.-, C92.-, C93.-, C94.-, C95.-) **D72.828 Other elevated white blood cell count**
-
-  Result 2 [ICD: D47 | Score: 0.1126]: Other neoplasms of uncertain behavior of lymphoid, hematopoietic and related tissue
-  Context: Mastocytoma NOS Mastocytosis NOS **D47.1 Chronic myeloproliferative disease** Chronic neutrophilic leukemia Myeloproliferative disease, unspecified **Excludes1:** atypical chronic myeloid leukemia BCR/ABL-negative (C92.2-) chronic myeloid leukemia BCR/ABL-positive (C92.1-)
-
-
-Source Entity: Leukocytosis
---------------------------------------------------
-  Result 1 [ICD: D72 | Score: 0.3283]: Other disorders of white blood cells
-  Context: **D72.828 Other elevated white blood cell count** **D72.829 Elevated white blood cell count, unspecified** Elevated leukocytes, unspecified Leukocytosis, unspecified **D72.89 Other specified disorders of white blood cells** Abnormality of white blood cells NEC
-
-  Result 2 [ICD: D72 | Score: 0.1462]: Other disorders of white blood cells
-  Context: Decreased leukocytes, unspecified Leukocytopenia, unspecified Leukopenia **D72.82 Elevated white blood cell count** **Excludes1:** eosinophilia (D72.1) **D72.820 Lymphocytosis (symptomatic)** Elevated lymphocytes **D72.821 Monocytosis (symptomatic)** **Excludes1:** infectious mononucleosis (B27.-)
-
-
-Source Entity: Hyperchloremia
---------------------------------------------------
-  Result 1 [ICD: E87 | Score: 0.8106]: Other disorders of fluid, electrolyte and acid-base balance
-  Context: TACO **E87.79 Other fluid overload** **E87.8 Other disorders of electrolyte and fluid balance, not elsewhere classified** Electrolyte imbalance NOS Hyperchloremia Hypochloremia
-
-  Result 2 [ICD: P74 | Score: 0.6303]: Other transitory neonatal electrolyte and metabolic disturbances
-  Context: **P74.41 Alkalosis of newborn** Hyperbicarbonatemia **P74.42 Disturbances of chlorine balance of newborn** **P74.421 Hyperchloremia of newborn** Hyperchloremic metabolic acidosis **Excludes2:** late metabolic acidosis of the newborn (P74.0) **P74.422 Hypochloremia of newborn**
-
-
-Source Entity: Hyperbilirubinemia
---------------------------------------------------
-  Result 1 [ICD: P59 | Score: 0.5167]: Neonatal jaundice from other and unspecified causes
-  Context: **P59 Neonatal jaundice from other and unspecified causes** **Excludes1:** jaundice due to inborn errors of metabolism (E70-E88) kernicterus (P57.-) **P59.0 Neonatal jaundice associated with preterm delivery** Hyperbilirubinemia of prematurity
-
-  Result 2 [ICD: P39 | Score: 0.3967]: Other infections specific to the perinatal period
-  Context: Gilbert syndrome (E80.4) hereditary hemolytic anemias (D55-D58)
+  Result 2 [ICD: D61 | Score: 0.8467]: Other aplastic anemias and other bone marrow failure syndromes
+  Context: **D61.81 Pancytopenia** **Excludes1:** pancytopenia (due to) (with) aplastic anemia (D61.9) pancytopenia (due to) (with) bone marrow infiltration (D61.82) pancytopenia (due to) (with) congenital (pure) red cell aplasia (D61.01) pancytopenia (due to) (with) hairy cell leukemia (C91.4-)
 
 
 
@@ -113,5 +68,45 @@ Source Entity: Hyperbilirubinemia
 === VERITAS AI: NORMALIZED CLINICAL CONTEXT ===
 
 No valid clinical diagnoses found in source document.
+
+
+=== VERITAS AI: NORMALIZED CLINICAL CONTEXT ===
+
+Source Entity: Severe Anemia
+--------------------------------------------------
+  Result 1 [ICD: D62 | Score: 0.2350]: Acute posthemorrhagic anemia
+  Context: **D62 Acute posthemorrhagic anemia** **Excludes1:** anemia due to chronic blood loss (D50.0) blood loss anemia NOS (D50.0) congenital anemia from fetal blood loss (P61.3)
+
+  Result 2 [ICD: D56 | Score: 0.0764]: Thalassemia
+  Context: hydrops fetalis due to isoimmunization (P56.0) hydrops fetalis not due to immune hemolysis (P83.2) **D56.1 Beta thalassemia** Beta thalassemia major Cooley's anemia Homozygous beta thalassemia Severe beta thalassemia Thalassemia intermedia Thalassemia major
+
+
+Source Entity: Jaundice
+--------------------------------------------------
+  Result 1 [ICD: P59 | Score: 0.6535]: Neonatal jaundice from other and unspecified causes
+  Context: Hyperbilirubinemia of prematurity Jaundice due to delayed conjugation associated with preterm delivery **P59.1 Inspissated bile syndrome** **P59.2 Neonatal jaundice from other and unspecified hepatocellular damage** **Excludes1:** congenital viral hepatitis (P35.3)
+
+  Result 2 [ICD: P58 | Score: 0.2750]: Neonatal jaundice due to other excessive hemolysis
+  Context: **P58 Neonatal jaundice due to other excessive hemolysis** **Excludes1:** jaundice due to isoimmunization (P55-P57) **P58.0 Neonatal jaundice due to bruising** **P58.1 Neonatal jaundice due to bleeding** **P58.2 Neonatal jaundice due to infection** **P58.3 Neonatal jaundice due to polycythemia**
+
+
+Source Entity: Pancytopenia
+--------------------------------------------------
+  Result 1 [ICD: D61 | Score: 0.9635]: Other aplastic anemias and other bone marrow failure syndromes
+  Context: pancytopenia (due to) (with) human immunodeficiency virus disease (B20.-) pancytopenia (due to) (with) leukoerythroblastic anemia (D61.82) pancytopenia (due to) (with) myeloproliferative disease (D47.1) **Excludes2:** pancytopenia (due to) (with) myelodysplastic syndromes (D46.-)
+
+  Result 2 [ICD: D61 | Score: 0.8467]: Other aplastic anemias and other bone marrow failure syndromes
+  Context: **D61.81 Pancytopenia** **Excludes1:** pancytopenia (due to) (with) aplastic anemia (D61.9) pancytopenia (due to) (with) bone marrow infiltration (D61.82) pancytopenia (due to) (with) congenital (pure) red cell aplasia (D61.01) pancytopenia (due to) (with) hairy cell leukemia (C91.4-)
+
+
+Source Entity: Sepsis
+--------------------------------------------------
+  Result 1 [ICD: A41 | Score: 0.9340]: Other sepsis
+  Context: sepsis (due to) (in) anthrax (A22.7) sepsis (due to) (in) candidal (B37.7) sepsis (due to) (in) Erysipelothrix (A26.7) sepsis (due to) (in) extraintestinal yersiniosis (A28.2) sepsis (due to) (in) gonococcal (A54.86) sepsis (due to) (in) herpesviral (B00.7) sepsis (due to) (in) listerial (A32.7)
+
+  Result 2 [ICD: A41 | Score: 0.9030]: Other sepsis
+  Context: sepsis (due to) (in) listerial (A32.7) sepsis (due to) (in) melioidosis (A24.1) sepsis (due to) (in) meningococcal (A39.2-A39.4) sepsis (due to) (in) plague (A20.7) sepsis (due to) (in) tularemia (A21.7) toxic shock syndrome (A48.3) **A41.0 Sepsis due to Staphylococcus aureus**
+
+
 
 

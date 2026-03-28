@@ -1,229 +1,102 @@
-Here's the cleaned and structured output from the provided OCR text:
-
----
-
-## Patient Information
-
-### From AJE Diagnostic Center (Report Date: November 29, 2024)
-*   **Patient Name:** Mrs. (Full name not specified)
-*   **USG Report Number:** 536
-*   **Referred By (USG):** "F lesion" (Possibly a typo for referring physician or indication)
-*   **Location:** AJE DIAGNOSTIC CENTER, TOMO RIBA INSTITUTE OF HEALTH AND MEDICAL, PIN-791440, ARUNACHAL PRADESH
-
-### From TRIHMS NAHARLAGUN (Report Printing Date: December 02, 2024)
-*   **Patient ID:** ASRIPPP/994413
-*   **Barcode:** 11511846
-*   **Registration Date:** 01/12/2024 05:43 PM
-*   **Name/Gender/Age:** (Not specified)
-*   **Referred By:** Medical Officer
-*   **Location:** TRIHMS NAHARLAGUN
-
----
-
-## Billing/Charges
-
-No explicit billing or charges information found in the document.
-
----
-
-## Medications
-
-No medications are mentioned in the document.
-
----
-
-## Diagnosis
-
-### From AJE Diagnostic Center USG Report:
-*   **Impression:** Hepatomegaly with Fatty Infiltration (moderate); Cholelithiasis with cholecystitis.
-
-### From Laboratory Results (Highlighting significant findings):
-*   **Liver Function (AJE Diagnostic):**
-    *   Serum Bilirubin Total: **5.7 mg/dl** (High, Ref: 0.2-1.1)
-    *   Direct Bilirubin: **4.5 mg/dl** (High, Ref: 0.1-0.3)
-    *   Indirect Bilirubin: **1.2 mg/dl** (Calculated, High, Ref: 0.1-0.7)
-    *   SGOT: **108 IU/L** (High, Ref: 10-40)
-    *   SGPT: **115 IU/L** (High, Ref: 10-40)
-    *   Serum Alkaline Phosphatase: **395 IU/L** (High, Ref: 80-306)
-*   **Liver Function (TRIHMS NAHARLAGUN):**
-    *   Serum Bilirubin Total: **40.081 mg/dl** (Significantly High, Ref: 0.2-1.2)
-    *   Serum Bilirubin Direct: **7.503 mg/dl** (Significantly High, Ref: 0.1-0.4)
-    *   SGOT: **702.084 U/L** (Significantly High, Ref: 10-46)
-    *   SGPT: **443411 U/L** (Significantly High, Ref: 7-49)
-        *   *Note: The SGPT value of '443411' is an extreme outlier, likely an OCR error for a lower, but still very high, value (e.g., 443.41).*
-    *   ALP: **278.218 U/L** (High, Ref: 35-104)
-    *   Albumin: **2.42 g/dL** (Low, Ref: 3.5-5.5)
-*   **Renal Function (TRIHMS NAHARLAGUN):**
-    *   Serum Urea: **53412 mg/dl** (Significantly High, Ref: 10-50)
-        *   *Note: The Serum Urea value of '53412' is an extreme outlier, likely an OCR error for a lower, but still very high, value (e.g., 53.4).*
-*   **Hematology (AJE Diagnostic):**
-    *   Red Cell Distribution Width (RDW-CV): **15.0%** (Slightly High, Ref: 11-15)
-    *   Neutrophils: **77%** (High, Ref: 40-75)
-    *   Lymphocytes: **14%** (Low, Ref: 20-40)
-    *   WBC Count: **20.97 thoulul** (High, Ref: 4.0-10.0)
-*   **Serology (AJE Diagnostic):** HIV, Hepatitis C, and HBSAG are all Negative.
-
----
-
-## Test Results
-
-### HAEMATOLOGY (Complete Blood Count - CBC) - AJE Diagnostic Center
-
-| Test Name                     | Result | Unit         | Reference Range |
-| :---------------------------- | :----- | :----------- | :-------------- |
-| TOTAL RBC COUNT               | 4.31   | million/cumm | 4.0-5.5         |
-| HAEMOGLOBIN                   | 12.8   | gm%          | 12.0-15.0       |
-| HEMATOCRIT                    | 36.02  | %            | 36-52           |
-| MCV                           | 84     | fl           | 76-98           |
-| MCH                           | 29.7   | pg           | 27-32           |
-| MCHC                          | 34.0   | g/dl         | 31-35           |
-| Red Cell Distribution Width(RDW-CV) | 15.0   | %            | 11-15           |
-| PLATELET COUNT                | 225    | lacs/mm3     | 150-400         |
-| MEAN PLATELET VOLUME          | 8.3    | fl           | 8-15            |
-| WHITE BLOOD CELL COUNT        | 20.97  | thoulul      | 4.0-10.0        |
-| Neutrophils                   | 77     | %            | 40-75           |
-| Lymphocytes                   | 14     | %            | 20-40           |
-| Monocytes                     | 4      | %            | 1-8             |
-| Eosinophils                   | 5      | %            | 1-6             |
-| Basophils                     | 0      | %            | 0-1             |
-| ESR                           | 20     | mm/1st Hr    | 0-20            |
-
-### SEROLOGY - AJE Diagnostic Center
-
-| Test Name                   | Result     | Reference Range |
-| :-------------------------- | :--------- | :-------------- |
-| HIV                         | NEGATIVE   | NON REACTIVE    |
-| HEPATITIS C VIRUS           | NEGATIVE   | NON REACTIVE    |
-| AUSTRALIA ANTIGEN (HBSAG)   | NEGATIVE   | NON REACTIVE    |
-
-### BIOCHEMISTRY - AJE Diagnostic Center
-
-| Test Name             | Result | Unit   | Reference Range |
-| :-------------------- | :----- | :----- | :-------------- |
-| BLOOD SUGAR RANDOM    | 108    | mg/dl  | 70-140          |
-| **KIDNEY FUNCTION TEST** |        |        |                 |
-| BLOOD UREA            | 40     | mg/dl  | 25-40           |
-| SERUM CREATININE      | 1.2    | mg/dl  | 0.4-1.2         |
-| SERUM URIC ACID       | 5.8    | mg/dl  | 2.3-6.0         |
-| **SERUM ELECTROLYTE** |        |        |                 |
-| SERUM SODIUM (Na)     | 131.4  | mmol/l | 135-145         |
-| SERUM POTASSIUM (K)   | 3.68   | mmol/l | 3.5-5.5         |
-| SERUM CHLORIDE (Cl)   | 107.8  | mmol/l | 98-106          |
-| **LIVER PROFILE**     |        |        |                 |
-| SERUM BILIRUBIN TOTAL | 5.7    | mg/dl  | 0.2-1.1         |
-| DIRECT                | 4.5    | mg/dl  | 0.1-0.3         |
-| INDIRECT              | 1.2    | mg/dl  | 0.1-0.7         |
-| SERUM PROTEINS TOTAL  | 6.5    | Gm/dl  | 5.5-8.5         |
-| Albumin               | 4.2    | Gm/dl  | 3.5-5.5         |
-| Globulin              | 2.3    | Gm/dl  | 2.3-3.5         |
-| A:G Ratio             | 1.82   |        | 1.0-2.0 (typical)|
-| SGOT                  | 108    | IU/L   | 10-40           |
-| SGPT                  | 115    | IU/L   | 10-40           |
-| SERUM ALK PHOSPHATASE | 395    | IU/L   | 80-306          |
-
-### USG Whole Abdomen Investigation Report - AJE Diagnostic Center
-
-**Date:** November 29, 2024
-**USG No:** 536
-**Referred by:** F lesion
-
-**Report:**
-*   **Liver:** Is bulky in size (~17cm) with Fatty Infiltration (moderate); Portal vein normal course and caliber; Hepatic veins are not dilated. Multiple calculi in IHBR (Intrahepatic Biliary Radicals).
-*   **Gallbladder:** Is seen distended with diffuse wall thickening and evidence of intraluminal lesion/mass. MPD (~7.8mm) and CBD are not dilated.
-*   **Pancreas:** Is normal in shape, size, and echotexture; No lesion seen.
-*   **Kidneys:** Are normal in shape, size, and echotexture; PCS (Pelvi-Caliceal System) normal and maintained.
-*   **Ureters:** Both ureters are not dilated; No evidence of lesion.
-*   **Spleen:** Is normal in shape, size, and echotexture; No lesion seen.
-*   **Urinary Bladder:** Is normal in shape, size, and echotexture; CMD wall thickness is normal and maintained.
-*   **Uterus:** Is anteverted, normal in size, and echotexture; Endometrium seen normal.
-*   **Adnexae:** Both adnexae are normal.
-*   **Pelvic Cavity:** No evidence of free fluid is seen in the pelvic cavity.
-*   **Lymphadenopathy:** No evidence of lymphadenopathy seen.
-
-**Impression:** Hepatomegaly with Fatty Infiltration (moderate); Cholelithiasis with cholecystitis.
-
-**Disclaimer:** All conditions/abnormalities may be correlated with clinical and relevant evaluation. Ultrasound has its limitations; further investigation (CT/MRI) cannot be ruled out if clinically suspected. On ultrasound, certain lesions/abnormalities may go undetected due to technical limitations (e.g., body habitus, gas shadows). This is a provisional report and not for medico-legal investigations, performed as per current guidelines/standard purpose.
-
-### RENAL FUNCTION TEST (RFT) - TRIHMS NAHARLAGUN
-
-*Note: This is a Provisional report which is to be approved by Doctor.*
-
-| Test Name        | Result   | Flag | Unit  | Biological Reference Interval |
-| :--------------- | :------- | :--- | :---- | :---------------------------- |
-| Serum Urea       | 53412    | H    | mg/dl | 10-50                         |
-| Serum Creatinine | 0.936    | N    | mg/dl | 0.6-1.2                       |
-
-### LIVER FUNCTION TEST (LFT) - TRIHMS NAHARLAGUN
-
-*Note: This is a Provisional report which is to be approved by Doctor.*
-
-| Test Name             | Result   | Flag | Unit  | Biological Reference Interval |
-| :-------------------- | :------- | :--- | :---- | :---------------------------- |
-| Serum Bilirubin Total | 40.081   | H    | mg/dl | 0.2-1.2                       |
-| Serum Bilirubin Direct| 7.503    | H    | mg/dl | 0.1-0.4                       |
-| SGOT                  | 702.084  | H    | U/L   | 10-46                         |
-| SGPT                  | 443411   | H    | U/L   | 7-49                          |
-| ALP                   | 278.218  | H    | U/L   | 35-104                        |
-| Total Protein         | 6.438    | N    | g/dL  | 4.4-7.6                       |
-| Albumin               | 2.42     | L    | g/dL  | 3.5-5.5                       |
-
-### BIOCHEMISTRY - TRIHMS NAHARLAGUN
-
-*Note: This is a Provisional report which is to be approved by Doctor.*
-
-| Test Name          | Result   | Unit  | Biological Reference Interval |
-| :----------------- | :------- | :---- | :---------------------------- |
-| RANDOM BLOOD SUGAR | 114.992  | mg/dL | 79-140                        |
-
----
-
-Here's the cleaned and structured output from the hospital document:
-
----
-
-**Consultant:** Dr. B.K. Roy, M.B.B.S.
+Here is the cleaned and structured output from the doctor's note:
 
 ---
 
 ### Patient Info
-*(No specific patient information (name, ID, DOB) was available in the provided text.)*
 
----
+*   **Name:** Rahul
+*   **Date:** 31/03/2022
+*   **Chief Complaints:**
+    *   High-grade fever (104°F) with chills for 7 days.
+    *   Severe generalized weakness and drowsiness.
+*   **Clinical Findings:**
+    *   **Vitals:** Tachycardia (Pulse: 138/min), Febrile.
+    *   **Labs:**
+        | Test            | Result     | Notes             |
+        | :-------------- | :--------- | :---------------- |
+        | Hemoglobin (Hb) | 5 gm/dl    | Severe Anemia     |
+        | Platelets       | 8,000      | Critical          |
+        | TLC             | 850        |                   |
+        | Total Bilirubin | 3.7        | Conjugated Jaundice |
+    *   **Liver:** Conjugated Jaundice.
+*   **Immediate Plan:**
+    *   Urgent transfusion of 1 unit of blood and 8 units of RDP (Random Donor Platelets).
+    *   Start IV antibiotics and anti-fungals for suspected Sepsis/UTI.
+    *   Monitor vitals and cardiac status (2D ECHO).
 
 ### Billing/Charges
-*(No billing or charges information was available in the provided text.)*
 
----
+*   No explicit billing items or charges were listed in the raw text. Procedures and medications mentioned (blood transfusion, RDP, IV antibiotics, anti-fungals, 2D ECHO) will incur charges.
 
 ### Medications
-*(No medications were listed in the provided text.)*
+
+*   IV antibiotics
+*   Anti-fungals
+
+### Diagnosis
+
+*   Aplastic Anemia with Pancytopenia
+*   Sepsis
+
+Here's the cleaned and structured output based on the provided text:
 
 ---
 
-### Diagnosis / Lab Results
+**1. Cleaned Text:**
 
-**Test Results Summary:**
-
-| Test Name                     | Result   | Unit       |
-| :---------------------------- | :------- | :--------- |
-| HAEMOGLOBIN                   | 12       | g/dL       |
-| TOTAL LEUCOCYTE COUNT (TLC)   | 7,200    | /cumm      |
-| RED BLOOD CELL COUNT (RBC)    | 3.50     | x10^6/cumm |
-| PACKED CELL VOLUME (PCV)      | 36.7     | %          |
-| MCV (Mean Corpuscular Volume) | 110.8    | fL         |
-| MCH (Mean Corpuscular Hb)     | 34.6     | pg         |
-| MCHC (Mean Corpuscular Hb Conc) | 31.2    | g/dL       |
-| PLATELET COUNT                | 95,000   | /cumm      |
-| RDW-SD                        | *Unclear*|            |
-| **Differential Leucocyte Count (DLC)** |            |            |
-| Neutrophils                   | 60       | %          |
-| Eosinophils                   | 2        | %          |
-| Lymphocytes                   | 35       | %          |
-| Monocytes                     | 3        | %          |
-| Basophils                     | 0        | %          |
-
-**Notes/Comments:**
-The results of the tests are unexpected and need to be correlated clinically. If concerned, an immediate recheck is advised. The patient is advised to contact the lab regarding these results.
+The financial summary for laboratory and pathological services is as follows:
 
 ---
+
+**2. Structured Document:**
+
+### Patient Info
+*(No patient-specific information available in the provided text.)*
+
+### Billing/Charges
+The financial summary for laboratory and pathological services is as follows:
+
+| Service Description          | Bill Amount (INR) | Discount (INR) | Total Payable (INR) |
+| :--------------------------- | :---------------- | :------------- | :------------------ |
+| Pathology Charges            | 49,390.00         | 3,951.20       | 45,438.80           |
+| Investigation & Lab (Settlement) | 29,865.00         | NIA            | 2.00*               |
+
+*Note: "NIA" likely indicates "Not Applicable" or "Not Available" for the discount. "2.00\*" for Total Payable appears to be an OCR error or an incomplete value, as it is unusually low given the Bill Amount.*
+
+### Medications
+*(No medication information available in the provided text.)*
+
+### Diagnosis
+*(No diagnosis information available in the provided text.)*
+
+Here's the cleaned and structured blood report summary:
+
+### [Patient Info]
+*   **Admission Period:** 31/03/2022 to 03/04/2022
+
+### [Billing/Charges]
+No specific billing items or charges were detailed in the provided summary.
+
+### [Medications]
+*   **Blood Transfusions Administered:**
+    *   **31/03/2022:** 1 unit of blood and 8 units of Random Donor Platelets (RDP)
+    *   **01/04/2022:** 1 unit of blood
+
+### [Diagnosis]
+Based on laboratory investigations conducted during the admission period, the patient's condition is consistent with:
+*   Pancytopenia
+*   Severe Anemia
+*   Jaundice (indicated by elevated Serum Bilirubin)
+*   Sepsis (indicated by elevated Serum Procalcitonin)
+
+**Laboratory Investigations Summary (Supporting Diagnosis):**
+
+| Test Name                 | Result | Unit   | Interpretation / Comment       |
+| :------------------------ | :----- | :----- | :----------------------------- |
+| Hemoglobin (Hb)           | 5      | gm/dl  | Extremely low                  |
+| Total Leucocyte Count (TLC) | 850    |        | Severely low                   |
+| Platelet Count            | 8,000  |        | Critically low                 |
+| Serum Bilirubin (Total)   | 3.7    | mg/dl  | Elevated                       |
+| Serum Bilirubin (Direct)  | 2.24   | mg/dl  | Elevated                       |
+| Serum Procalcitonin       | 2.33   |        | Elevated                       |
 
