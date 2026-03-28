@@ -102,10 +102,26 @@ async def process_medical_batch(pdf_files: List[UploadFile] = File(...)):
             structured_text = run_pdf_pipeline(file_path, file.filename)
             if structured_text.startswith("Error") or structured_text.startswith("Gemini API Error"):
                 raise Exception(structured_text)
-
+            
+            # Save intermediate output for retrieval step
+            output_folder = os.path.join(BASE_DIR, "retrieval", "data_from_preprocessing")
+            os.makedirs(output_folder, exist_ok=True)
+            output_file = os.path.join(output_folder, "structured_hospital_data.txt")
+            with open(output_file, "a", encoding="utf-8") as f: # Use append since it's a batch process in api.py
+                f.write(structured_text + "\n\n")
+            print(f"✅ Intermediate data saved to {output_file}")
+            # STEP 2: Retrieval Handoff
             print("⏳ Running Step 2: Retrieval Mapping...")
             retrieval_text = run_retrieval_pipeline(structured_text)
-
+            
+            # Save retrieval output for the final steps
+            retrieval_folder = os.path.join(BASE_DIR, "data", "input")
+            os.makedirs(retrieval_folder, exist_ok=True)
+            retrieval_file = os.path.join(retrieval_folder, "reti_output.txt")
+            with open(retrieval_file, "a", encoding="utf-8") as f: # Use append since it's a batch process
+                f.write(retrieval_text + "\n\n")
+            print(f"✅ Retrieval data saved to {retrieval_file}")
+            # STEP 3: FHIR Generation
             print("⏳ Running Step 3: FHIR Generation...")
             if not API_KEY:
                 raise Exception("GEMINI_API_KEY not found.")
