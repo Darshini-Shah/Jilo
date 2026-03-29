@@ -1,3 +1,4 @@
+from preprocessing.pdf_to_text import process_single_pdf
 import os
 import sys
 import json
@@ -35,7 +36,10 @@ class SettlementController:
     Controller for auditing insurance settlement letters against FHIR clinical records.
     """
     
-    async def audit_settlement(self, patient_id: str, file: UploadFile, tpa_id: str) -> dict:
+    async def audit_settlement(self, document_ids: List[str], 
+        patient_id: str, 
+        tpa_id: str ) -> dict:
+        
         supabase = get_supabase()
         
         # 1. Update Patient Status to "discharged"
@@ -46,21 +50,52 @@ class SettlementController:
             print(f"Warning: Failed to update patient status: {e}")
 
         # 2. Extract text from Settlement PDF
-        print(f"Extracting text from settlement letter: {file.filename}...")
-        # Save temp file for OCR
-        temp_dir = os.path.join(BASE_DIR, "temp")
-        os.makedirs(temp_dir, exist_ok=True)
-        temp_path = os.path.join(temp_dir, file.filename)
+        combined_structured = ""
+        doc_id = str(uuid.uuid4())
+        file_name = "document.pdf"
         
-        await file.seek(0)
-        with open(temp_path, "wb") as buffer:
-            buffer.write(await file.read())
+        # ==========================================
+        # STEP 1: DOWNLOAD FROM BUCKET & PROCESS
+        # ==========================================
+        for doc_uuid in document_ids:
+            doc_res = supabase.table("documents").select("file_name, file_url").eq("id", doc_uuid).execute()
             
-        try:
-            settlement_text = run_pdf_pipeline(temp_path, file.filename)
-        finally:
-            if os.path.exists(temp_path):
-                os.remove(temp_path)
+            if not doc_res.data:
+                continue
+                
+            file_url = doc_res.data[0]["file_url"]
+            file_name = doc_res.data[0]["file_name"]
+            
+            # --- THE FIX: Extract the relative path just like you do in delete_document ---
+            marker = "/storage/v1/object/public/medical_documents/"
+            if marker in file_url:
+                storage_path = file_url.split(marker, 1)[1]
+            else:
+                storage_path = file_url # Fallback just in case
+                
+            print(f"--- Downloading {file_name} from Supabase Storage ---")
+            
+            try:
+                # Pass the clean storage_path, NOT the full URL
+                file_bytes = supabase.storage.from_("medical_documents").download(storage_path)
+                
+                # 3. Process the bytes in memory using our fast function
+                raw_content = process_single_pdf(file_bytes, file_name) 
+                combined_structured += raw_content
+                
+                # 4. UPDATE the existing document row with the extracted text
+                supabase.table("documents").update({
+                    "extracted_text": raw_content 
+                }).eq("id", doc_uuid).execute()
+
+            except Exception as e:
+                print(f"❌ Failed processing {file_name}: {e}")
+                raise HTTPException(status_code=500, detail=str(e))
+            
+        combined_structured = structure_text_with_gemini(combined_structured, file_name)
+                
+        if combined_structured.startswith("Error"):
+            raise Exception(combined_structured)
 
         # 3. Fetch Patient and FHIR Records for Context
         print(f"Fetching context for patient {patient_id}...")

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/lib/supabase';
@@ -17,6 +18,7 @@ import OnboardingModal from './dashboard/OnboardingModal';
  * Logic is abstracted to useDashboardLogic to keep this under 200 lines.
  */
 export default function OfficerDashboard() {
+  const navigate = useNavigate();
   const {
     patients, loading, activePatientId, setActivePatientId,
     isNewPatientOpen, setIsNewPatientOpen, userProfile, isOnboardingOpen,
@@ -24,7 +26,6 @@ export default function OfficerDashboard() {
     handleOnboardingSubmit, handleCreatePatient, handleFileAttached, processBatch,
     isSubmittingPatient, patientError, setPatientError, updatePatientStep,
     handleEditPatient, handleDeletePatient, handleDeleteDocument,
-    processSettlement,
     processBillAudit, processBillApproval,
     exportPatientsToCSV,
     addPatientAmount, deletePatientAmount, refreshPatientData
@@ -125,7 +126,20 @@ export default function OfficerDashboard() {
           <RegistryGrid 
             patients={patients} 
             loading={loading && !processingStatus} 
-            onSelectPatient={setActivePatientId} 
+            onSelectPatient={(patientId) => {
+              const p = patients.find(pat => pat.id === patientId);
+              const step = p?.step?.toLowerCase();
+              if (step === 'discharged' || step === 'discharge') {
+                 // In a real app, we'd fetch the last audit result. 
+                 // For now, opening the modal is the only way to re-run or see it 
+                 // UNLESS we want to navigate. Let's navigate to settlement if we have data.
+                 // However, without stored data, the dashboard will be empty.
+                 // So we'll still open the modal for now, or just alert.
+                 setActivePatientId(patientId);
+              } else {
+                 setActivePatientId(patientId);
+              }
+            }} 
             onEditPatient={onEditPatientClick}
             onDeletePatient={handleDeletePatient}
           />
@@ -143,7 +157,6 @@ export default function OfficerDashboard() {
         }}
         onUpdateStep={updatePatientStep}
         onDeleteDocument={handleDeleteDocument}
-        onProcessSettlement={processSettlement}
         onAddPatientAmount={addPatientAmount}
         onDeletePatientAmount={deletePatientAmount}
         onRefreshPatient={refreshPatientData}

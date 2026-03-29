@@ -127,25 +127,25 @@ export function useDashboardLogic() {
     try {
       setLoading(true);
       setProcessingStatus("Synchronizing Patient Registry...");
-      
+
       const res = await fetch(`${API_BASE}/patients/`, {
         method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json', 
-          'Authorization': `Bearer ${session.access_token}` 
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session.access_token}`
         },
-        body: JSON.stringify({ 
-          aadhar_no: patientForm.aadhar_no 
+        body: JSON.stringify({
+          aadhar_no: patientForm.aadhar_no
         })
       });
-      
+
       if (!res.ok) {
         const errData = await res.json();
         throw new Error(errData.detail || "Failed to create/update patient");
       }
-      
+
       const newPat = await res.json();
-      
+
       // Update local state: Replace if already exists in list, otherwise add to top
       setPatients(prev => {
         const exists = prev.findIndex(p => p.aadhar_no === newPat.aadhar_no);
@@ -156,7 +156,7 @@ export function useDashboardLogic() {
         }
         return [{ ...newPat, documents: [] }, ...prev];
       });
-      
+
       setIsNewPatientOpen(false);
       setPatientForm({ aadhar_no: "" });
     } catch (err) {
@@ -266,13 +266,13 @@ export function useDashboardLogic() {
 
   const handleFileAttached = async (e, patientId, stage, prefix = "") => {
     const files = Array.from(e.target.files);
-    const newDocs = files.map(f => ({ 
-      id: `t-${Math.random()}`, 
-      name: prefix ? `${prefix}${f.name}` : f.name, 
-      stage, 
-      status: 'pending', 
-      url: URL.createObjectURL(f), 
-      rawFile: f 
+    const newDocs = files.map(f => ({
+      id: `t-${Math.random()}`,
+      name: prefix ? `${prefix}${f.name}` : f.name,
+      stage,
+      status: 'pending',
+      url: URL.createObjectURL(f),
+      rawFile: f
     }));
     setPatients(ps => ps.map(p => p.id === patientId ? { ...p, documents: [...p.documents, ...newDocs] } : p));
     for (const f of files) {
@@ -281,9 +281,9 @@ export function useDashboardLogic() {
       fd.append("file", f, `${stage}__${fileName}`);
       const res = await fetch(`${API_BASE}/documents/?patient_id=${patientId}`, { method: 'POST', headers: { 'Authorization': `Bearer ${session.access_token}` }, body: fd });
       const up = await res.json();
-      setPatients(ps => ps.map(p => p.id === patientId ? { 
-        ...p, 
-        documents: p.documents.map(d => (d.name === fileName || d.name === f.name) && d.stage === stage ? { ...d, id: up.id, url: up.file_url, rawFile: f } : d) 
+      setPatients(ps => ps.map(p => p.id === patientId ? {
+        ...p,
+        documents: p.documents.map(d => (d.name === fileName || d.name === f.name) && d.stage === stage ? { ...d, id: up.id, url: up.file_url, rawFile: f } : d)
       } : p));
     }
   };
@@ -351,29 +351,53 @@ export function useDashboardLogic() {
     const s = step.toLowerCase().trim();
     if (s === 'pre auth' || s === 'pre_auth' || s === 'preauth') return 'preAuth';
     if (s === 'admitted') return 'admitted';
-    if (s === 'settled' || s === 'discharged') return 'settled';
+    if (s === 'discharge' || s === 'discharged') return 'discharged';
+    if (s === 'settled') return 'settled';
     return 'preAuth';
   };
 
+
+
   const processBatch = async (patient, stage) => {
     if (!session) { alert("Session expired. Please log in again."); return; }
+    
+    // Consistent document selection based on provided stage
     const sDocs = patient.documents.filter(d => d.stage === stage);
+    if (!sDocs.length) { alert(`No documents found in ${stage} stage to analyze.`); return; }
+
     setLoading(true);
     setProcessingStatus("Aggregating Records...");
-    
+
     try {
-      const pipelineStage = dbStepToStage(patient.step);
-      setProcessingStatus(`Running ${pipelineStage === 'preAuth' ? 'Pre-Auth' : 'Admitted'} Pipeline...`);
+      // Endpoint mapping based on stage
+      let endpoint;
+      let statusMsg;
+      
+      switch(stage) {
+        case 'preAuth':
+          endpoint = `${API_BASE}/pipeline/preauth`;
+          statusMsg = "Running Pre-Auth Pipeline...";
+          break;
+        case 'admitted':
+          endpoint = `${API_BASE}/pipeline/admitted`;
+          statusMsg = "Running Admitted Pipeline...";
+          break;
+        case 'settled':
+          endpoint = `${API_BASE}/settlement/audit`;
+          statusMsg = "Initiating Settlement Audit...";
+          break;
+        default:
+          endpoint = `${API_BASE}/pipeline/preauth`;
+          statusMsg = "Running Analysis...";
+      }
+
+      setProcessingStatus(statusMsg);
 
       const payload = {
         document_ids: sDocs.map(d => d.id).filter(id => id && !id.startsWith('t-')),
         patient_id: patient.id,
         tpa_id: session?.user?.id || null
       };
-
-      let endpoint = pipelineStage === 'preAuth' 
-        ? `${API_BASE}/pipeline/preauth` 
-        : `${API_BASE}/pipeline/admitted`;
 
       const res = await fetch(endpoint, {
         method: 'POST',
@@ -392,20 +416,32 @@ export function useDashboardLogic() {
       const data = await res.json();
       setProcessingStatus("Finalizing Extraction...");
 
-      // Single navigation call with all necessary data
-      navigate('/process', { 
-        state: { 
-          batchResult: data.results ? data.results[0] : data, 
-          results: data.results || [data], 
-          files: sDocs.map(d => ({ name: d.name, url: d.url })), 
-          stage: pipelineStage, 
-          patient, 
-          pipelineData: data 
-        } 
-      });
+      // Branch navigation based on stage results
+      if (stage === 'settled') {
+         // Update local state for visual feedback
+         setPatients(ps => ps.map(p => p.id === patient.id ? { ...p, step: 'discharged' } : p));
+         
+         navigate('/settlement', {
+            state: {
+              settlementResult: data,
+              patient: patient
+            }
+         });
+      } else {
+        navigate('/process', {
+          state: {
+            batchResult: data.results?.[0] || data,
+            results: data.results || [data],
+            files: sDocs.map(d => ({ name: d.name, url: d.url })),
+            stage: stage,
+            patient,
+            pipelineData: data
+          }
+        });
+      }
 
     } catch (err) {
-      console.error(err);
+      console.error("Pipeline processing failed:", err);
       alert(`Pipeline failed: ${err.message}`);
     } finally {
       setLoading(false);
@@ -472,7 +508,7 @@ export function useDashboardLogic() {
   };
 
   return {
-    patients: patients.filter(p => !['setteled', 'settled'].includes(p.step?.toLowerCase())),
+    patients,
     loading, activePatientId, setActivePatientId,
     isNewPatientOpen, setIsNewPatientOpen, userProfile, isOnboardingOpen,
     processingStatus, patientForm, setPatientForm, hospitalForm, setHospitalForm,
@@ -480,6 +516,7 @@ export function useDashboardLogic() {
     isSubmittingPatient, patientError, setPatientError, updatePatientStep,
     handleEditPatient, handleDeletePatient, handleDeleteDocument,
     exportPatientsToCSV,
-    addPatientAmount, deletePatientAmount, refreshPatientData
+    addPatientAmount, deletePatientAmount, refreshPatientData,
+    processBatch
   };
 }

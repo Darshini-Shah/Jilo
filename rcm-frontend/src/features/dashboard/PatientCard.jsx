@@ -6,6 +6,7 @@ import { Clock, ShieldCheck, Activity, CheckCircle2, User, MoreVertical, Edit2, 
 const STEP_CONFIG = {
   'pre auth': { label: 'Pre-Auth', icon: ShieldCheck, color: 'bg-amber-500/15 text-amber-600 border-amber-500/30' },
   'admitted': { label: 'Admitted', icon: Activity, color: 'bg-blue-500/15 text-blue-600 border-blue-500/30' },
+  'discharged': { label: 'Discharged', icon: Activity, color: 'bg-indigo-500/15 text-indigo-600 border-indigo-500/30' },
   'settled': { label: 'Settled', icon: CheckCircle2, color: 'bg-emerald-500/15 text-emerald-600 border-emerald-500/30' },
 };
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from '@/components/ui/dropdown-menu';
@@ -19,7 +20,7 @@ const PatientCard = ({ patient, onSelect, onEdit, onDelete }) => {
   return (
     <Card onClick={() => onSelect(patient.id)} className="shadow-sm border border-border cursor-pointer hover:border-foreground/50 hover:shadow-md transition-all duration-200 group rounded-sm overflow-hidden relative overflow-hidden">
       {/* Step indicator bar along top */}
-      <div className={`h-1 w-full ${step === 'admitted' ? 'bg-blue-500' : step === 'settled' ? 'bg-emerald-500' : 'bg-amber-500'}`} />
+      <div className={`h-1 w-full ${step === 'admitted' ? 'bg-blue-500' : step === 'discharged' ? 'bg-indigo-500' : step === 'settled' ? 'bg-emerald-500' : 'bg-amber-500'}`} />
 
       <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity z-10">
         <DropdownMenu>

@@ -15,7 +15,6 @@ const PatientDetailModal = ({
   onProcessBatch,
   onUpdateStep, // Duplicate removed from here
   onDeleteDocument,
-  onProcessSettlement,
   onProcessBillAudit,
   onProcessBillApproval,
   onAddPatientAmount,
@@ -148,7 +147,6 @@ const PatientDetailModal = ({
                         onProcessBatch={() => onProcessBatch(patient, stage)}
                         onDeleteDocument={onDeleteDocument}
                         onUpdateStep={onUpdateStep}
-                        onProcessSettlement={onProcessSettlement}
                         onAddPatientAmount={onAddPatientAmount}
                         onDeletePatientAmount={onDeletePatientAmount}
                         onRefreshPatient={onRefreshPatient}

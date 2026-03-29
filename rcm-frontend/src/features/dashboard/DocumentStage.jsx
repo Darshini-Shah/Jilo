@@ -12,7 +12,6 @@ const DocumentStage = ({
   onUploadClick, 
   onProcessBatch,
   onDeleteDocument,
-  onProcessSettlement,
   onAddPatientAmount,
   onDeletePatientAmount,
   onRefreshPatient
@@ -97,7 +96,7 @@ const DocumentStage = ({
               <Button 
                 variant={isSettledStage ? "default" : "secondary"}
                 className={`w-full font-black text-[10px] uppercase tracking-[0.2em] h-9 shadow-sm ${isSettledStage ? 'shadow-destructive/20 bg-destructive hover:bg-destructive/90 text-destructive-foreground' : ''}`}
-                onClick={isSettledStage ? () => onProcessSettlement(patient, sectionDocs[0].rawFile || sectionDocs[0]) : onProcessBatch}
+                onClick={() => onProcessBatch(patient, targetStage)}
               >
                 {isSettledStage ? (
                   <><FileSearch className="w-4 h-4 mr-2" /> Start Settlement Audit</>
