@@ -34,20 +34,13 @@ dotenv.load_dotenv()
 async def lifespan(app: FastAPI):
     """Initializes global resources on startup."""
     print("🚀 Initializing CMS Validation Dictionaries...")
-    # Store in app.state for retrieval by routers/controllers
-    try:
-        ptp, mue, gender, ncd = load_all_dictionaries()
-        app.state.cms_dicts = {
-            "ptp_edits": ptp,
-            "mue_limits": mue,
-            "gender_codes": gender,
-            "ncd_map": ncd
-        }
-        print("✅ Initialization Complete.")
-    except Exception as e:
-        print(f"⚠️ Warning: Failed to load CMS dictionaries: {e}")
-        app.state.cms_dicts = {}
-        
+    ptp, mue, gender, ncd = load_all_dictionaries()
+    CMS_DICTS["ptp_edits"] = ptp
+    CMS_DICTS["mue_limits"] = mue
+    CMS_DICTS["gender_codes"] = gender
+    CMS_DICTS["ncd_map"] = ncd
+    app.state.cms_dicts = CMS_DICTS
+    print("✅ Initialization Complete.")
     yield
     print("🛑 Shutting down.")
 

@@ -1,47 +1,69 @@
-import sys
+from fastapi import APIRouter, UploadFile, File, Form, Request, Response, Body
+from typing import List, Optional
 import os
-from fastapi import APIRouter, UploadFile, File, HTTPException, Request
-from typing import List
-from controllers.pipeline_controller import PipelineController
+import re
+import json
+from controllers import pipeline_controller
 
-# ---------------------------
-# Robust Path Initialization
-# ---------------------------
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if BASE_DIR not in sys.path:
-    sys.path.append(BASE_DIR)
+router = APIRouter(prefix="/pipeline", tags=["Pipeline"])
 
-# ---------------------------
-# Controller Instance
-# ---------------------------
-# Note: In a larger app, you'd use dependency injection (Depends) 
-# but for this script-to-webapp migration, a singleton instance is consistent.
-controller = PipelineController()
+@router.post("/preauth")
+async def run_preauth(
+    request: Request,
+    patient_id: str = Form(...),
+    files: List[UploadFile] = File(...),
+    tpa_id: Optional[str] = Form(None),
+):
+    cms_dicts = request.app.state.cms_dicts
+    return await pipeline_controller.run_preauth_pipeline(files, patient_id, cms_dicts, tpa_id=tpa_id)
 
-router = APIRouter(prefix="/pipeline", tags=["Pipeline Processing"])
+@router.post("/admitted")
+async def run_admitted(
+    request: Request,
+    patient_id: str = Form(...),
+    files: List[UploadFile] = File(...),
+    tpa_id: Optional[str] = Form(None),
+):
+    cms_dicts = request.app.state.cms_dicts
+    return await pipeline_controller.run_admitted_pipeline(files, patient_id, cms_dicts, tpa_id=tpa_id)
 
-@router.post("/process-pdfs")
-async def process_medical_batch(request: Request, pdf_files: List[UploadFile] = File(...)):
+@router.post("/export-html")
+async def export_html(payload: dict = Body(...)):
     """
-    Triggers the 4-stage pipeline: PDF Preprocessing, NER Retrieval, 
-    FHIR Generation, and CMS Validation.
+    Receives preauth_form_json and injects it into medi_assist.html for download.
     """
-    # Access CMS_DICTS from app state (initialized in api.py lifespan)
-    cms_dicts = getattr(request.app.state, "cms_dicts", {})
-    return await controller.process_medical_batch(pdf_files, cms_dicts)
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    template_path = os.path.join(base_dir, "form_template", "medi_assist.html")
+    
+    if not os.path.exists(template_path):
+        from fastapi import HTTPException
+        raise HTTPException(status_code=404, detail="Template not found")
+        
+    with open(template_path, "r", encoding="utf-8") as f:
+        html_content = f.read()
+        
+    # Replace the formData definition in the template
+    # Look for 'const formData = { ... };' up to the next function/comment
+    json_str = json.dumps(payload, indent=2)
+    replacement = f"const formData = {json_str};"
+    
+    # We use a regex to replace the specific block
+    # We find `const formData = {` up to `};` right before `function getVal` or `/* ====`.
+    pattern = re.compile(r'const formData = \{.*?\};', re.DOTALL)
+    # Use lambda to bypass re.sub treating escape characters in the replacement string as regex sequences!
+    new_html = pattern.sub(lambda m: replacement, html_content)
+    
+    # If regex failed, just append it before </script> as a fallback (though regex should work)
+    if replacement not in new_html:
+        new_html = html_content.replace(
+            "const formData = {", 
+            f"const dummyData = {{}};\n{replacement}\nconst oldFormData ="
+        )
 
-@router.get("/fhir-result/{doc_id}")
-async def get_fhir_result(doc_id: str):
-    """Retrieves cached FHIR bundles for a processed document."""
-    res = controller.get_fhir_result(doc_id)
-    if not res:
-        raise HTTPException(status_code=404, detail="Document ID not found in cache.")
-    return res
-
-@router.get("/validation-report/{doc_id}")
-async def get_validation_report(doc_id: str):
-    """Retrieves cached validation results for a processed document."""
-    res = controller.get_validation_report(doc_id)
-    if not res:
-        raise HTTPException(status_code=404, detail="Document ID not found in cache.")
-    return res
+    return Response(
+        content=new_html,
+        media_type="text/html",
+        headers={
+            "Content-Disposition": 'attachment; filename="MediAssist_PreAuth.html"'
+        }
+    )
