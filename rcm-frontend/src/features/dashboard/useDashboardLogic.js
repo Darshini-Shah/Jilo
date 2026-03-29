@@ -1,24 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabase';
+import { usePatients } from '../../context/PatientContext';
 
 const API_BASE = 'http://localhost:8000';
 
 export function useDashboardLogic() {
+  const { patients, setPatients, isFetched, setIsFetched, userProfile, setUserProfile } = usePatients();
   const navigate = useNavigate();
   const [session, setSession] = useState(null);
-  const [patients, setPatients] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!isFetched);
   const [activePatientId, setActivePatientId] = useState(null);
   const [isNewPatientOpen, setIsNewPatientOpen] = useState(false);
-  const [userProfile, setUserProfile] = useState(null);
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
   const [processingStatus, setProcessingStatus] = useState("");
   const [isSubmittingPatient, setIsSubmittingPatient] = useState(false);
   const [patientError, setPatientError] = useState("");
 
   const [patientForm, setPatientForm] = useState({
-    name: "", gender: "", contact: "", dob: "", age: "", policy_number: "", employee_id: "", insurer_id: "", medical_claim: false, occupation: "", address: ""
+    aadhar_no: ""
   });
 
   const [hospitalForm, setHospitalForm] = useState({
@@ -42,26 +42,23 @@ export function useDashboardLogic() {
     supabase.auth.getSession().then(({ data: { session: cur } }) => {
       setSession(cur);
       if (cur) {
-        fetchProfile(cur);
-        if (!loadedFromCache) fetchPatients(cur);
-      } else {
-        setLoading(false);
-        navigate('/', { replace: true });
+        if (!userProfile) fetchProfile(cur);
+        if (!isFetched) fetchPatients(cur);
+        else setLoading(false);
       }
+      else { setLoading(false); }
     });
 
     const { data: authListener } = supabase.auth.onAuthStateChange((_e, s) => {
       setSession(s);
       if (s) {
-        fetchProfile(s);
-        fetchPatients(s);
-      } else {
-        navigate('/', { replace: true });
+        if (!userProfile) fetchProfile(s);
+        if (!isFetched) fetchPatients(s);
       }
     });
 
     return () => authListener.subscription.unsubscribe();
-  }, []);
+  }, [isFetched]);
 
   useEffect(() => {
     sessionStorage.setItem('cachedPatients', JSON.stringify(patients));
@@ -97,6 +94,7 @@ export function useDashboardLogic() {
         return { ...pat, documents: docs };
       }));
       setPatients(enhanced);
+      setIsFetched(true);
     } catch (err) { console.error(err); } finally { setLoading(false); }
   };
 
@@ -117,31 +115,56 @@ export function useDashboardLogic() {
     fetchProfile(session);
   };
 
+  /**
+   * handleCreatePatient
+   * Updated to only send aadhar_no. Backend handles lookup and TPA association.
+   */
   const handleCreatePatient = async (e) => {
     e.preventDefault();
     if (!session) { setPatientError("Session expired. Please log in again."); return; }
     setIsSubmittingPatient(true);
     setPatientError("");
     try {
+      setLoading(true);
+      setProcessingStatus("Synchronizing Patient Registry...");
+      
       const res = await fetch(`${API_BASE}/patients/`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${session.access_token}` },
-        body: JSON.stringify({ ...patientForm, age: patientForm.age ? parseInt(patientForm.age) : null })
+        headers: { 
+          'Content-Type': 'application/json', 
+          'Authorization': `Bearer ${session.access_token}` 
+        },
+        body: JSON.stringify({ 
+          aadhar_no: patientForm.aadhar_no 
+        })
       });
+      
       if (!res.ok) {
-        const errData = await res.json().catch(() => ({}));
-        throw new Error(errData.detail || `Server error ${res.status}`);
+        const errData = await res.json();
+        throw new Error(errData.detail || "Failed to create/update patient");
       }
+      
       const newPat = await res.json();
-      setPatients([{ ...newPat, documents: [] }, ...patients]);
+      
+      // Update local state: Replace if already exists in list, otherwise add to top
+      setPatients(prev => {
+        const exists = prev.findIndex(p => p.aadhar_no === newPat.aadhar_no);
+        if (exists !== -1) {
+          const updated = [...prev];
+          updated[exists] = { ...newPat, documents: prev[exists].documents || [] };
+          return updated;
+        }
+        return [{ ...newPat, documents: [] }, ...prev];
+      });
+      
       setIsNewPatientOpen(false);
-      setPatientForm({ name: "", gender: "", contact: "", dob: "", age: "", policy_number: "", employee_id: "", insurer_id: "", medical_claim: false, occupation: "", address: "" });
+      setPatientForm({ aadhar_no: "" });
     } catch (err) {
-      console.error("Patient create error:", err);
-      setPatientError(err.message || "Failed to create patient. Check connection.");
+      console.error(err);
+      alert(err.message);
     } finally {
-      setIsSubmittingPatient(false);
-    }
+      setLoading(false);
+      setProcessingStatus("");
   };
 
   const updatePatientStep = async (patientId, newStep) => {
@@ -237,19 +260,71 @@ export function useDashboardLogic() {
     } catch (err) {
       console.error(err);
       alert("Failed to delete document.");
+    try {
+      setLoading(true);
+      setProcessingStatus("Synchronizing Patient Registry...");
+      
+      const res = await fetch(`${API_BASE}/patients/`, {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json', 
+          'Authorization': `Bearer ${session.access_token}` 
+        },
+        body: JSON.stringify({ 
+          aadhar_no: patientForm.aadhar_no 
+        })
+      });
+      
+      if (!res.ok) {
+        const errData = await res.json();
+        throw new Error(errData.detail || "Failed to create/update patient");
+      }
+      
+      const newPat = await res.json();
+      
+      // Update local state: Replace if already exists in list, otherwise add to top
+      setPatients(prev => {
+        const exists = prev.findIndex(p => p.aadhar_no === newPat.aadhar_no);
+        if (exists !== -1) {
+          const updated = [...prev];
+          updated[exists] = { ...newPat, documents: prev[exists].documents || [] };
+          return updated;
+        }
+        return [{ ...newPat, documents: [] }, ...prev];
+      });
+      
+      setIsNewPatientOpen(false);
+      setPatientForm({ aadhar_no: "" });
+    } catch (err) {
+      console.error(err);
+      alert(err.message);
+    } finally {
+      setLoading(false);
+      setProcessingStatus("");
     }
   };
 
   const handleFileAttached = async (e, patientId, stage) => {
     const files = Array.from(e.target.files);
-    const newDocs = files.map(f => ({ id: `t-${Math.random()}`, name: f.name, stage, status: 'pending', url: URL.createObjectURL(f), rawFile: f }));
+    // Keep rawFile in memory so we can re-use it for pipeline without downloading
+    const newDocs = files.map(f => ({ 
+      id: `t-${Math.random()}`, 
+      name: f.name, 
+      stage, 
+      status: 'pending', 
+      url: URL.createObjectURL(f), 
+      rawFile: f 
+    }));
     setPatients(ps => ps.map(p => p.id === patientId ? { ...p, documents: [...p.documents, ...newDocs] } : p));
     for (const f of files) {
       const fd = new FormData();
       fd.append("file", f, `${stage}__${f.name}`);
       const res = await fetch(`${API_BASE}/documents/?patient_id=${patientId}`, { method: 'POST', headers: { 'Authorization': `Bearer ${session.access_token}` }, body: fd });
       const up = await res.json();
-      setPatients(ps => ps.map(p => p.id === patientId ? { ...p, documents: p.documents.map(d => d.name === f.name && d.stage === stage ? { ...d, id: up.id, url: up.file_url, rawFile: f } : d) } : p));
+      setPatients(ps => ps.map(p => p.id === patientId ? { 
+        ...p, 
+        documents: p.documents.map(d => d.name === f.name && d.stage === stage ? { ...d, id: up.id, url: up.file_url, rawFile: f } : d) 
+      } : p));
     }
   };
 
@@ -268,6 +343,8 @@ export function useDashboardLogic() {
     const sDocs = patient.documents.filter(d => d.stage === stage);
     setLoading(true);
     setProcessingStatus("Aggregating Records...");
+    
+    // Check if we already have the rawFile in memory (session memory)
     const blobs = await Promise.all(sDocs.map(async d => {
       if (d.rawFile) return d.rawFile;
       const r = await fetch(d.url);

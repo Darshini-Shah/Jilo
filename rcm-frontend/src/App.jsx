@@ -5,6 +5,7 @@ import Auth from './features/Auth';
 import OfficerDashboard from './features/OfficerDashboard';
 import ProcessingPipeline from './features/ProcessingPipeline';
 import { ThemeProvider } from '@/components/ui/theme_provider';
+import { PatientProvider } from './context/PatientContext';
 
 function App() {
   return (
