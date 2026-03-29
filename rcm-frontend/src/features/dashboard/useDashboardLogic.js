@@ -288,33 +288,60 @@ export function useDashboardLogic() {
     }
   };
 
-  const processBillAudit = async (patient) => {
-    // MISSING ENDPOINT: The /pipeline/bill endpoint is currently not implemented on the backend.
-    setLoading(true);
-    setProcessingStatus("Auditing Hospital Bill...");
+  const addPatientAmount = async (patientId, description, amount) => {
     try {
-      await new Promise(r => setTimeout(r, 2000)); // Simulating AI audit
-      alert("Bill Audit Complete (Simulated). The clinical validation matches the generated bill.");
+      const res = await fetch(`${API_BASE}/patients/${patientId}/amount`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session?.access_token || ''}`
+        },
+        body: JSON.stringify({ description, amount: Number(amount) })
+      });
+      if (!res.ok) {
+        const errBody = await res.json().catch(() => ({ detail: 'Unknown error' }));
+        throw new Error(errBody.detail || `API returned ${res.status}`);
+      }
+      const updatedPatient = await res.json();
+      setPatients(ps => ps.map(p => p.id === patientId ? { ...p, amount: updatedPatient.amount } : p));
+      return updatedPatient;
     } catch (err) {
-      console.error(err);
-    } finally {
-      setLoading(false);
-      setProcessingStatus("");
+      console.error('addPatientAmount failed:', err);
+      alert(`Failed to add amount: ${err.message}`);
     }
   };
 
-  const processBillApproval = async (patient) => {
-    // MISSING ENDPOINT: The /pipeline/bill-approved endpoint is currently not implemented on the backend.
-    setLoading(true);
-    setProcessingStatus("Verifying Authorization...");
+  const deletePatientAmount = async (patientId, description) => {
     try {
-      await new Promise(r => setTimeout(r, 1500)); // Simulating authorization check
-      alert("Bill Authorization Verified (Simulated). All line items are approved by the medical board.");
+      const res = await fetch(`${API_BASE}/patients/${patientId}/amount/${encodeURIComponent(description)}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${session?.access_token || ''}`
+        }
+      });
+      if (!res.ok) {
+        const errBody = await res.json().catch(() => ({ detail: 'Unknown error' }));
+        throw new Error(errBody.detail || `API returned ${res.status}`);
+      }
+      const updatedPatient = await res.json();
+      setPatients(ps => ps.map(p => p.id === patientId ? { ...p, amount: updatedPatient.amount } : p));
+      return updatedPatient;
     } catch (err) {
-      console.error(err);
-    } finally {
-      setLoading(false);
-      setProcessingStatus("");
+      console.error('deletePatientAmount failed:', err);
+      alert(`Failed to delete amount: ${err.message}`);
+    }
+  };
+
+  const refreshPatientData = async (patientId) => {
+    try {
+      const res = await fetch(`${API_BASE}/patients/${patientId}`, {
+        headers: { 'Authorization': `Bearer ${session?.access_token || ''}` }
+      });
+      if (!res.ok) return;
+      const freshPatient = await res.json();
+      setPatients(ps => ps.map(p => p.id === patientId ? { ...p, ...freshPatient } : p));
+    } catch (err) {
+      console.error('refreshPatientData failed:', err);
     }
   };
 

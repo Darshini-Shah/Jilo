@@ -225,6 +225,7 @@ async def process_full_pipeline(
 ):
     combined_structured = ""
     doc_id = str(uuid.uuid4())
+    file_name = "document.pdf"
     
     # ==========================================
     # STEP 1: DOWNLOAD FROM BUCKET & PROCESS

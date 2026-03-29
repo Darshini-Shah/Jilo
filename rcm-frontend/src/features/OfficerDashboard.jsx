@@ -143,9 +143,10 @@ export default function OfficerDashboard() {
         onUpdateStep={updatePatientStep}
         onDeleteDocument={handleDeleteDocument}
         onProcessSettlement={processSettlement}
-        onProcessBillAudit={processBillAudit}
-        onProcessBillApproval={processBillApproval}
-        onUpdateStep={() => {}} 
+        onAddPatientAmount={addPatientAmount}
+        onDeletePatientAmount={deletePatientAmount}
+        onRefreshPatient={refreshPatientData}
+        // onUpdateStep={() => {}} 
       />
 
       <OnboardingModal 

@@ -13,8 +13,9 @@ const DocumentStage = ({
   onProcessBatch,
   onDeleteDocument,
   onProcessSettlement,
-  onProcessBillAudit,
-  onProcessBillApproval
+  onAddPatientAmount,
+  onDeletePatientAmount,
+  onRefreshPatient
 }) => {
   const sectionDocs = patient.documents.filter(d => d.stage === targetStage);
   const isSettledStage = targetStage === 'settled';
@@ -26,8 +27,10 @@ const DocumentStage = ({
       <AdmittedStageWorkspace 
         patient={patient}
         onUploadClick={onUploadClick}
-        onProcessBillAudit={onProcessBillAudit}
-        onProcessBillApproval={onProcessBillApproval}
+        onProcessBatch={onProcessBatch}
+        onAddPatientAmount={onAddPatientAmount}
+        onDeletePatientAmount={onDeletePatientAmount}
+        onRefreshPatient={onRefreshPatient}
       />
     );
   }

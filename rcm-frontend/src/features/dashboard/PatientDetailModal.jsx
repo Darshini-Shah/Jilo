@@ -18,6 +18,10 @@ const PatientDetailModal = ({
   onProcessSettlement,
   onProcessBillAudit,
   onProcessBillApproval,
+  onAddPatientAmount,
+  onDeletePatientAmount,
+  onRefreshPatient,
+  onUpdateStep
 }) => {
   if (!patient) return null;
 
@@ -146,8 +150,9 @@ const PatientDetailModal = ({
                         onDeleteDocument={onDeleteDocument}
                         onUpdateStep={onUpdateStep}
                         onProcessSettlement={onProcessSettlement}
-                        onProcessBillAudit={onProcessBillAudit}
-                        onProcessBillApproval={onProcessBillApproval}
+                        onAddPatientAmount={onAddPatientAmount}
+                        onDeletePatientAmount={onDeletePatientAmount}
+                        onRefreshPatient={onRefreshPatient}
                       />
                     </div>
                   );
