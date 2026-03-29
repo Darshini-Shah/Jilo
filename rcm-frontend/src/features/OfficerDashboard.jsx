@@ -24,6 +24,8 @@ export default function OfficerDashboard() {
     handleOnboardingSubmit, handleCreatePatient, handleFileAttached, processBatch,
     isSubmittingPatient, patientError, setPatientError, updatePatientStep,
     handleEditPatient, handleDeletePatient, handleDeleteDocument,
+    processSettlement,
+    processBillAudit, processBillApproval
     exportPatientsToCSV
   } = useDashboardLogic();
 
@@ -140,6 +142,10 @@ export default function OfficerDashboard() {
         }}
         onUpdateStep={updatePatientStep}
         onDeleteDocument={handleDeleteDocument}
+        onProcessSettlement={processSettlement}
+        onProcessBillAudit={processBillAudit}
+        onProcessBillApproval={processBillApproval}
+        onUpdateStep={() => {}} 
       />
 
       <OnboardingModal 
