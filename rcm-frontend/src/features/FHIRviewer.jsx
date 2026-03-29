@@ -14,21 +14,75 @@ const RESOURCE_ICONS = {
   Bundle: Database,
 };
 
-/* Pretty-print a value for the formal view */
-const formatValue = (val) => {
-  if (val === null || val === undefined) return '—';
-  if (Array.isArray(val)) {
-    return val.map(item => {
-      if (typeof item === 'object') {
-        return Object.entries(item).map(([k, v]) => `${k}: ${typeof v === 'object' ? JSON.stringify(v) : v}`).join(', ');
-      }
-      return String(item);
-    }).join(' · ');
+/* Recursively render JSON into clean, human-readable React elements */
+const PrettyValue = ({ value }) => {
+  if (value === null || value === undefined) return <span className="text-muted-foreground">—</span>;
+
+  if (Array.isArray(value)) {
+    if (value.length === 0) return <span className="text-muted-foreground italic text-[10px]">Empty array</span>;
+
+    // If it's an array of simple strings/numbers, render as inline badges
+    if (value.every(v => typeof v !== 'object')) {
+      return (
+        <div className="flex flex-wrap gap-1">
+          {value.map((v, i) => (
+            <Badge key={i} variant="secondary" className="font-mono text-[9px] px-1.5 py-0">
+              {String(v)}
+            </Badge>
+          ))}
+        </div>
+      );
+    }
+
+    // Array of objects -> render each as a sub-card
+    return (
+      <div className="flex flex-col gap-2 w-full mt-1">
+        {value.map((item, idx) => (
+          <div key={idx} className="bg-muted/10 p-2 rounded border border-muted/50 shadow-sm overflow-hidden">
+            <PrettyValue value={item} />
+          </div>
+        ))}
+      </div>
+    );
   }
-  if (typeof val === 'object') {
-    return Object.entries(val).map(([k, v]) => `${k}: ${typeof v === 'object' ? JSON.stringify(v) : v}`).join(', ');
+
+  if (typeof value === 'object') {
+    // Quick-catch common FHIR specific structures
+    if (value.reference) {
+      return (
+        <span className="font-semibold text-primary underline decoration-primary/30 truncate block">
+          {value.display || value.reference.split('/').pop() || value.reference}
+        </span>
+      );
+    }
+    
+    // Filter out technical FHIR boilerplate for human readability
+    const entries = Object.entries(value).filter(([k]) => !['id', 'text', 'meta', 'identifier', 'extension'].includes(k));
+    if (entries.length === 0) return null;
+    return (
+      <div className="grid grid-cols-1 gap-1.5 w-full">
+        {entries.map(([k, v]) => (
+          <div key={k} className="flex flex-col sm:flex-row gap-1 sm:gap-3 text-xs">
+            <span className="text-muted-foreground font-semibold uppercase tracking-wider text-[9px] sm:w-[85px] shrink-0 mt-[1px]">
+              {humanizeKey(k)}
+            </span>
+            <div className="flex-1 break-words"><PrettyValue value={v} /></div>
+          </div>
+        ))}
+      </div>
+    );
   }
-  return String(val);
+
+  // Primitive strings, numbers, booleans
+  if (typeof value === 'boolean') {
+    return (
+      <Badge variant={value ? 'default' : 'outline'} className="text-[10px] uppercase font-bold py-0 h-4">
+        {value ? 'True' : 'False'}
+      </Badge>
+    );
+  }
+
+  return <span className="font-semibold text-foreground break-words">{String(value)}</span>;
 };
 
 /* Humanize camelCase keys */
@@ -43,168 +97,6 @@ const humanizeKey = (key) => {
 const FhirViewer = ({ files = [], apiResults = [], patient, onProceed, onBack }) => {
   const [copied, setCopied] = useState(false);
   const [viewMode, setViewMode] = useState('formal');
-  const [mediAssistData, setMediAssistData] = useState(null);
-  const [templateHtml, setTemplateHtml] = useState("");
-  const [loadingMedi, setLoadingMedi] = useState(false);
-
-  React.useEffect(() => {
-    const fetchMediData = async () => {
-      setLoadingMedi(true);
-      try {
-        const [dataRes, tempRes] = await Promise.all([
-          fetch('http://localhost:8000/api/generate-mediassist'),
-          fetch('http://localhost:8000/api/mediassist-template')
-        ]);
-        const dataJson = await dataRes.json();
-        const tempJson = await tempRes.json();
-        if (dataJson.status === 'success') setMediAssistData(dataJson.data);
-        if (tempJson.status === 'success') setTemplateHtml(tempJson.template);
-      } catch (err) {
-        console.error("Failed to fetch MediAssist data:", err);
-      } finally {
-        setLoadingMedi(false);
-      }
-    };
-    fetchMediData();
-  }, []);
-
-  const populateHTML = (html, data) => {
-    if (!html || !data) return "";
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-
-    // Helper to get nested value
-    const getVal = (path) => {
-      const keys = path.split('.');
-      let curr = data;
-      // Simple mapping for common fields if not nested in data
-      const mapping = {
-        'hospital.name': data.HospitalName,
-        'hospital.location': data.HospitalAddress,
-        'hospital.hospitalId': data.HospitalID,
-        'hospital.emailId': data.HospitalEmail_ID,
-        'hospital.rohiniId': data.HospitalROHINI_ID,
-        'patient.name': data.PatientName,
-        'patient.gender': data.PatientGender,
-        'patient.contactNo': data.PatientMobile,
-        'patient.ageYears': data.PatientAge,
-        'patient.dateOfBirth': data.PatientBirthDate,
-        'patient.policyNumber': data.Patient_Policy_No,
-        'patient.address': data.PatientAddress,
-        'admission.dateOfAdmission': data.AdmissionDate,
-        'doctor.provisionalDiagnosis': data.Diagnosis,
-        'doctor.surgeryName': data.Procedure,
-      };
-      if (mapping[path]) return mapping[path];
-
-      for (const k of keys) {
-        if (curr && curr[k] !== undefined) curr = curr[k];
-        else return "";
-      }
-      return curr;
-    };
-
-    // Fill .cboxes
-    doc.querySelectorAll('.cboxes').forEach(el => {
-      const field = el.getAttribute('data-field');
-      const count = parseInt(el.getAttribute('data-count') || "0");
-      const val = String(getVal(field) || "").toUpperCase();
-      el.innerHTML = '';
-      for (let i = 0; i < count; i++) {
-        const box = doc.createElement('div');
-        box.className = 'cbox';
-        box.textContent = val[i] || '';
-        el.appendChild(box);
-      }
-    });
-
-    // Fill .cb
-    doc.querySelectorAll('.cb').forEach(el => {
-      const field = el.getAttribute('data-field');
-      const matchVal = el.getAttribute('data-value');
-      const val = getVal(field);
-      if (String(val).toLowerCase() === String(matchVal).toLowerCase()) {
-        el.textContent = 'X';
-        el.style.fontWeight = 'bold';
-      }
-    });
-
-    // Fill .ta
-    doc.querySelectorAll('.ta').forEach(el => {
-      const field = el.getAttribute('data-field');
-      el.textContent = getVal(field);
-    });
-
-    // Fill .dboxes
-    doc.querySelectorAll('.dboxes').forEach(el => {
-      const field = el.getAttribute('data-field');
-      const val = String(getVal(field) || "").trim();
-      if (!val) {
-        el.innerHTML = '';
-        return;
-      }
-
-      // Try to parse date and format as DDMMYYYY
-      let dStr = "";
-      try {
-        const date = new Date(val);
-        if (!isNaN(date.getTime())) {
-          const day = String(date.getDate()).padStart(2, '0');
-          const month = String(date.getMonth() + 1).padStart(2, '0');
-          const year = String(date.getFullYear());
-          dStr = day + month + year;
-        } else {
-          dStr = val.replace(/\D/g, '').substring(0, 8);
-        }
-      } catch (e) {
-        dStr = val.replace(/\D/g, '').substring(0, 8);
-      }
-
-      el.innerHTML = '';
-      const chars = dStr.split('');
-      chars.forEach((c, i) => {
-        const box = doc.createElement('div');
-        box.className = 'cbox';
-        box.textContent = c;
-        el.appendChild(box);
-        if (i === 1 || i === 3) {
-          const sep = doc.createElement('span');
-          sep.className = 'dsep';
-          sep.textContent = '/';
-          el.appendChild(sep);
-        }
-      });
-    });
-
-    // Copy styles from head to body so dangerouslySetInnerHTML includes them
-    const styles = doc.head.querySelectorAll('style');
-    styles.forEach(s => {
-      doc.body.prepend(s.cloneNode(true));
-    });
-
-    return doc.body.innerHTML;
-  };
-
-  const handleDownloadPdf = () => {
-    const element = document.getElementById('medi-assist-form-container');
-    const opt = {
-      margin: 10,
-      filename: `MediAssist_${mediAssistData?.PatientName || 'Form'}.pdf`,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-    html2pdf().set(opt).from(element).save();
-  };
-
-  const handleDownloadJson = () => {
-    const blob = new Blob([JSON.stringify(mediAssistData, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `MediAssist_${mediAssistData?.PatientName || 'Data'}.json`;
-    a.click();
-  };
 
   // Grab the first file's name to make the JSON look dynamic, fallback to default if missing
   const dynamicFileName = files.length > 0 ? files[0].name.replace('.pdf', '') : "Batch_001";
@@ -264,7 +156,7 @@ const FhirViewer = ({ files = [], apiResults = [], patient, onProceed, onBack })
 
 
       {/* MAIN CONTENT SPLIT */}
-      <div className={`grid grid-cols-1 ${patient?.step === 'pre auth' ? 'lg:grid-cols-5' : 'lg:grid-cols-1'} gap-6 h-[calc(100vh-320px)] min-h-[400px]`}>
+      <div className={`grid grid-cols-1 gap-6 h-[calc(100vh-320px)] min-h-[400px]`}>
 
         {/* LEFT: FHIR Resource Viewer */}
         <Card className={`${patient?.step === 'pre auth' ? 'lg:col-span-3' : 'lg:col-span-1'} shadow-sm flex flex-col overflow-hidden border-2 border-foreground`}>
@@ -316,7 +208,11 @@ const FhirViewer = ({ files = [], apiResults = [], patient, onProceed, onBack })
                   const res = entry.resource;
                   if (!res) return null;
                   const Icon = RESOURCE_ICONS[res.resourceType] || Database;
-                  const fields = Object.entries(res).filter(([k]) => k !== 'resourceType');
+                  
+                  // Filter out technical FHIR boilerplate fields
+                  const fields = Object.entries(res).filter(([k]) => 
+                    !['resourceType', 'id', 'text', 'meta', 'identifier', 'extension'].includes(k)
+                  );
 
                   return (
                     <Card key={idx} className="shadow-none border rounded-sm overflow-hidden">
@@ -335,12 +231,12 @@ const FhirViewer = ({ files = [], apiResults = [], patient, onProceed, onBack })
                       <div className="divide-y">
                         {fields.map(([key, value]) => (
                           <div key={key} className="flex items-start px-4 py-2.5 text-xs hover:bg-muted/20 transition-colors">
-                            <span className="w-[35%] shrink-0 text-muted-foreground font-semibold uppercase tracking-wider text-[10px] pt-0.5">
+                            <span className="w-1/3 max-w-[120px] shrink-0 text-muted-foreground font-bold uppercase tracking-widest text-[10px] pt-1">
                               {humanizeKey(key)}
                             </span>
-                            <span className="flex-1 font-medium text-foreground break-words leading-relaxed">
-                              {formatValue(value)}
-                            </span>
+                            <div className="flex-1 w-full overflow-hidden">
+                              <PrettyValue value={value} />
+                            </div>
                           </div>
                         ))}
                       </div>
@@ -351,56 +247,6 @@ const FhirViewer = ({ files = [], apiResults = [], patient, onProceed, onBack })
             )}
           </div>
         </Card>
-
-        {/* RIGHT: MediAssist PDF Preview (Conditional) */}
-        {patient?.step === 'pre auth' && (
-          <Card className="lg:col-span-2 shadow-sm flex flex-col overflow-hidden bg-zinc-100">
-            <CardHeader className="bg-white pb-3 border-b flex flex-row items-center justify-between">
-              <div>
-                <CardTitle className="text-sm font-bold uppercase tracking-wide">MediAssist Pre-Auth</CardTitle>
-                <CardDescription className="text-xs">PDF Preview — Part C (Revised)</CardDescription>
-              </div>
-              <div className="flex gap-2">
-                <Button variant="outline" size="sm" onClick={handleDownloadJson} className="h-7 text-[10px] uppercase font-bold px-2">
-                  <Download className="w-3 h-3 mr-1" /> JSON
-                </Button>
-                <Button size="sm" onClick={handleDownloadPdf} className="h-7 text-[10px] uppercase font-bold px-2">
-                  <Download className="w-3 h-3 mr-1" /> PDF
-                </Button>
-              </div>
-            </CardHeader>
-
-            {/* Changed flex layout and padding here to fix "padding chuda hua hai" layout scaling overlap issue
-            <div className="flex-grow overflow-auto bg-zinc-200/50 relative">
-              {loadingMedi ? (
-                <div className="flex flex-col items-center justify-center p-20 gap-3 h-full">
-                  <div className="animate-spin w-8 h-8 rounded-full border-4 border-primary border-t-transparent"></div>
-                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Generating Form...</p>
-                </div>
-              ) : (
-                <div className="flex justify-center p-8 w-full min-h-max">
-                  <div 
-                    className="origin-top scale-[0.45] w-[210mm] bg-white shadow-2xl shrink-0" 
-                    style={{ height: 'fit-content', fontFamily: 'Arial, Helvetica, sans-serif', transformOrigin: 'top center' }}
-                  >
-                    <div
-                      id="medi-assist-form-container"
-                      className="p-[7mm] text-black bg-white w-full h-full"
-                      dangerouslySetInnerHTML={{ __html: populateHTML(templateHtml, mediAssistData) }}
-                    />
-                  </div>
-                </div>
-              )}
-
-              {!loadingMedi && (
-                <div className="absolute top-4 right-4 flex items-center gap-2 bg-black/80 text-white px-3 py-1.5 rounded-full backdrop-blur-sm shadow-xl z-10 border border-white/20">
-                  <Eye className="w-3.5 h-3.5 text-emerald-400" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest">PDF Preview</span>
-                </div>
-              )}
-            </div> */}
-          </Card>
-        )}
 
       </div>
     </div>

@@ -6,7 +6,7 @@ import { Clock, ShieldCheck, Activity, CheckCircle2, User, MoreVertical, Edit2, 
 const STEP_CONFIG = {
   'pre auth': { label: 'Pre-Auth', icon: ShieldCheck, color: 'bg-amber-500/15 text-amber-600 border-amber-500/30' },
   'admitted': { label: 'Admitted', icon: Activity, color: 'bg-blue-500/15 text-blue-600 border-blue-500/30' },
-  'settled':  { label: 'Settled',  icon: CheckCircle2, color: 'bg-emerald-500/15 text-emerald-600 border-emerald-500/30' },
+  'settled': { label: 'Settled', icon: CheckCircle2, color: 'bg-emerald-500/15 text-emerald-600 border-emerald-500/30' },
 };
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from '@/components/ui/dropdown-menu';
 
@@ -20,7 +20,7 @@ const PatientCard = ({ patient, onSelect, onEdit, onDelete }) => {
     <Card onClick={() => onSelect(patient.id)} className="shadow-sm border border-border cursor-pointer hover:border-foreground/50 hover:shadow-md transition-all duration-200 group rounded-sm overflow-hidden relative overflow-hidden">
       {/* Step indicator bar along top */}
       <div className={`h-1 w-full ${step === 'admitted' ? 'bg-blue-500' : step === 'settled' ? 'bg-emerald-500' : 'bg-amber-500'}`} />
-      
+
       <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity z-10">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -39,7 +39,7 @@ const PatientCard = ({ patient, onSelect, onEdit, onDelete }) => {
         </DropdownMenu>
       </div>
 
-      <div className="p-5 flex flex-col gap-4 mt-4">
+      <div className="p-5 flex flex-col gap-4 pl-7 mt-4">
         {/* Row 1: Name + Step Badge */}
         <div className="flex justify-between items-start gap-3">
           <div className="flex items-start gap-3 min-w-0">

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Download } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { supabase } from '@/lib/supabase';
 import { useDashboardLogic } from './dashboard/useDashboardLogic';
 
@@ -16,12 +18,13 @@ import OnboardingModal from './dashboard/OnboardingModal';
  */
 export default function OfficerDashboard() {
   const {
-    patients, loading, activePatientId, setActivePatientId, 
+    patients, loading, activePatientId, setActivePatientId,
     isNewPatientOpen, setIsNewPatientOpen, userProfile, isOnboardingOpen,
     processingStatus, patientForm, setPatientForm, hospitalForm, setHospitalForm,
     handleOnboardingSubmit, handleCreatePatient, handleFileAttached, processBatch,
     isSubmittingPatient, patientError, setPatientError, updatePatientStep,
-    handleEditPatient, handleDeletePatient, handleDeleteDocument
+    handleEditPatient, handleDeletePatient, handleDeleteDocument,
+    exportPatientsToCSV
   } = useDashboardLogic();
 
   const [editingPatientId, setEditingPatientId] = React.useState(null);
@@ -78,17 +81,28 @@ export default function OfficerDashboard() {
                 {patients.length} Open Workflows
               </p>
             </div>
-            <NewPatientModal 
-              isOpen={isNewPatientOpen} 
-              onOpenChange={onModalChange} 
-              formData={patientForm} 
-              onChange={(e) => setPatientForm({ 
-                ...patientForm, 
-                [e.target.id]: e.target.type === 'checkbox' ? e.target.checked : e.target.value 
-              })} 
-              onSubmit={onModalSubmit} 
-              isEditMode={!!editingPatientId}
-            />
+            <div className="flex items-center gap-3">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={exportPatientsToCSV}
+                className="h-7 font-bold text-[10px] uppercase tracking-widest rounded-sm border-2"
+              >
+                <Download className="w-3.5 h-3.5 mr-1.5" />
+                Export CSV
+              </Button>
+              <NewPatientModal
+                isOpen={isNewPatientOpen}
+                onOpenChange={onModalChange}
+                formData={patientForm}
+                onChange={(e) => setPatientForm({
+                  ...patientForm,
+                  [e.target.id]: e.target.type === 'checkbox' ? e.target.checked : e.target.value
+                })}
+                onSubmit={onModalSubmit}
+                isEditMode={!!editingPatientId}
+              />
+            </div>
           </div>
 
           {loading && processingStatus && (

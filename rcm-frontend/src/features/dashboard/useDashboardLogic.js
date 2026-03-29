@@ -28,7 +28,7 @@ export function useDashboardLogic() {
   useEffect(() => {
     const cachedPatients = sessionStorage.getItem('cachedPatients');
     let loadedFromCache = false;
-    
+
     if (cachedPatients && cachedPatients !== '[]') {
       try {
         setPatients(JSON.parse(cachedPatients));
@@ -52,11 +52,11 @@ export function useDashboardLogic() {
 
     const { data: authListener } = supabase.auth.onAuthStateChange((_e, s) => {
       setSession(s);
-      if (s) { 
-        fetchProfile(s); 
-        fetchPatients(s); 
+      if (s) {
+        fetchProfile(s);
+        fetchPatients(s);
       } else {
-        navigate('/', { replace: true }); 
+        navigate('/', { replace: true });
       }
     });
 
@@ -149,16 +149,16 @@ export function useDashboardLogic() {
     try {
       // Optimistic update
       setPatients(ps => ps.map(p => p.id === patientId ? { ...p, step: newStep } : p));
-      
+
       const res = await fetch(`${API_BASE}/patients/${patientId}`, {
         method: 'PUT',
-        headers: { 
-          'Content-Type': 'application/json', 
-          'Authorization': `Bearer ${session.access_token}` 
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session.access_token}`
         },
         body: JSON.stringify({ step: newStep })
       });
-      
+
       if (!res.ok) {
         // Revert on error
         fetchPatients(session);
@@ -225,7 +225,7 @@ export function useDashboardLogic() {
     try {
       // Optimistic delete
       setPatients(ps => ps.map(p => p.id === patientId ? { ...p, documents: p.documents.filter(d => d.id !== docId) } : p));
-      
+
       const res = await fetch(`${API_BASE}/documents/${docId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${session.access_token}` }
@@ -291,13 +291,13 @@ export function useDashboardLogic() {
       if (pipelineStage === 'preAuth') endpoint = `${API_BASE}/pipeline/preauth`;
       else endpoint = `${API_BASE}/pipeline/admitted`;
 
-      const res = await fetch(endpoint, { 
-        method: 'POST', 
+      const res = await fetch(endpoint, {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${session?.access_token || ''}`
         },
-        body: JSON.stringify(payload) 
+        body: JSON.stringify(payload)
       });
       if (!res.ok) {
         const errBody = await res.json().catch(() => ({ detail: 'Unknown error' }));
@@ -305,15 +305,15 @@ export function useDashboardLogic() {
       }
       const data = await res.json();
       setProcessingStatus("Finalizing Extraction...");
-      navigate('/process', { 
-        state: { 
-          batchResult: data.results[0], 
-          results: data.results, 
+      navigate('/process', {
+        state: {
+          batchResult: data.results[0],
+          results: data.results,
           files: sDocs.map(d => ({ name: d.name, url: d.url })),
           patient: patient
-        } 
+        }
       });
-      
+
       const passResults = data.results || [data];
       const batchRes = data.results ? data.results[0] : data;
 
@@ -327,12 +327,72 @@ export function useDashboardLogic() {
     }
   };
 
+  // ... inside useDashboardLogic() before the return statement ...
+
+  const exportPatientsToCSV = () => {
+    // We filter out patients with 'settled' step just like your return statement does
+    const activePatients = patients.filter(p => !['setteled', 'settled'].includes(p.step?.toLowerCase()));
+
+    if (!activePatients || activePatients.length === 0) {
+      alert("No patient data available to export.");
+      return;
+    }
+
+    // Define the exact columns we want to export based on your JSON
+    const headers = [
+      "id", "tpa_id", "name", "gender", "contact", "dob", "age",
+      "policy_number", "employee_id", "insurer_id", "medical_claim",
+      "occupation", "address", "step", "aadhar_no", "created_at"
+    ];
+
+    // Create the CSV header row
+    let csvContent = headers.join(",") + "\n";
+
+    // Map through patients and create CSV rows
+    activePatients.forEach(patient => {
+      const row = headers.map(header => {
+        let val = patient[header];
+
+        // Handle nulls/undefined
+        if (val === null || val === undefined) val = "";
+
+        // Convert to string and escape existing double quotes
+        val = String(val).replace(/"/g, '""');
+
+        // Wrap in quotes if the value contains a comma, newline, or quotes
+        if (val.includes(",") || val.includes("\n") || val.includes("\"")) {
+          val = `"${val}"`;
+        }
+
+        return val;
+      });
+      csvContent += row.join(",") + "\n";
+    });
+
+    // Create a Blob and trigger the download
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+
+    // Add today's date to the filename
+    const date = new Date().toISOString().split('T')[0];
+    link.setAttribute("download", `Patient_Registry_Export_${date}.csv`);
+
+    // Trigger download mechanism
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return {
-    patients: patients.filter(p => !['setteled', 'settled'].includes(p.step?.toLowerCase())), loading, activePatientId, setActivePatientId, 
+    patients: patients.filter(p => !['setteled', 'settled'].includes(p.step?.toLowerCase())),
+    loading, activePatientId, setActivePatientId,
     isNewPatientOpen, setIsNewPatientOpen, userProfile, isOnboardingOpen,
     processingStatus, patientForm, setPatientForm, hospitalForm, setHospitalForm,
     handleOnboardingSubmit, handleCreatePatient, handleFileAttached, processBatch,
     isSubmittingPatient, patientError, setPatientError, updatePatientStep,
-    handleEditPatient, handleDeletePatient, handleDeleteDocument
+    handleEditPatient, handleDeletePatient, handleDeleteDocument,
+    exportPatientsToCSV // <--- Make sure to export the new function here!
   };
 }

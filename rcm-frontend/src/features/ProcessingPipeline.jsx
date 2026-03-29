@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import DocumentUpload from './DocumentUpload';
 import ExtractionDashboard from './ExtractionDashboard';
+import PreAuthDashboard from './PreAuthDashboard';
 import FhirViewer from './FHIRviewer';
 import ReconciliationDashboard from './ReconciliationDashboard';
 import axios from 'axios';
-import { Loader2, CheckCircle2, ArrowLeft, Upload, FileSearch, Code, Activity } from 'lucide-react';
+import { Loader2, CheckCircle2, ArrowLeft, Upload, FileSearch, Code, Activity, ClipboardList } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
@@ -66,12 +67,21 @@ export default function ProcessingPipeline() {
   // For this hackathon scope, if we have a preloaded network document, we'll simulate the backend hit 
   // or assume we already have results to view. Let's start the user at step 2.
 
-  const steps = [
+  const isPreAuth = location.state?.stage === 'preAuth';
+  const steps = isPreAuth ? [
+    { id: 1, label: 'Ingestion' },
+    { id: 2, label: 'Extraction' },
+    { id: 3, label: 'Pre-Auth Form' },
+    { id: 4, label: 'FHIR Bundle' },
+    { id: 5, label: 'Reconciliation' }
+  ] : [
     { id: 1, label: 'Ingestion' },
     { id: 2, label: 'Extraction' },
     { id: 3, label: 'FHIR Bundle' },
     { id: 4, label: 'Reconciliation' }
   ];
+
+  const totalSteps = steps.length;
 
   const handleFilesSubmit = async (files) => {
     setIsProcessing(true);
@@ -126,22 +136,30 @@ export default function ProcessingPipeline() {
                 <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">AI Concept Mapping</p>
               </div>
             )}
-            {currentStep === 3 && (
+            {currentStep === 3 && isPreAuth && (
+              <div className="text-center">
+                <h2 className="text-sm font-bold tracking-tight flex items-center justify-center gap-1.5 uppercase">
+                  <ClipboardList className="w-4 h-4 text-foreground" /> PRE-AUTH DASHBOARD
+                </h2>
+                <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">MediAssist Generation</p>
+              </div>
+            )}
+            {(currentStep === 3 && !isPreAuth) || (currentStep === 4 && isPreAuth) ? (
               <div className="text-center">
                 <h2 className="text-sm font-bold tracking-tight flex items-center justify-center gap-1.5 uppercase">
                   <Code className="w-4 h-4 text-foreground" /> FHIR R4 BUNDLE
                 </h2>
                 <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">Interoperability Standard Ready</p>
               </div>
-            )}
-            {currentStep === 4 && (
+            ) : null}
+            {(currentStep === 4 && !isPreAuth) || (currentStep === 5 && isPreAuth) ? (
               <div className="text-center">
                 <h2 className="text-sm font-bold tracking-tight flex items-center justify-center gap-1.5 uppercase">
                   <Activity className="w-4 h-4 text-foreground" /> FINAL ADJUDICATION
                 </h2>
                 <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">Pre-Submission Rules Engine</p>
               </div>
-            )}
+            ) : null}
           </div>
 
           <div className="flex items-center gap-4">
@@ -167,10 +185,10 @@ export default function ProcessingPipeline() {
       {/* Dynamic Mobile Step Progress */}
       <div className="md:hidden w-full border-b bg-card px-4 py-2">
         <div className="flex items-center justify-between mb-1.5">
-          <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-wider">{steps[currentStep - 1].label}</span>
-          <span className="text-[9px] font-bold text-muted-foreground">Step {currentStep} of 4</span>
+          <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-wider">{steps[currentStep - 1]?.label}</span>
+          <span className="text-[9px] font-bold text-muted-foreground">Step {currentStep} of {totalSteps}</span>
         </div>
-        <Progress value={(currentStep / 4) * 100} className="h-1" />
+        <Progress value={(currentStep / totalSteps) * 100} className="h-1" />
       </div>
 
       {/* Main Application Workspace */}
@@ -245,18 +263,28 @@ export default function ProcessingPipeline() {
           />
         )}
 
-        {currentStep === 3 && (
+        {currentStep === 3 && isPreAuth && (
+          <PreAuthDashboard
+            files={uploadedFiles}
+            apiResults={apiResults}
+            patient={location.state?.patient}
+            onConfirm={() => setCurrentStep(4)}
+            onBack={() => setCurrentStep(2)}
+          />
+        )}
+
+        {((currentStep === 3 && !isPreAuth) || (currentStep === 4 && isPreAuth)) && (
           <FhirViewer
             files={uploadedFiles}
             apiResults={apiResults}
             stage={location.state?.stage || 'admitted'}
             patient={location.state?.patient}
-            onProceed={() => setCurrentStep(4)}
-            onBack={() => setCurrentStep(2)}
+            onProceed={() => setCurrentStep(isPreAuth ? 5 : 4)}
+            onBack={() => setCurrentStep(isPreAuth ? 3 : 2)}
           />
         )}
 
-        {currentStep === 4 && (
+        {((currentStep === 4 && !isPreAuth) || (currentStep === 5 && isPreAuth)) && (
           <ReconciliationDashboard
             files={uploadedFiles}
             apiResults={apiResults}
@@ -267,7 +295,7 @@ export default function ProcessingPipeline() {
               setCurrentStep(1);
               navigate('/dashboard'); // Go back to dashboard on complete restart
             }}
-            onBack={() => setCurrentStep(3)}
+            onBack={() => setCurrentStep(isPreAuth ? 4 : 3)}
           />
         )}
       </main>
