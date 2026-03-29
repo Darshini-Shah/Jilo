@@ -1,42 +1,53 @@
-Here is the cleaned and structured information from the hospital document:
+Here is the cleaned and structured output:
 
----
+## Patient Info
 
-### Patient Info
+*   **Name:** Rahul
+*   **Admission Period:** 31/03/2022 to 03/04/2022
 
-*   **Patient Name:** Rahul
-*   **Date:** 31/03/2022
-*   **Chief Complaints:** High-grade fever (104°F) with chills for 7 days. Severe generalized weakness and drowsiness.
+## Billing/Charges
+
+| Service Description              | Bill Amount (INR) | Discount (INR) | Total Payable (INR) |
+| :------------------------------- | :---------------- | :-------------- | :------------------ |
+| Pathology Charges                | 49,390.00         | 3,951.20        | 45,438.80           |
+| Investigation & Lab (Settlement) | N/A               | 29,865.00       | 2.00                |
+
+## Medications
+
+*   **Blood Transfusions Administered:**
+    *   31/03/2022: 1 unit of blood and 8 units of Random Donor Platelets (RDP)
+    *   01/04/2022: 1 unit of blood
+*   **Other Medications:**
+    *   IV antibiotics (for suspected Sepsis/UTI)
+    *   IV anti-fungals (for suspected Sepsis/UTI)
+
+## Diagnosis
+
+*   **Primary Diagnoses:**
+    *   Aplastic Anemia
+    *   Pancytopenia
+    *   Sepsis
+    *   Severe Anemia
+    *   Conjugated Jaundice
+
+*   **Chief Complaints:**
+    *   High-grade fever (104°F) with chills for 7 days
+    *   Severe generalized weakness and drowsiness
+
 *   **Clinical Findings:**
-    *   **Vitals:** Tachycardia (Pulse: 138/min) and febrile.
+    *   Vitals: Tachycardia (Pulse: 138/min) and febrile
+    *   Liver: Conjugated Jaundice
 
-### Diagnosis
+*   **Laboratory Investigations (during 31/03/2022 - 03/04/2022):**
 
-*   Aplastic Anemia with Pancytopenia and Sepsis
+| Test                        | Result | Unit   | Interpretation/Note           |
+| :-------------------------- | :----- | :----- | :---------------------------- |
+| Hemoglobin (Hb)             | 5      | gm/dl  | Extremely low / Severe Anemia |
+| Total Leucocyte Count (TLC) | 850    |        | Severely low                  |
+| Platelet Count              | 8,000  |        | Critically low                |
+| Serum Bilirubin Total       | 3.7    | mg/dl  | Elevated, indicating Jaundice |
+| Serum Bilirubin Direct      | 2.24   | mg/dl  | Elevated, indicating Jaundice |
+| Serum Procalcitonin         | 2.33   |        | Elevated, indicating Sepsis   |
 
-### Lab Results
-
-| Test                      | Result    | Comment             |
-| :------------------------ | :-------- | :------------------ |
-| Hemoglobin (Hb)           | 5 gm/dl   | Severe Anemia       |
-| Platelets                 | 8,000     | Critical            |
-| TLC (Total Leukocyte Count) | 850       |                     |
-| Total Bilirubin           | 3.7       | Conjugated Jaundice |
-
-### Medications
-
-*   IV antibiotics (for suspected Sepsis/UTI)
-*   IV anti-fungals (for suspected Sepsis/UTI)
-
-### Treatment / Procedures
-
-*   Urgent transfusion of 1 unit of blood.
-*   Urgent transfusion of 8 units of RDP (Random Donor Platelets).
-*   Monitor vitals and cardiac status (2D ECHO).
-
-### Billing/Charges
-
-*   *No specific billing or charge information was found in the provided text.*
-
----
-
+*   **Immediate Plan (Doctor's Note):**
+    *   Monitor vitals and cardiac status (2D ECHO).
