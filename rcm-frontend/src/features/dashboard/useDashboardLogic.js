@@ -1,19 +1,22 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabase';
+import { usePatientContext } from '../../contexts/PatientContext';
 
 const API_BASE = 'http://localhost:8000';
 
 export function useDashboardLogic() {
   const navigate = useNavigate();
+  const { patients, loading: patientsLoading, setPatients } = usePatientContext();
   const [session, setSession] = useState(null);
-  const [patients, setPatients] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [activePatientId, setActivePatientId] = useState(null);
   const [isNewPatientOpen, setIsNewPatientOpen] = useState(false);
   const [userProfile, setUserProfile] = useState(null);
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
   const [processingStatus, setProcessingStatus] = useState("");
+  const [processingProgress, setProcessingProgress] = useState(0);
+  const [processingStartTime, setProcessingStartTime] = useState(null);
 
   const [patientForm, setPatientForm] = useState({
     name: "", gender: "", contact: "", dob: "", age: "", policy_number: "", employee_id: "", insurer_id: "", medical_claim: false, occupation: "", address: ""
@@ -26,12 +29,13 @@ export function useDashboardLogic() {
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session: cur } }) => {
       setSession(cur);
-      if (cur) { fetchProfile(cur); fetchPatients(cur); }
-      else { setLoading(false); }
+      if (cur) { fetchProfile(cur); }
+      else { navigate('/'); }
     });
     const { data: authListener } = supabase.auth.onAuthStateChange((_e, s) => {
       setSession(s);
-      if (s) { fetchProfile(s); fetchPatients(s); }
+      if (s) { fetchProfile(s); }
+      else { navigate('/'); }
     });
     return () => authListener.subscription.unsubscribe();
   }, []);
@@ -45,29 +49,7 @@ export function useDashboardLogic() {
     }
   };
 
-  const fetchPatients = async (s) => {
-    setLoading(true);
-    try {
-      const res = await fetch(`${API_BASE}/patients/`, { headers: { 'Authorization': `Bearer ${s.access_token}` } });
-      if (!res.ok) throw new Error("Fetch failed");
-      const data = await res.json();
-      const enhanced = await Promise.all(data.map(async (pat) => {
-        const dRes = await fetch(`${API_BASE}/documents/?patient_id=${pat.id}`, { headers: { 'Authorization': `Bearer ${s.access_token}` } });
-        let docs = [];
-        if (dRes.ok) {
-          const raw = await dRes.json();
-          docs = raw.map(d => {
-            const stage = d.file_name?.includes('__') ? d.file_name.split('__')[0] : 'admitted';
-            const name = d.file_name?.includes('__') ? d.file_name.split('__').slice(1).join('__') : (d.file_name || 'Doc.pdf');
-            
-            return { ...d, name, stage, status: 'pending', url: d.file_url };
-          });
-        }
-        return { ...pat, documents: docs };
-      }));
-      setPatients(enhanced);
-    } catch (err) { console.error(err); } finally { setLoading(false); }
-  };
+  // Patient data is now fetched in PatientContext
 
   const handleOnboardingSubmit = async (e) => {
     e.preventDefault();
@@ -115,7 +97,11 @@ export function useDashboardLogic() {
   const processBatch = async (patient, stage) => {
     const sDocs = patient.documents.filter(d => d.stage === stage);
     setLoading(true);
-    setProcessingStatus("Aggregating Records...");
+    setProcessingProgress(0);
+    setProcessingStartTime(Date.now());
+    setProcessingStatus("Fetching Documents from Storage...");
+    setProcessingProgress(10);
+
     const blobs = await Promise.all(sDocs.map(async d => {
       if (d.rawFile) return d.rawFile;
       const r = await fetch(d.url);
@@ -123,16 +109,31 @@ export function useDashboardLogic() {
       return new File([b], d.name, { type: 'application/pdf' });
     }));
 
-    setProcessingStatus("Analyzing Unified Context...");
+    setProcessingStatus("Preprocessing & OCR Extraction...");
+    setProcessingProgress(25);
+
     const bfd = new FormData();
     blobs.forEach(f => bfd.append("pdf_files", f));
 
     try {
+      setProcessingStatus("Running AI Pipeline (this may take 1-3 min)...");
+      setProcessingProgress(40);
+
       const res = await fetch(`${API_BASE}/process-pdfs`, { method: 'POST', body: bfd });
+
+      setProcessingStatus("Generating FHIR Bundle & Validation...");
+      setProcessingProgress(80);
+
       if (!res.ok) throw new Error("API failed");
       const data = await res.json();
-      setProcessingStatus("Finalizing Extraction...");
-      // Reverting to sequential results handling: use the first result for the immediate view or the whole array
+
+      setProcessingStatus("Finalizing Results...");
+      setProcessingProgress(95);
+
+      // Small delay so user can see 95% before navigation
+      await new Promise(r => setTimeout(r, 400));
+      setProcessingProgress(100);
+
       navigate('/process', { state: { batchResult: data.results[0], results: data.results, files: blobs } });
     } catch (err) {
       console.error(err);
@@ -140,13 +141,22 @@ export function useDashboardLogic() {
     } finally {
       setLoading(false);
       setProcessingStatus("");
+      setProcessingProgress(0);
+      setProcessingStartTime(null);
     }
   };
 
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    navigate('/');
+  };
+
   return {
-    patients, loading, activePatientId, setActivePatientId, 
+    patients, loading: loading || patientsLoading, activePatientId, setActivePatientId, 
     isNewPatientOpen, setIsNewPatientOpen, userProfile, isOnboardingOpen,
-    processingStatus, patientForm, setPatientForm, hospitalForm, setHospitalForm,
-    handleOnboardingSubmit, handleCreatePatient, handleFileAttached, processBatch
+    processingStatus, processingProgress, processingStartTime,
+    patientForm, setPatientForm, hospitalForm, setHospitalForm,
+    handleOnboardingSubmit, handleCreatePatient, handleFileAttached, processBatch,
+    handleLogout
   };
 }
