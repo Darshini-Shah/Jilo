@@ -13,6 +13,8 @@ const PatientDetailModal = ({
   onClose,
   onFileAttached,
   onProcessBatch,
+  onUpdateStep,
+  onDeleteDocument
   onProcessSettlement,
   onProcessBillAudit,
   onProcessBillApproval,

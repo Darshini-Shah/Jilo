@@ -22,6 +22,7 @@ class PatientCreate(BaseModel):
     medical_claim: Optional[bool] = False
     occupation: Optional[str] = None
     address: Optional[str] = None
+    step: Optional[str] = "pre auth"
     aadhar_no: Optional[str] = None
 
 

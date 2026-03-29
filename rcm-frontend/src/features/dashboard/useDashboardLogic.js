@@ -14,6 +14,8 @@ export function useDashboardLogic() {
   const [isNewPatientOpen, setIsNewPatientOpen] = useState(false);
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
   const [processingStatus, setProcessingStatus] = useState("");
+  const [isSubmittingPatient, setIsSubmittingPatient] = useState(false);
+  const [patientError, setPatientError] = useState("");
 
   const [patientForm, setPatientForm] = useState({
     aadhar_no: ""
@@ -24,6 +26,19 @@ export function useDashboardLogic() {
   });
 
   useEffect(() => {
+    const cachedPatients = sessionStorage.getItem('cachedPatients');
+    let loadedFromCache = false;
+
+    if (cachedPatients && cachedPatients !== '[]') {
+      try {
+        setPatients(JSON.parse(cachedPatients));
+        setLoading(false);
+        loadedFromCache = true;
+      } catch (e) {
+        console.error("Cache parsing error", e);
+      }
+    }
+
     supabase.auth.getSession().then(({ data: { session: cur } }) => {
       setSession(cur);
       if (cur) {
@@ -33,6 +48,7 @@ export function useDashboardLogic() {
       }
       else { setLoading(false); }
     });
+
     const { data: authListener } = supabase.auth.onAuthStateChange((_e, s) => {
       setSession(s);
       if (s) {
@@ -40,8 +56,13 @@ export function useDashboardLogic() {
         if (!isFetched) fetchPatients(s);
       }
     });
+
     return () => authListener.subscription.unsubscribe();
   }, [isFetched]);
+
+  useEffect(() => {
+    sessionStorage.setItem('cachedPatients', JSON.stringify(patients));
+  }, [patients]);
 
   const fetchProfile = async (s) => {
     const res = await fetch(`${API_BASE}/users/me`, { headers: { 'Authorization': `Bearer ${s.access_token}` } });
@@ -66,7 +87,7 @@ export function useDashboardLogic() {
           docs = raw.map(d => {
             const stage = d.file_name?.includes('__') ? d.file_name.split('__')[0] : 'admitted';
             const name = d.file_name?.includes('__') ? d.file_name.split('__').slice(1).join('__') : (d.file_name || 'Doc.pdf');
-            
+
             return { ...d, name, stage, status: 'pending', url: d.file_url };
           });
         }
@@ -100,6 +121,145 @@ export function useDashboardLogic() {
    */
   const handleCreatePatient = async (e) => {
     e.preventDefault();
+    if (!session) { setPatientError("Session expired. Please log in again."); return; }
+    setIsSubmittingPatient(true);
+    setPatientError("");
+    try {
+      setLoading(true);
+      setProcessingStatus("Synchronizing Patient Registry...");
+      
+      const res = await fetch(`${API_BASE}/patients/`, {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json', 
+          'Authorization': `Bearer ${session.access_token}` 
+        },
+        body: JSON.stringify({ 
+          aadhar_no: patientForm.aadhar_no 
+        })
+      });
+      
+      if (!res.ok) {
+        const errData = await res.json();
+        throw new Error(errData.detail || "Failed to create/update patient");
+      }
+      
+      const newPat = await res.json();
+      
+      // Update local state: Replace if already exists in list, otherwise add to top
+      setPatients(prev => {
+        const exists = prev.findIndex(p => p.aadhar_no === newPat.aadhar_no);
+        if (exists !== -1) {
+          const updated = [...prev];
+          updated[exists] = { ...newPat, documents: prev[exists].documents || [] };
+          return updated;
+        }
+        return [{ ...newPat, documents: [] }, ...prev];
+      });
+      
+      setIsNewPatientOpen(false);
+      setPatientForm({ aadhar_no: "" });
+    } catch (err) {
+      console.error(err);
+      alert(err.message);
+    } finally {
+      setLoading(false);
+      setProcessingStatus("");
+  };
+
+  const updatePatientStep = async (patientId, newStep) => {
+    if (!session) return;
+    try {
+      // Optimistic update
+      setPatients(ps => ps.map(p => p.id === patientId ? { ...p, step: newStep } : p));
+
+      const res = await fetch(`${API_BASE}/patients/${patientId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session.access_token}`
+        },
+        body: JSON.stringify({ step: newStep })
+      });
+
+      if (!res.ok) {
+        // Revert on error
+        fetchPatients(session);
+        throw new Error("Failed to update patient step");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Failed to update status. Check connection.");
+    }
+  };
+
+  const handleEditPatient = async (patientId, data) => {
+    if (!session) return;
+    setIsSubmittingPatient(true);
+    setPatientError("");
+    try {
+      const payload = { ...data, age: data.age ? parseInt(data.age) : null };
+      const res = await fetch(`${API_BASE}/patients/${patientId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session.access_token}`
+        },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData.detail || `Server error ${res.status}`);
+      }
+      const updatedPat = await res.json();
+      setPatients(ps => ps.map(p => p.id === patientId ? { ...updatedPat, documents: p.documents } : p));
+      setIsNewPatientOpen(false);
+    } catch (err) {
+      console.error(err);
+      setPatientError(err.message || "Failed to edit patient details.");
+    } finally {
+      setIsSubmittingPatient(false);
+    }
+  };
+
+  const handleDeletePatient = async (patientId) => {
+    if (!session) return;
+    if (!window.confirm("Are you sure you want to permanently delete this patient context?")) return;
+    try {
+      setPatients(ps => ps.filter(p => p.id !== patientId)); // Optimistic delete
+      const res = await fetch(`${API_BASE}/patients/${patientId}`, {
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${session.access_token}` }
+      });
+      if (!res.ok) {
+        fetchPatients(session); // Revert on failure
+        throw new Error("Failed to delete patient");
+      }
+      if (activePatientId === patientId) setActivePatientId(null);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to delete patient context.");
+    }
+  };
+
+  const handleDeleteDocument = async (patientId, docId) => {
+    if (!session) return;
+    if (!window.confirm("Are you sure you want to delete this document?")) return;
+    try {
+      // Optimistic delete
+      setPatients(ps => ps.map(p => p.id === patientId ? { ...p, documents: p.documents.filter(d => d.id !== docId) } : p));
+
+      const res = await fetch(`${API_BASE}/documents/${docId}`, {
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${session.access_token}` }
+      });
+      if (!res.ok) {
+        fetchPatients(session); // Revert on failure
+        throw new Error("Failed to delete document");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Failed to delete document.");
     try {
       setLoading(true);
       setProcessingStatus("Synchronizing Patient Registry...");
@@ -209,6 +369,7 @@ export function useDashboardLogic() {
   };
 
   const processBatch = async (patient, stage) => {
+    if (!session) { alert("Session expired. Please log in again."); return; }
     const sDocs = patient.documents.filter(d => d.stage === stage);
     setLoading(true);
     setProcessingStatus("Aggregating Records...");
@@ -221,6 +382,7 @@ export function useDashboardLogic() {
       return new File([b], d.name, { type: 'application/pdf' });
     }));
 
+    setProcessingStatus("Running AI Pipeline — This May Take A Moment...");
     // Determine the correct pipeline stage based on DB step
     const pipelineStage = dbStepToStage(patient.step);
     setProcessingStatus(`Running ${pipelineStage === 'preAuth' ? 'Pre-Auth' : 'Admitted'} Pipeline...`);
@@ -236,13 +398,13 @@ export function useDashboardLogic() {
       if (pipelineStage === 'preAuth') endpoint = `${API_BASE}/pipeline/preauth`;
       else endpoint = `${API_BASE}/pipeline/admitted`;
 
-      const res = await fetch(endpoint, { 
-        method: 'POST', 
+      const res = await fetch(endpoint, {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${session?.access_token || ''}`
         },
-        body: JSON.stringify(payload) 
+        body: JSON.stringify(payload)
       });
       if (!res.ok) {
         const errBody = await res.json().catch(() => ({ detail: 'Unknown error' }));
@@ -250,7 +412,15 @@ export function useDashboardLogic() {
       }
       const data = await res.json();
       setProcessingStatus("Finalizing Extraction...");
-      
+      navigate('/process', {
+        state: {
+          batchResult: data.results[0],
+          results: data.results,
+          files: sDocs.map(d => ({ name: d.name, url: d.url })),
+          patient: patient
+        }
+      });
+
       const passResults = data.results || [data];
       const batchRes = data.results ? data.results[0] : data;
 
@@ -264,43 +434,72 @@ export function useDashboardLogic() {
     }
   };
 
-  const processSettlement = async (patient, settlementFile) => {
-    setLoading(true);
-    setProcessingStatus("Auditing Settlement...");
-    
-    const formData = new FormData();
-    formData.append('file', settlementFile);
+  // ... inside useDashboardLogic() before the return statement ...
 
-    try {
-      const res = await fetch(`${API_BASE}/settlement/audit?patient_id=${patient.id}`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${session?.access_token || ''}`
-        },
-        body: formData
-      });
+  const exportPatientsToCSV = () => {
+    // We filter out patients with 'settled' step just like your return statement does
+    const activePatients = patients.filter(p => !['setteled', 'settled'].includes(p.step?.toLowerCase()));
 
-      if (!res.ok) {
-        const errBody = await res.json().catch(() => ({ detail: 'Settlement audit failed' }));
-        throw new Error(errBody.detail || `API returned ${res.status}`);
-      }
-
-      const data = await res.json();
-      navigate('/settlement', { state: { settlementResult: data, patient } });
-    } catch (err) {
-      console.error(err);
-      alert(`Settlement Audit failed: ${err.message}`);
-    } finally {
-      setLoading(false);
-      setProcessingStatus("");
+    if (!activePatients || activePatients.length === 0) {
+      alert("No patient data available to export.");
+      return;
     }
+
+    // Define the exact columns we want to export based on your JSON
+    const headers = [
+      "id", "tpa_id", "name", "gender", "contact", "dob", "age",
+      "policy_number", "employee_id", "insurer_id", "medical_claim",
+      "occupation", "address", "step", "aadhar_no", "created_at"
+    ];
+
+    // Create the CSV header row
+    let csvContent = headers.join(",") + "\n";
+
+    // Map through patients and create CSV rows
+    activePatients.forEach(patient => {
+      const row = headers.map(header => {
+        let val = patient[header];
+
+        // Handle nulls/undefined
+        if (val === null || val === undefined) val = "";
+
+        // Convert to string and escape existing double quotes
+        val = String(val).replace(/"/g, '""');
+
+        // Wrap in quotes if the value contains a comma, newline, or quotes
+        if (val.includes(",") || val.includes("\n") || val.includes("\"")) {
+          val = `"${val}"`;
+        }
+
+        return val;
+      });
+      csvContent += row.join(",") + "\n";
+    });
+
+    // Create a Blob and trigger the download
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+
+    // Add today's date to the filename
+    const date = new Date().toISOString().split('T')[0];
+    link.setAttribute("download", `Patient_Registry_Export_${date}.csv`);
+
+    // Trigger download mechanism
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return {
-    patients, loading, activePatientId, setActivePatientId, 
+    patients: patients.filter(p => !['setteled', 'settled'].includes(p.step?.toLowerCase())),
+    loading, activePatientId, setActivePatientId,
     isNewPatientOpen, setIsNewPatientOpen, userProfile, isOnboardingOpen,
     processingStatus, patientForm, setPatientForm, hospitalForm, setHospitalForm,
-    handleOnboardingSubmit, handleCreatePatient, handleFileAttached, processBatch, processSettlement,
-    processBillAudit, processBillApproval
+    handleOnboardingSubmit, handleCreatePatient, handleFileAttached, processBatch,
+    isSubmittingPatient, patientError, setPatientError, updatePatientStep,
+    handleEditPatient, handleDeletePatient, handleDeleteDocument,
+    exportPatientsToCSV // <--- Make sure to export the new function here!
   };
 }
