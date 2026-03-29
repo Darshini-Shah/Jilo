@@ -1,39 +1,44 @@
-Here is the cleaned and structured version of the doctor's note:
+Here is the cleaned and structured information from the hospital document:
 
 # Doctors Admission Note
 
 ## Patient Info
 *   **Name:** Rahul
 *   **Date:** 31/03/2022
-*   **Chief Complaints:**
-    *   High-grade fever (104°F) with chills for 7 days.
-    *   Severe generalized weakness and drowsiness.
+*   **Chief Complaints:** High-grade fever (104°F) with chills for 7 days. Severe generalized weakness and drowsiness.
 *   **Clinical Findings:**
-    *   **Vitals:** Tachycardia (Pulse: 138/min), Febrile.
-    *   **Liver:** Conjugated Jaundice.
+    *   **Vitals:** Tachycardia (Pulse: 138/min) and febrile.
+
+### Diagnosis
+
+*   Aplastic Anemia with Pancytopenia and Sepsis
 
 ### Lab Results
 
-| Test            | Result         | Notes         |
-| :-------------- | :------------- | :------------ |
-| Hemoglobin (Hb) | 5 gm/dL        | Severe Anemia |
-| Platelets       | 8,000/µL       | Critical      |
-| TLC             | 850/µL         |               |
-| Total Bilirubin | 3.7 mg/dL      |               |
+| Test                      | Result    | Comment             |
+| :------------------------ | :-------- | :------------------ |
+| Hemoglobin (Hb)           | 5 gm/dl   | Severe Anemia       |
+| Platelets                 | 8,000     | Critical            |
+| TLC (Total Leukocyte Count) | 850       |                     |
+| Total Bilirubin           | 3.7       | Conjugated Jaundice |
 
 ### Immediate Plan
 *   Urgent transfusion of 1 unit of blood.
 *   Urgent transfusion of 8 units of RDP (Random Donor Platelets).
 *   Monitor vitals and cardiac status (2D ECHO planned).
 
-## Billing/Charges
-*   No explicit billing items or charges are provided in this note. However, the planned transfusions (blood, RDP) and the 2D ECHO are procedures that will incur charges.
-
-## Medications
 *   IV antibiotics (for suspected Sepsis/UTI)
-*   Anti-fungals (for suspected Sepsis/UTI)
+*   IV anti-fungals (for suspected Sepsis/UTI)
 
-## Diagnosis
-*   Aplastic Anemia with Pancytopenia
-*   Sepsis
+### Treatment / Procedures
+
+*   Urgent transfusion of 1 unit of blood.
+*   Urgent transfusion of 8 units of RDP (Random Donor Platelets).
+*   Monitor vitals and cardiac status (2D ECHO).
+
+### Billing/Charges
+
+*   *No specific billing or charge information was found in the provided text.*
+
+---
 

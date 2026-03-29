@@ -67,3 +67,4 @@ async def export_html(payload: dict = Body(...)):
             "Content-Disposition": 'attachment; filename="MediAssist_PreAuth.html"'
         }
     )
+
