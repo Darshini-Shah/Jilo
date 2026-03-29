@@ -1,10 +1,9 @@
 Here is the cleaned and structured information from the hospital document:
 
----
+# Doctors Admission Note
 
-### Patient Info
-
-*   **Patient Name:** Rahul
+## Patient Info
+*   **Name:** Rahul
 *   **Date:** 31/03/2022
 *   **Chief Complaints:** High-grade fever (104°F) with chills for 7 days. Severe generalized weakness and drowsiness.
 *   **Clinical Findings:**
@@ -23,7 +22,10 @@ Here is the cleaned and structured information from the hospital document:
 | TLC (Total Leukocyte Count) | 850       |                     |
 | Total Bilirubin           | 3.7       | Conjugated Jaundice |
 
-### Medications
+### Immediate Plan
+*   Urgent transfusion of 1 unit of blood.
+*   Urgent transfusion of 8 units of RDP (Random Donor Platelets).
+*   Monitor vitals and cardiac status (2D ECHO planned).
 
 *   IV antibiotics (for suspected Sepsis/UTI)
 *   IV anti-fungals (for suspected Sepsis/UTI)
