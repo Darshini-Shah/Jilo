@@ -26,18 +26,46 @@ export function useDashboardLogic() {
   });
 
   useEffect(() => {
+    const cachedPatients = sessionStorage.getItem('cachedPatients');
+    let loadedFromCache = false;
+    
+    if (cachedPatients && cachedPatients !== '[]') {
+      try {
+        setPatients(JSON.parse(cachedPatients));
+        setLoading(false);
+        loadedFromCache = true;
+      } catch (e) {
+        console.error("Cache parsing error", e);
+      }
+    }
+
     supabase.auth.getSession().then(({ data: { session: cur } }) => {
       setSession(cur);
-      if (cur) { fetchProfile(cur); fetchPatients(cur); }
-      else { setLoading(false); navigate('/', { replace: true }); }
+      if (cur) {
+        fetchProfile(cur);
+        if (!loadedFromCache) fetchPatients(cur);
+      } else {
+        setLoading(false);
+        navigate('/', { replace: true });
+      }
     });
+
     const { data: authListener } = supabase.auth.onAuthStateChange((_e, s) => {
       setSession(s);
-      if (s) { fetchProfile(s); fetchPatients(s); }
-      else { navigate('/', { replace: true }); }
+      if (s) { 
+        fetchProfile(s); 
+        fetchPatients(s); 
+      } else {
+        navigate('/', { replace: true }); 
+      }
     });
+
     return () => authListener.subscription.unsubscribe();
   }, []);
+
+  useEffect(() => {
+    sessionStorage.setItem('cachedPatients', JSON.stringify(patients));
+  }, [patients]);
 
   const fetchProfile = async (s) => {
     const res = await fetch(`${API_BASE}/users/me`, { headers: { 'Authorization': `Bearer ${s.access_token}` } });
@@ -142,6 +170,76 @@ export function useDashboardLogic() {
     }
   };
 
+  const handleEditPatient = async (patientId, data) => {
+    if (!session) return;
+    setIsSubmittingPatient(true);
+    setPatientError("");
+    try {
+      const payload = { ...data, age: data.age ? parseInt(data.age) : null };
+      const res = await fetch(`${API_BASE}/patients/${patientId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session.access_token}`
+        },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData.detail || `Server error ${res.status}`);
+      }
+      const updatedPat = await res.json();
+      setPatients(ps => ps.map(p => p.id === patientId ? { ...updatedPat, documents: p.documents } : p));
+      setIsNewPatientOpen(false);
+    } catch (err) {
+      console.error(err);
+      setPatientError(err.message || "Failed to edit patient details.");
+    } finally {
+      setIsSubmittingPatient(false);
+    }
+  };
+
+  const handleDeletePatient = async (patientId) => {
+    if (!session) return;
+    if (!window.confirm("Are you sure you want to permanently delete this patient context?")) return;
+    try {
+      setPatients(ps => ps.filter(p => p.id !== patientId)); // Optimistic delete
+      const res = await fetch(`${API_BASE}/patients/${patientId}`, {
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${session.access_token}` }
+      });
+      if (!res.ok) {
+        fetchPatients(session); // Revert on failure
+        throw new Error("Failed to delete patient");
+      }
+      if (activePatientId === patientId) setActivePatientId(null);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to delete patient context.");
+    }
+  };
+
+  const handleDeleteDocument = async (patientId, docId) => {
+    if (!session) return;
+    if (!window.confirm("Are you sure you want to delete this document?")) return;
+    try {
+      // Optimistic delete
+      setPatients(ps => ps.map(p => p.id === patientId ? { ...p, documents: p.documents.filter(d => d.id !== docId) } : p));
+      
+      const res = await fetch(`${API_BASE}/documents/${docId}`, {
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${session.access_token}` }
+      });
+      if (!res.ok) {
+        fetchPatients(session); // Revert on failure
+        throw new Error("Failed to delete document");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Failed to delete document.");
+    }
+  };
+
   const handleFileAttached = async (e, patientId, stage) => {
     const files = Array.from(e.target.files);
     const newDocs = files.map(f => ({ id: `t-${Math.random()}`, name: f.name, stage, status: 'pending', url: URL.createObjectURL(f), rawFile: f }));
@@ -198,6 +296,7 @@ export function useDashboardLogic() {
     isNewPatientOpen, setIsNewPatientOpen, userProfile, isOnboardingOpen,
     processingStatus, patientForm, setPatientForm, hospitalForm, setHospitalForm,
     handleOnboardingSubmit, handleCreatePatient, handleFileAttached, processBatch,
-    isSubmittingPatient, patientError, setPatientError, updatePatientStep
+    isSubmittingPatient, patientError, setPatientError, updatePatientStep,
+    handleEditPatient, handleDeletePatient, handleDeleteDocument
   };
 }

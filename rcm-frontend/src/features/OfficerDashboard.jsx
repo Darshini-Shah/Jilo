@@ -20,8 +20,47 @@ export default function OfficerDashboard() {
     isNewPatientOpen, setIsNewPatientOpen, userProfile, isOnboardingOpen,
     processingStatus, patientForm, setPatientForm, hospitalForm, setHospitalForm,
     handleOnboardingSubmit, handleCreatePatient, handleFileAttached, processBatch,
-    isSubmittingPatient, patientError, setPatientError, updatePatientStep
+    isSubmittingPatient, patientError, setPatientError, updatePatientStep,
+    handleEditPatient, handleDeletePatient, handleDeleteDocument
   } = useDashboardLogic();
+
+  const [editingPatientId, setEditingPatientId] = React.useState(null);
+
+  const onEditPatientClick = (patient) => {
+    setEditingPatientId(patient.id);
+    setPatientForm({
+      name: patient.name || "",
+      gender: patient.gender || "",
+      contact: patient.contact || "",
+      dob: patient.dob || "",
+      age: patient.age || "",
+      policy_number: patient.policy_number || "",
+      employee_id: patient.employee_id || "",
+      insurer_id: patient.insurer_id || "",
+      medical_claim: patient.medical_claim || false,
+      occupation: patient.occupation || "",
+      address: patient.address || ""
+    });
+    setIsNewPatientOpen(true);
+  };
+
+  const onModalSubmit = (e) => {
+    if (editingPatientId) {
+      e.preventDefault();
+      handleEditPatient(editingPatientId, patientForm);
+      setEditingPatientId(null);
+    } else {
+      handleCreatePatient(e);
+    }
+  };
+
+  const onModalChange = (isOpen) => {
+    setIsNewPatientOpen(isOpen);
+    if (!isOpen) {
+      setEditingPatientId(null);
+      setPatientForm({ name: "", gender: "", contact: "", dob: "", age: "", policy_number: "", employee_id: "", insurer_id: "", medical_claim: false, occupation: "", address: "" });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans">
@@ -41,13 +80,14 @@ export default function OfficerDashboard() {
             </div>
             <NewPatientModal 
               isOpen={isNewPatientOpen} 
-              onOpenChange={setIsNewPatientOpen} 
+              onOpenChange={onModalChange} 
               formData={patientForm} 
               onChange={(e) => setPatientForm({ 
                 ...patientForm, 
                 [e.target.id]: e.target.type === 'checkbox' ? e.target.checked : e.target.value 
               })} 
-              onSubmit={handleCreatePatient} 
+              onSubmit={onModalSubmit} 
+              isEditMode={!!editingPatientId}
             />
           </div>
 
@@ -69,6 +109,8 @@ export default function OfficerDashboard() {
             patients={patients} 
             loading={loading && !processingStatus} 
             onSelectPatient={setActivePatientId} 
+            onEditPatient={onEditPatientClick}
+            onDeletePatient={handleDeletePatient}
           />
         </div>
       </main>
@@ -80,6 +122,7 @@ export default function OfficerDashboard() {
         onFileAttached={handleFileAttached} 
         onProcessBatch={processBatch}
         onUpdateStep={updatePatientStep}
+        onDeleteDocument={handleDeleteDocument}
       />
 
       <OnboardingModal 

@@ -6,13 +6,14 @@ import { Activity } from 'lucide-react';
 import DocumentStage from './DocumentStage';
 import { STAGE_ORDER, STAGE_LABELS, STAGE_ICONS } from './constants';
 
-const PatientDetailModal = ({ 
-  patient, 
-  isOpen, 
-  onClose, 
-  onFileAttached, 
+const PatientDetailModal = ({
+  patient,
+  isOpen,
+  onClose,
+  onFileAttached,
   onProcessBatch,
-  onUpdateStep
+  onUpdateStep,
+  onDeleteDocument
 }) => {
   if (!patient) return null;
 
@@ -61,7 +62,7 @@ const PatientDetailModal = ({
           {/* LEFT PANEL: Database Fields */}
           <div className="md:col-span-1 p-8 border-r border-border bg-muted/5 overflow-y-auto custom-scrollbar">
             <h4 className="text-xs font-bold uppercase tracking-widest mb-4 border-b pb-2">Full Schema Data</h4>
-            
+
 
 
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
@@ -74,7 +75,7 @@ const PatientDetailModal = ({
               {renderField('Employee ID', patient.employee_id)}
               {renderField('Occupation', patient.occupation)}
             </div>
-            
+
             {renderField('Address', patient.address)}
           </div>
 
@@ -96,13 +97,14 @@ const PatientDetailModal = ({
                     className="hidden"
                     onChange={(e) => onFileAttached(e, patient.id, stage)}
                   />
-                  <DocumentStage 
+                  <DocumentStage
                     patient={patient}
                     targetStage={stage}
                     stageLabel={STAGE_LABELS[stage]}
                     Icon={STAGE_ICONS[stage]}
                     onUploadClick={() => triggerFileAttachment(stage)}
                     onProcessBatch={() => onProcessBatch(patient, stage)}
+                    onDeleteDocument={onDeleteDocument}
                   />
                 </div>
               </div>

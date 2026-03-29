@@ -5,17 +5,19 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Plus, User } from 'lucide-react';
 
-const NewPatientModal = ({ isOpen, onOpenChange, formData, onChange, onSubmit }) => {
+const NewPatientModal = ({ isOpen, onOpenChange, formData, onChange, onSubmit, isEditMode = false }) => {
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogTrigger asChild>
-        <Button className="font-bold text-xs uppercase tracking-widest rounded-sm border-2">
-          <Plus className="w-4 h-4 mr-2" /> Registry Entry
-        </Button>
-      </DialogTrigger>
+      {!isEditMode && (
+        <DialogTrigger asChild>
+          <Button className="font-bold text-xs uppercase tracking-widest rounded-sm border-2">
+            <Plus className="w-4 h-4 mr-2" /> Registry Entry
+          </Button>
+        </DialogTrigger>
+      )}
       <DialogContent className="sm:max-w-2xl max-h-[85vh] p-0 overflow-hidden flex flex-col">
         <DialogHeader className="p-6 border-b bg-muted/10 shrink-0">
-          <DialogTitle className="uppercase tracking-widest text-sm font-bold">New Registry Entry</DialogTitle>
+          <DialogTitle className="uppercase tracking-widest text-sm font-bold">{isEditMode ? 'Edit Registry Entry' : 'New Registry Entry'}</DialogTitle>
           <DialogDescription className="text-xs">Populate the schema carefully. Name is exclusively required.</DialogDescription>
         </DialogHeader>
 
@@ -84,7 +86,9 @@ const NewPatientModal = ({ isOpen, onOpenChange, formData, onChange, onSubmit })
         </div>
 
         <DialogFooter className="p-6 border-t bg-muted/10 shrink-0">
-          <Button form="registry-form" type="submit" className="w-full font-bold uppercase tracking-widest rounded-sm">Commit Registry Entry</Button>
+          <Button form="registry-form" type="submit" className="w-full font-bold uppercase tracking-widest rounded-sm">
+            {isEditMode ? 'Save Changes' : 'Commit Registry Entry'}
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

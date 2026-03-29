@@ -22,16 +22,6 @@ const ExtractionDashboard = ({ files = [], apiResults = [], isBatch = false, onC
           Back
         </Button>
 
-        <div className="text-center hidden sm:flex flex-col items-center justify-center scale-90">
-          <h2 className="text-l font-bold tracking-tight flex items-center justify-center gap-1">
-            <Activity className="w-3.5 h-2 text-foreground" />
-            EXTRACTION DASHBOARD
-          </h2>
-          <p className="text-[11px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">
-            {isBatch ? 'BATCH CONTEXTUAL EXTRACTION' : 'NLP EXTRACTION & CODING'}
-          </p>
-        </div>
-
         <div className="flex gap-2">
           <Button size="sm" onClick={onConfirm} className="h-7 font-bold shadow-md shadow-foreground/10 text-xs">
             Approve ({files.length})

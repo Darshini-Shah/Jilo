@@ -59,11 +59,9 @@ async def update_patient(patient_id: str, tpa_id: str, data: dict) -> dict:
             .eq("tpa_id", tpa_id)
             .execute()
         )
-        if not res.data:
-            raise HTTPException(status.HTTP_404_NOT_FOUND, detail="Patient not found")
-        return res.data[0]
-    except HTTPException:
-        raise
+        # Refetch the updated row since default update doesn't always return the payload
+        updated_res = supabase.table("patients").select("*").eq("id", patient_id).single().execute()
+        return updated_res.data
     except Exception as e:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, detail=str(e))
 
@@ -78,9 +76,5 @@ async def delete_patient(patient_id: str, tpa_id: str):
             .eq("tpa_id", tpa_id)
             .execute()
         )
-        if not res.data:
-            raise HTTPException(status.HTTP_404_NOT_FOUND, detail="Patient not found")
-    except HTTPException:
-        raise
     except Exception as e:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, detail=str(e))

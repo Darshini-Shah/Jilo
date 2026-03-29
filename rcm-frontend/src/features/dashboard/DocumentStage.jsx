@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, CheckCircle2, UploadCloud } from 'lucide-react';
+import { FileText, CheckCircle2, UploadCloud, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -9,7 +9,8 @@ const DocumentStage = ({
   stageLabel, 
   Icon, 
   onUploadClick, 
-  onProcessBatch 
+  onProcessBatch,
+  onDeleteDocument 
 }) => {
   const sectionDocs = patient.documents.filter(d => d.stage === targetStage);
 
@@ -51,6 +52,9 @@ const DocumentStage = ({
                       {doc.status === 'pending' && <Badge variant="outline" className="text-[9px] uppercase tracking-widest leading-none h-4 rounded-sm bg-muted/50">Stored</Badge>}
                     </div>
                   </div>
+                  <Button variant="ghost" size="sm" onClick={() => onDeleteDocument(patient.id, doc.id)} className="text-destructive hover:bg-destructive/10 hover:text-destructive shrink-0 h-6 w-6 p-0 items-center justify-center rounded-xs transition-colors">
+                     <Trash2 className="w-3.5 h-3.5" />
+                  </Button>
                 </div>
               ))}
             </div>

@@ -38,16 +38,6 @@ const ReconciliationDashboard = ({ files = [], apiResults = [], patient, onResta
           Back
         </Button>
 
-        <div className="text-center hidden sm:block">
-          <h2 className="text-sm font-bold tracking-tight flex items-center justify-center gap-1.5">
-            <Activity className="w-4 h-4 text-foreground" />
-            FINAL ADJUDICATION
-          </h2>
-          <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">
-            Pre-Submission Rules Engine
-          </p>
-        </div>
-
         <Badge variant="outline" className="px-3 py-1 uppercase tracking-widest font-bold text-[10px]">
           {files.length} {files.length === 1 ? 'Doc' : 'Docs'} Queued
         </Badge>

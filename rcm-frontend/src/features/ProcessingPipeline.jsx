@@ -5,7 +5,7 @@ import ExtractionDashboard from './ExtractionDashboard';
 import FhirViewer from './FHIRviewer';
 import ReconciliationDashboard from './ReconciliationDashboard';
 import axios from 'axios';
-import { Loader2, CheckCircle2, ArrowLeft } from 'lucide-react';
+import { Loader2, CheckCircle2, ArrowLeft, Upload, FileSearch, Code, Activity } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
@@ -108,35 +108,56 @@ export default function ProcessingPipeline() {
             </div>
           </div>
 
-          <div className="hidden md:flex flex-1 mx-8 items-center justify-center max-w-xl">
-             <div className="flex items-center w-full justify-between">
-               {steps.map((step, idx) => (
-                 <React.Fragment key={step.id}>
-                   <div className="flex flex-col items-center group">
-                     <div className={`flex items-center justify-center w-6 h-6 rounded-full border-2 text-[10px] font-bold transition-all
-                       ${currentStep > step.id ? 'bg-primary border-primary text-primary-foreground' : 
-                        currentStep === step.id ? 'border-primary text-primary bg-background shadow-sm' : 
-                        'border-muted bg-muted text-muted-foreground'}
-                     `}>
-                       {currentStep > step.id ? <CheckCircle2 className="w-3.5 h-3.5" /> : step.id}
-                     </div>
-                     <span className={`text-[9px] mt-1 uppercase font-bold tracking-wider ${currentStep >= step.id ? 'text-foreground' : 'text-muted-foreground'}`}>
-                       {step.label}
-                     </span>
-                   </div>
-                   {idx !== steps.length - 1 && (
-                     <div className={`flex-1 h-px mx-1.5 rounded-full transition-all ${currentStep > step.id ? 'bg-primary' : 'bg-muted'}`} />
-                   )}
-                 </React.Fragment>
-               ))}
-             </div>
+          <div className="hidden md:flex flex-1 mx-8 items-center justify-center">
+            {currentStep === 1 && (
+              <div className="text-center">
+                <h2 className="text-sm font-bold tracking-tight flex items-center justify-center gap-1.5 uppercase">
+                  <Upload className="w-4 h-4 text-foreground" /> INGESTION
+                </h2>
+                <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">Secure Document Upload</p>
+              </div>
+            )}
+            {currentStep === 2 && (
+              <div className="text-center">
+                <h2 className="text-sm font-bold tracking-tight flex items-center justify-center gap-1.5 uppercase">
+                  <Activity className="w-4 h-4 text-foreground" /> EXTRACTION DASHBOARD
+                </h2>
+                <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">AI Concept Mapping</p>
+              </div>
+            )}
+            {currentStep === 3 && (
+              <div className="text-center">
+                <h2 className="text-sm font-bold tracking-tight flex items-center justify-center gap-1.5 uppercase">
+                  <Code className="w-4 h-4 text-foreground" /> FHIR R4 BUNDLE
+                </h2>
+                <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">Interoperability Standard Ready</p>
+              </div>
+            )}
+            {currentStep === 4 && (
+              <div className="text-center">
+                <h2 className="text-sm font-bold tracking-tight flex items-center justify-center gap-1.5 uppercase">
+                  <Activity className="w-4 h-4 text-foreground" /> FINAL ADJUDICATION
+                </h2>
+                <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">Pre-Submission Rules Engine</p>
+              </div>
+            )}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
+            {/* Minimal right-aligned timeline */}
+            <div className="hidden md:flex items-center opacity-80 gap-1.5">
+               {steps.map((step, idx) => (
+                 <React.Fragment key={step.id}>
+                    <div className={`w-4 h-4 rounded-full flex items-center justify-center text-[8px] font-bold ${currentStep >= step.id ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>{step.id}</div>
+                    {idx !== steps.length - 1 && <div className={`w-3 h-px ${currentStep > step.id ? 'bg-primary' : 'bg-muted'}`} />}
+                 </React.Fragment>
+               ))}
+            </div>
+
             {uploadedFiles.length > 0 && (
-              <Badge variant="secondary" className="hidden sm:flex text-[10px] py-0.5">
-                {uploadedFiles.length} Docs
-              </Badge>
+               <Badge variant="secondary" className="hidden sm:flex text-[10px] py-0.5 px-2">
+                 {uploadedFiles.length} Docs
+               </Badge>
             )}
           </div>
         </div>
@@ -203,6 +224,7 @@ export default function ProcessingPipeline() {
             <FhirViewer 
               files={uploadedFiles}
               apiResults={apiResults}
+              patient={patient}
               onProceed={() => setCurrentStep(4)} 
               onBack={() => setCurrentStep(2)} 
             />

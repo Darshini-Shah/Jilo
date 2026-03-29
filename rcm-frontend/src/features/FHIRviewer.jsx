@@ -40,7 +40,7 @@ const humanizeKey = (key) => {
     .trim();
 };
 
-const FhirViewer = ({ files = [], apiResults = [], onProceed, onBack }) => {
+const FhirViewer = ({ files = [], apiResults = [], patient, onProceed, onBack }) => {
   const [copied, setCopied] = useState(false);
   const [viewMode, setViewMode] = useState('formal');
   const [mediAssistData, setMediAssistData] = useState(null);
@@ -176,6 +176,12 @@ const FhirViewer = ({ files = [], apiResults = [], onProceed, onBack }) => {
       });
     });
 
+    // Copy styles from head to body so dangerouslySetInnerHTML includes them
+    const styles = doc.head.querySelectorAll('style');
+    styles.forEach(s => {
+      doc.body.prepend(s.cloneNode(true));
+    });
+
     return doc.body.innerHTML;
   };
 
@@ -247,16 +253,8 @@ const FhirViewer = ({ files = [], apiResults = [], onProceed, onBack }) => {
           Back
         </Button>
 
-        <div className="text-center hidden sm:block">
-          <h2 className="text-sm font-bold tracking-tight flex items-center justify-center gap-1.5">
-            <Code className="w-4 h-4 text-foreground" />
-            FHIR R4 BUNDLE
-          </h2>
-          <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">
-            Interoperability Standard Ready
-          </p>
-        </div>
-
+        {/* Dynamic header title moved to parent ProcessingPipeline */}
+        
         <Button size="sm" onClick={onProceed} className="h-7 font-bold shadow-md shadow-foreground/10 text-xs">
           Run Reconciliation
           <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
@@ -266,10 +264,10 @@ const FhirViewer = ({ files = [], apiResults = [], onProceed, onBack }) => {
 
 
       {/* MAIN CONTENT SPLIT */}
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 h-[calc(100vh-380px)] min-h-[400px]">
+      <div className={`grid grid-cols-1 ${patient?.step === 'pre auth' ? 'lg:grid-cols-5' : 'lg:grid-cols-1'} gap-6 h-[calc(100vh-320px)] min-h-[400px]`}>
 
         {/* LEFT: FHIR Resource Viewer */}
-        <Card className="lg:col-span-3 shadow-sm flex flex-col overflow-hidden border-2 border-foreground">
+        <Card className={`${patient?.step === 'pre auth' ? 'lg:col-span-3' : 'lg:col-span-1'} shadow-sm flex flex-col overflow-hidden border-2 border-foreground`}>
           <CardHeader className="pb-2 border-b flex flex-row items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-foreground rounded flex items-center justify-center">
@@ -307,7 +305,7 @@ const FhirViewer = ({ files = [], apiResults = [], onProceed, onBack }) => {
             </div>
           </CardHeader>
 
-          <div className="flex-grow overflow-y-auto p-4 custom-scrollbar">
+          <div className="flex-grow overflow-y-auto p-6 custom-scrollbar bg-card/50">
             {viewMode === 'json' ? (
               <pre className="whitespace-pre-wrap leading-relaxed text-xs font-mono text-foreground bg-muted/30 p-4 rounded border">
                 {JSON.stringify(fhirPayload, null, 2)}
@@ -353,7 +351,56 @@ const FhirViewer = ({ files = [], apiResults = [], onProceed, onBack }) => {
             )}
           </div>
         </Card>
+        
+        {/* RIGHT: MediAssist PDF Preview (Conditional) */}
+        {patient?.step === 'pre auth' && (
+          <Card className="lg:col-span-2 shadow-sm flex flex-col overflow-hidden bg-zinc-100">
+            <CardHeader className="bg-white pb-3 border-b flex flex-row items-center justify-between">
+              <div>
+                <CardTitle className="text-sm font-bold uppercase tracking-wide">MediAssist Pre-Auth</CardTitle>
+                <CardDescription className="text-xs">PDF Preview — Part C (Revised)</CardDescription>
+              </div>
+              <div className="flex gap-2">
+                <Button variant="outline" size="sm" onClick={handleDownloadJson} className="h-7 text-[10px] uppercase font-bold px-2">
+                  <Download className="w-3 h-3 mr-1" /> JSON
+                </Button>
+                <Button size="sm" onClick={handleDownloadPdf} className="h-7 text-[10px] uppercase font-bold px-2">
+                  <Download className="w-3 h-3 mr-1" /> PDF
+                </Button>
+              </div>
+            </CardHeader>
 
+            {/* Changed flex layout and padding here to fix "padding chuda hua hai" layout scaling overlap issue */}
+            <div className="flex-grow overflow-auto bg-zinc-200/50 relative">
+              {loadingMedi ? (
+                <div className="flex flex-col items-center justify-center p-20 gap-3 h-full">
+                  <div className="animate-spin w-8 h-8 rounded-full border-4 border-primary border-t-transparent"></div>
+                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Generating Form...</p>
+                </div>
+              ) : (
+                <div className="flex justify-center p-8 w-full min-h-max">
+                  <div 
+                    className="origin-top scale-[0.45] w-[210mm] bg-white shadow-2xl shrink-0" 
+                    style={{ height: 'fit-content', fontFamily: 'Arial, Helvetica, sans-serif', transformOrigin: 'top center' }}
+                  >
+                    <div
+                      id="medi-assist-form-container"
+                      className="p-[7mm] text-black bg-white w-full h-full"
+                      dangerouslySetInnerHTML={{ __html: populateHTML(templateHtml, mediAssistData) }}
+                    />
+                  </div>
+                </div>
+              )}
+
+              {!loadingMedi && (
+                <div className="absolute top-4 right-4 flex items-center gap-2 bg-black/80 text-white px-3 py-1.5 rounded-full backdrop-blur-sm shadow-xl z-10 border border-white/20">
+                  <Eye className="w-3.5 h-3.5 text-emerald-400" />
+                  <span className="text-[10px] font-bold uppercase tracking-widest">PDF Preview</span>
+                </div>
+              )}
+            </div>
+          </Card>
+        )}
 
       </div>
     </div>
