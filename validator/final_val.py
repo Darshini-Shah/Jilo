@@ -1,4 +1,3 @@
-from final_dict import build_dictionaries
 import os
 from fhir.resources.claim import Claim
 from fhir.resources.patient import Patient
@@ -26,6 +25,7 @@ if os.path.exists(cms_dicts_path):
         NCD_MAP = {k: set(v) for k, v in data.get("ncd_map", {}).items()}
 else:
     print("⚠️ Precomputed CMS JSON not found. Falling back to heavy DataFrame loading...")
+    from final_dict import build_dictionaries
     from final_df import get_cached_df
     import pandas as pd
     ptp_df = get_cached_df("cache_ptp.pkl", base_dir, "ccipra*", skiprows=1)
