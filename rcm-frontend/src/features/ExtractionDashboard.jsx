@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FileText, ArrowRight, ArrowLeft, Activity, ShieldCheck, CheckCircle2, Stethoscope, ClipboardList } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,6 +9,27 @@ import { Button } from "@/components/ui/button";
 
 const ExtractionDashboard = ({ files = [], apiResults = [], isBatch = false, onConfirm, onAction, onBack, stage, patient }) => {
   const [activeFileId, setActiveFileId] = useState(`file-0`);
+  const [pdfUrls, setPdfUrls] = useState({});
+
+  useEffect(() => {
+    const urls = {};
+    files.forEach((file, idx) => {
+      if (file instanceof Blob || file instanceof File) {
+        const pdfBlob = new Blob([file], { type: 'application/pdf' });
+        urls[idx] = URL.createObjectURL(pdfBlob);
+      } else if (file && file.url) {
+        urls[idx] = file.url;
+      }
+    });
+    setPdfUrls(urls);
+    return () => {
+      Object.values(urls).forEach(url => {
+        if (url && url.startsWith('blob:')) {
+          URL.revokeObjectURL(url);
+        }
+      });
+    };
+  }, [files]);
 
   const handleExportMediAssist = async () => {
     try {
@@ -20,25 +41,16 @@ const ExtractionDashboard = ({ files = [], apiResults = [], isBatch = false, onC
         return;
       }
 
-      const resp = await fetch('http://localhost:8000/pipeline/export-html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(preauthForm)
-      });
-
-      if (resp.ok) {
-        const blob = await resp.blob();
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `MediAssist_Export.html`;
-        a.click();
-      } else {
-        alert('Export failed.');
-      }
+      const blob = new Blob([JSON.stringify(preauthForm, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `MediAssist_Export.json`;
+      a.click();
+      URL.revokeObjectURL(url);
     } catch (err) {
       console.error(err);
-      alert('Export failed. Check backend console.');
+      alert('Export failed. Check console.');
     }
   };
 
@@ -138,11 +150,12 @@ const ExtractionDashboard = ({ files = [], apiResults = [], isBatch = false, onC
         )}
 
         {files.map((currentFile, idx) => {
-          const currentAiData = isBatch ? (apiResults[0] || {}) : (apiResults[idx] || {});
-          const pdfUrl = currentFile ? URL.createObjectURL(currentFile) : null;
+          const currentAiData = (isBatch || apiResults.length === 1) ? (apiResults[0] || {}) : (apiResults[idx] || {});
+          const pdfUrl = pdfUrls[idx] || null;
           const confidenceScore = currentAiData?.confidence_score || 0;
-          const diagnoses = currentAiData?.patient?.diagnoses || [];
-          const services = currentAiData?.patient?.services || [];
+          const aiExtractPatient = currentAiData?.ai_extract?.patients?.[0] || {};
+          const diagnoses = currentAiData?.patient?.diagnoses?.length ? currentAiData.patient.diagnoses : (aiExtractPatient.diagnoses || []);
+          const services = currentAiData?.patient?.services?.length ? currentAiData.patient.services : (aiExtractPatient.services || []);
           const preauthForm = currentAiData?.preauth_form_json;
 
           return (
@@ -168,7 +181,14 @@ const ExtractionDashboard = ({ files = [], apiResults = [], isBatch = false, onC
                   </div>
                   <CardContent className="grow p-0 relative">
                     {pdfUrl ? (
-                      <iframe src={pdfUrl} className="w-full h-full absolute inset-0 bg-white" title="PDF Preview" />
+                      <object data={`${pdfUrl}#toolbar=0`} type="application/pdf" className="w-full h-full absolute inset-0 bg-white">
+                        <div className="flex flex-col items-center justify-center w-full h-full text-muted-foreground p-6 text-center bg-muted/20">
+                          <FileText className="w-12 h-12 mb-4 opacity-50" />
+                          <p className="font-bold text-foreground">PDF Plugin Not Found</p>
+                          <p className="text-xs mt-2">Your current environment (e.g., VS Code Preview) does not support inline PDFs.</p>
+                          <p className="text-xs mt-1 text-primary">Please open <b>http://localhost:5173</b> in a standard browser like Chrome.</p>
+                        </div>
+                      </object>
                     ) : (
                       <div className="flex items-center justify-center w-full h-full text-muted-foreground text-sm font-medium">
                         No document available
@@ -211,7 +231,7 @@ const ExtractionDashboard = ({ files = [], apiResults = [], isBatch = false, onC
                   </Card> */}
 
                   {/* Diagnoses Card */}
-                  {/* {diagnoses.length > 0 && (
+                  {diagnoses.length > 0 && (
                     <Card className="shadow-sm border-l-4 border-l-amber-500">
                       <CardHeader className="p-5 flex flex-row items-center justify-between pb-2 border-b">
                         <CardTitle className="text-xs font-bold uppercase tracking-wide flex items-center gap-2">
@@ -244,7 +264,7 @@ const ExtractionDashboard = ({ files = [], apiResults = [], isBatch = false, onC
                         </Table>
                       </CardContent>
                     </Card>
-                  )} */}
+                  )}
 
                   {/* Services & Coding Table */}
                   <Card className="shadow-sm shrink-0 border-l-4 border-l-blue-500">

@@ -91,10 +91,34 @@ def _build_preauth_form_json(ai_extract: dict, patient_db: dict = None, hospital
 
     # Build cost estimates from services
     total_cost = 0
+    clean_services = []
     for svc in services:
         amt = svc.get("amount", 0)
-        if isinstance(amt, (int, float)):
-            total_cost += amt
+        amt_val = 0.0
+        try:
+            if isinstance(amt, str):
+                amt_str = ''.join(c for c in amt if c.isdigit() or c == '.')
+                if amt_str:
+                    amt_val = float(amt_str)
+            elif isinstance(amt, (int, float)):
+                amt_val = float(amt)
+        except Exception:
+            pass
+        total_cost += amt_val
+        clean_services.append({"description": svc.get("description", ""), "amount": amt_val})
+
+    def sum_category(*keywords):
+        return sum(s["amount"] for s in clean_services if any(k in s["description"].lower() for k in keywords))
+
+    room_rent = sum_category("room", "bed", "ward", "nursing")
+    investigation = sum_category("lab", "investigation", "test", "scan", "x-ray", "mri", "blood", "pathology")
+    icu = sum_category("icu", "intensive", "ccu")
+    ot = sum_category("ot", "operation", "surgery", "theatre")
+    prof = sum_category("doctor", "consult", "visit", "physician", "surgeon")
+    meds = sum_category("pharmacy", "medicine", "drug", "implant", "consumable")
+    
+    categorized = room_rent + investigation + icu + ot + prof + meds
+    other_exp = total_cost - categorized if total_cost > categorized else 0
 
     form = {
         "hospital": {
@@ -133,7 +157,7 @@ def _build_preauth_form_json(ai_extract: dict, patient_db: dict = None, hospital
             "pastHistory":          clinical.get("past_history", ""),
             "provisionalDiagnosis": clinical.get("provisional_diagnosis") or diag0.get("condition", ""),
             "icd10Code":            diag0.get("icd_10_code", ""),
-            "proposedTreatment":    clinical.get("proposed_line_of_treatment") or [svc.get("description", "") for svc in services[:3]],
+            "proposedTreatment":    clinical.get("proposed_line_of_treatment") or "",
             "investigationDetails": clinical.get("investigation_details", ""),
             "routeOfDrugAdmin":     clinical.get("route_of_drug_administration", ""),
             "surgeryName":          clinical.get("surgery_name", ""),
@@ -155,9 +179,14 @@ def _build_preauth_form_json(ai_extract: dict, patient_db: dict = None, hospital
             "roomType":        admission.get("room_type", "")
         },
         "costs": {
-            "roomRent": "", "investigationCost": "", "icuCharges": "",
-            "otCharges": "", "professionalFees": "", "medicinesImplants": "",
-            "otherExpenses": "", "packageCharges": "",
+            "roomRent": str(int(room_rent)) if room_rent else "", 
+            "investigationCost": str(int(investigation)) if investigation else "", 
+            "icuCharges": str(int(icu)) if icu else "",
+            "otCharges": str(int(ot)) if ot else "", 
+            "professionalFees": str(int(prof)) if prof else "", 
+            "medicinesImplants": str(int(meds)) if meds else "",
+            "otherExpenses": str(int(other_exp)) if other_exp else "", 
+            "packageCharges": "",
             "totalCost": str(int(total_cost)) if total_cost else ""
         },
         "chronicHistory": {

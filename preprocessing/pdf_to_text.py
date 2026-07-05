@@ -11,6 +11,7 @@ from dotenv import load_dotenv , find_dotenv
 load_dotenv(find_dotenv()) 
 
 api_key = os.getenv("GEMINI_API_KEY")
+print(api_key)
 genai.configure(api_key=api_key)
 #ocr model
 reader = easyocr.Reader(['en'])

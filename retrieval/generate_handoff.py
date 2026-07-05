@@ -4,18 +4,33 @@ import concurrent.futures
 from langchain_google_genai import ChatGoogleGenerativeAI
 from get_chunks import StandaloneRetriever
 
-from dotenv import load_dotenv, find_dotenv; load_dotenv(find_dotenv())
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv(), override=True)
 
-# Support both GOOGLE_API_KEY and GEMINI_API_KEY
-if "GOOGLE_API_KEY" not in os.environ and "GEMINI_API_KEY" in os.environ:
-    os.environ["GOOGLE_API_KEY"] = os.environ["GEMINI_API_KEY"]
 
-if "GOOGLE_API_KEY" not in os.environ:
-    raise ValueError("GOOGLE_API_KEY or GEMINI_API_KEY environment variable not set.")
+def get_gemini_api_key() -> str:
+    api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+
+    if not api_key:
+        raise ValueError("GEMINI_API_KEY or GOOGLE_API_KEY environment variable not set.")
+
+    api_key = api_key.strip().strip('"').strip("'")
+
+    if api_key == "your_valid_gemini_key":
+        raise ValueError("Replace placeholder key with a real Gemini API key.")
+
+    os.environ["GOOGLE_API_KEY"] = api_key
+    return api_key
+
 
 def extract_diagnoses(ocr_text: str) -> list[str]:
     print("-> Pinging Gemini 2.5 Flash for NER extraction...")
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
+
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash",
+        temperature=0,
+        google_api_key=get_gemini_api_key(),
+    )
     
     prompt = f"""
     You are a Clinical Data Extraction Engine. Analyze the provided hospital document OCR text.
