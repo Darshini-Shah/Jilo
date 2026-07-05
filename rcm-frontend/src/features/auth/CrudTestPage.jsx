@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useAuth } from '../../auth/AuthContext';
 import { Loader2 } from 'lucide-react';
 
-const API = 'http://localhost:8000';
+import { API_BASE as API } from '../../config';
 
 const EndpointTester = ({ title, method, path, requiresBody, requiresId, requiresUpload, token }) => {
   const [id, setId] = useState('');

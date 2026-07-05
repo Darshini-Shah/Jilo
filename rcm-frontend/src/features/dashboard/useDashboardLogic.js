@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabase';
 import { usePatients } from '../../context/PatientContext';
 
-const API_BASE = 'http://localhost:8000';
+import { API_BASE } from '../../config';
 
 export function useDashboardLogic() {
   const { patients, setPatients, isFetched, setIsFetched, userProfile, setUserProfile } = usePatients();
