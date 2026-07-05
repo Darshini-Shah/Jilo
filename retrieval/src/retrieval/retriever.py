@@ -1,18 +1,18 @@
-import psycopg2
-from langchain_huggingface import HuggingFaceEmbeddings
 import os
 from dotenv import load_dotenv
+from google import genai
+import psycopg2
 
 load_dotenv(dotenv_path="config/.env")
 
+
 class HybridRetriever:
     def __init__(self):
-        # Must use the EXACT same embedding model as ingestion
-        self.embeddings = HuggingFaceEmbeddings(
-            model_name="NeuML/pubmedbert-base-embeddings",
-            model_kwargs={'device': 'cpu'},
-            encode_kwargs={'normalize_embeddings': True}
-        )
+        # Use Gemini embeddings instead of local HuggingFace model (saves ~900MB RAM)
+        api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+        if not api_key:
+            raise ValueError("GEMINI_API_KEY or GOOGLE_API_KEY environment variable not set.")
+        self.client = genai.Client(api_key=api_key.strip().strip('"').strip("'"))
 
     def get_connection(self):
         return psycopg2.connect(
@@ -23,6 +23,14 @@ class HybridRetriever:
             dbname=os.getenv("DB_NAME")
         )
 
+    def _embed_query(self, query: str) -> list:
+        """Generate embeddings using Gemini API instead of local torch model."""
+        result = self.client.models.embed_content(
+            model="models/text-embedding-004",
+            contents=query
+        )
+        return result.embeddings[0].values
+
     def vector_search(self, query: str, top_k: int = 5):
         """
         Perform vector similarity search using pgvector.
@@ -30,7 +38,7 @@ class HybridRetriever:
         conn = self.get_connection()
 
         try:
-            query_vector = self.embeddings.embed_query(query)
+            query_vector = self._embed_query(query)
 
             sql = """
             SELECT id, content, metadata,

@@ -15,8 +15,7 @@ const ExtractionDashboard = ({ files = [], apiResults = [], isBatch = false, onC
     const urls = {};
     files.forEach((file, idx) => {
       if (file instanceof Blob || file instanceof File) {
-        const pdfBlob = new Blob([file], { type: 'application/pdf' });
-        urls[idx] = URL.createObjectURL(pdfBlob);
+        urls[idx] = URL.createObjectURL(file);
       } else if (file && file.url) {
         urls[idx] = file.url;
       }
@@ -181,14 +180,24 @@ const ExtractionDashboard = ({ files = [], apiResults = [], isBatch = false, onC
                   </div>
                   <CardContent className="grow p-0 relative">
                     {pdfUrl ? (
-                      <object data={`${pdfUrl}#toolbar=0`} type="application/pdf" className="w-full h-full absolute inset-0 bg-white">
-                        <div className="flex flex-col items-center justify-center w-full h-full text-muted-foreground p-6 text-center bg-muted/20">
-                          <FileText className="w-12 h-12 mb-4 opacity-50" />
-                          <p className="font-bold text-foreground">PDF Plugin Not Found</p>
-                          <p className="text-xs mt-2">Your current environment (e.g., VS Code Preview) does not support inline PDFs.</p>
-                          <p className="text-xs mt-1 text-primary">Please open <b>http://localhost:5173</b> in a standard browser like Chrome.</p>
+                      <div className="w-full h-full flex flex-col">
+                        <iframe
+                          src={pdfUrl}
+                          title="PDF Preview"
+                          className="w-full grow border-none bg-white"
+                        />
+                        <div className="p-2 bg-muted border-t flex justify-end shrink-0">
+                          <a
+                            href={pdfUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            download={currentFile?.name || "document.pdf"}
+                            className="text-xs text-blue-600 hover:underline font-semibold flex items-center gap-1"
+                          >
+                            Open / Download PDF in New Tab
+                          </a>
                         </div>
-                      </object>
+                      </div>
                     ) : (
                       <div className="flex items-center justify-center w-full h-full text-muted-foreground text-sm font-medium">
                         No document available

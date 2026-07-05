@@ -1,4 +1,5 @@
 # --- RCM Engine FastAPI Backend Dependencies ---
+# OPTIMIZED FOR RENDER FREE TIER (512MB RAM)
 
 # 1. FastAPI & Server
 fastapi>=0.111.0
@@ -11,35 +12,35 @@ fhir.resources==7.1.0
 # 3. Data Validation & Schema Enforcement
 pydantic>=2.5.0
 
-# 4. Document Parsing & OCR
+# 4. Document Parsing (Lightweight - NO torch/easyocr)
 PyMuPDF>=1.23.0
 pymupdf>=1.27.1
 pymupdf4llm>=0.3.4
 pypdf>=6.7.5
-easyocr>=1.7.1
-pdf2image>=1.17.0
 pillow>=10.3.0
 
-# 5. AI & LLM SDKs
-google-genai>=0.2.0
-google-generativeai>=0.5.2
+# 5. AI & LLM SDKs (API-based, no local models)
+google-genai>=1.0.0
 langchain-community>=0.4.1
 langchain-core>=1.2.17
 langchain-google-genai>=1.0.4
-langchain-huggingface>=1.2.1
 
-# 6. Embeddings & NLP
-sentence-transformers>=5.2.3
+# 6. Text Processing (no local embeddings)
 langchain-text-splitters>=1.1.1
 
-# 7. Computation & Data manipulation
-numpy
-pandas
-torch
-opencv-python
-
-# 8. Databases & Environments
+# 7. Databases & Environments
 psycopg2-binary>=2.9.11
 langchain-postgres>=0.0.17
 python-dotenv>=1.0.0
 supabase>=2.4.0
+
+# NOTE: The following HEAVY packages were REMOVED to fit in 512MB:
+# - torch (~800MB)        -> replaced with Gemini API
+# - easyocr (~100MB)      -> replaced with PyMuPDF + Gemini Vision
+# - sentence-transformers -> replaced with Gemini reranking API
+# - langchain-huggingface -> replaced with Gemini embeddings API
+# - opencv-python (~50MB) -> no longer needed
+# - pdf2image             -> replaced with PyMuPDF
+# - numpy                 -> no longer needed (was easyocr dep)
+# - pandas                -> no longer needed (CMS dicts pre-computed to JSON)
+# - google-generativeai   -> deprecated, replaced with google-genai

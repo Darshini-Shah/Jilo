@@ -1,36 +1,25 @@
 import os
 import json
 import concurrent.futures
-from langchain_google_genai import ChatGoogleGenerativeAI
+from google import genai
 from get_chunks import StandaloneRetriever
 
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv(), override=True)
 
 
-def get_gemini_api_key() -> str:
+def get_gemini_client():
     api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
-
     if not api_key:
         raise ValueError("GEMINI_API_KEY or GOOGLE_API_KEY environment variable not set.")
-
     api_key = api_key.strip().strip('"').strip("'")
-
-    if api_key == "your_valid_gemini_key":
-        raise ValueError("Replace placeholder key with a real Gemini API key.")
-
-    os.environ["GOOGLE_API_KEY"] = api_key
-    return api_key
+    return genai.Client(api_key=api_key)
 
 
 def extract_diagnoses(ocr_text: str) -> list[str]:
     print("-> Pinging Gemini 2.5 Flash for NER extraction...")
 
-    llm = ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash",
-        temperature=0,
-        google_api_key=get_gemini_api_key(),
-    )
+    client = get_gemini_client()
     
     prompt = f"""
     You are a Clinical Data Extraction Engine. Analyze the provided hospital document OCR text.
@@ -47,9 +36,12 @@ def extract_diagnoses(ocr_text: str) -> list[str]:
     {ocr_text}
     """
     
-    response = llm.invoke(prompt)
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt
+    )
     try:
-        clean_json = response.content.replace("```json", "").replace("```", "").strip()
+        clean_json = response.text.replace("```json", "").replace("```", "").strip()
         return json.loads(clean_json)
     except json.JSONDecodeError:
         print("Failed to parse LLM output. Returning empty list.")
@@ -61,7 +53,7 @@ def fetch_top_2_chunks(entities: list[str]) -> dict:
     results_map = {}
 
     def fetch_single(entity):
-        # Fetch using hybrid search and MedCPT cross-encoder, grab exactly top 2
+        # Fetch using hybrid search and cross-encoder re-ranking, grab exactly top 2
         chunks = retriever.search(query=entity, top_k=3)
         return entity, chunks[:2]
 
@@ -101,7 +93,7 @@ def write_handoff_file(mapped_contexts: dict, output_filename: str):
                     score = f"{score:.4f}"
                 
                 f.write(f"  Result {i+1} [ICD: {icd_code} | Score: {score}]: {disease}\n")
-                f.write(f"  Context: {chunk.get('text', '').replace('\n', ' ')}\n\n")
+                f.write(f"  Context: {chunk.get('text', '').replace(chr(10), ' ')}\n\n")
             f.write("\n")
 
 def generate_handoff_text(mapped_contexts: dict) -> str:
@@ -130,7 +122,7 @@ def generate_handoff_text(mapped_contexts: dict) -> str:
                 score = f"{score:.4f}"
             
             lines.append(f"  Result {i+1} [ICD: {icd_code} | Score: {score}]: {disease}\n")
-            lines.append(f"  Context: {chunk.get('text', '').replace('\n', ' ')}\n\n")
+            lines.append(f"  Context: {chunk.get('text', '').replace(chr(10), ' ')}\n\n")
         lines.append("\n")
     return "".join(lines)
 
