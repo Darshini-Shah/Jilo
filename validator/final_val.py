@@ -1,25 +1,38 @@
-from final_df import get_cached_df, load_ptps, load_mues, load_oce_demographics, load_ncd_crosswalk
 from final_dict import build_dictionaries
 import os
 from fhir.resources.claim import Claim
 from fhir.resources.patient import Patient
 import json
-import pandas as pd
 
-# 1. Load the fast caches
-# Dynamically find the data folder, no matter where the script is run from
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
 base_dir = os.path.join(PROJECT_ROOT, "data")
 
-print(f"📂 Looking for CMS databases in: {base_dir}")
-ptp_df = get_cached_df("cache_ptp.pkl", base_dir, "ccipra*", skiprows=1)
-mue_df = get_cached_df("cache_mue.pkl", base_dir, "MCR_MUE*", skiprows=1)
-hcpcs_df = get_cached_df("cache_hcpcs.pkl", base_dir, "Data_HCPCS.txt", skiprows=0)
-ncd_df = get_cached_df("cache_ncd.pkl", base_dir, "*Initial-ICD10-NCD-Spreadsheet*", skiprows=0)
+cms_dicts_path = os.path.join(base_dir, "cms_dicts.json")
 
-# 2. Build the dictionaries (Including NCD)
-PTP_EDITS, MUE_LIMITS, GENDER_SPECIFIC_CODES, NCD_MAP = build_dictionaries(ptp_df, mue_df, hcpcs_df, ncd_df)
+PTP_EDITS = {}
+MUE_LIMITS = {}
+GENDER_SPECIFIC_CODES = {}
+NCD_MAP = {}
+
+if os.path.exists(cms_dicts_path):
+    print(f"🚀 Loading precomputed CMS dictionaries from {cms_dicts_path} (Saves ~400MB RAM!)")
+    with open(cms_dicts_path, "r") as f:
+        data = json.load(f)
+        # Convert PTP and NCD lists back to sets for O(1) lookup
+        PTP_EDITS = {k: set(v) for k, v in data.get("ptp_edits", {}).items()}
+        MUE_LIMITS = data.get("mue_limits", {})
+        GENDER_SPECIFIC_CODES = data.get("gender_codes", {})
+        NCD_MAP = {k: set(v) for k, v in data.get("ncd_map", {}).items()}
+else:
+    print("⚠️ Precomputed CMS JSON not found. Falling back to heavy DataFrame loading...")
+    from final_df import get_cached_df
+    import pandas as pd
+    ptp_df = get_cached_df("cache_ptp.pkl", base_dir, "ccipra*", skiprows=1)
+    mue_df = get_cached_df("cache_mue.pkl", base_dir, "MCR_MUE*", skiprows=1)
+    hcpcs_df = get_cached_df("cache_hcpcs.pkl", base_dir, "Data_HCPCS.txt", skiprows=0)
+    ncd_df = get_cached_df("cache_ncd.pkl", base_dir, "*Initial-ICD10-NCD-Spreadsheet*", skiprows=0)
+    PTP_EDITS, MUE_LIMITS, GENDER_SPECIFIC_CODES, NCD_MAP = build_dictionaries(ptp_df, mue_df, hcpcs_df, ncd_df)
 
 print(f"Total MUE Codes Loaded: {len(MUE_LIMITS)}")
 print(f"Total Gender Codes Loaded: {len(GENDER_SPECIFIC_CODES)}")
